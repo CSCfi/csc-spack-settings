@@ -1,10 +1,16 @@
 packages:
+  openssl:
+    buildable: false
+    paths:
+      openssl@1.0.2k: /usr
   intel:
     buildable: false
     paths:
-      intel@19.0.4%gcc@4.8.5: /opt/intel/compilers_and_libraries_2019.4.243/linux/bin
+      intel@19.0.4%gcc@4.8.5: /opt/intel/compilers_and_libraries_2019.4.243/linux
   intel-mkl:
     buildable: false
     paths:
-      intel-mkl@2019.0.4%intel@19.0.4: /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
-      intel-mkl@2019.0.4%gcc@9.1.0: /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
+      intel-mkl@2019.4.243%intel@19.0.4 threads=openmp: /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
+      intel-mkl@2019.4.243%gcc@8.2.0 threads=openmp: /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
+      intel-mkl@2019.4.243%gcc@9.1.0 threads=openmp: /opt/intel/compilers_and_libraries_2019.4.243/linux/mkl
+
