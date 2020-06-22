@@ -29,6 +29,7 @@ class Flex(AutotoolsPackage):
     depends_on('help2man',      type='build')
     depends_on('findutils',     type='build')
     depends_on('diffutils',     type='build')
+    depends_on('texinfo',       type='build')
 
     # Older tarballs don't come with a configure script and the patch for
     # 2.6.4 touches configure
@@ -42,11 +43,15 @@ class Flex(AutotoolsPackage):
     # - https://github.com/spack/spack/issues/6942
     # - https://github.com/westes/flex/issues/241
     patch('https://github.com/westes/flex/commit/24fd0551333e7eded87b64dd36062da3df2f6380.patch', sha256='09c22e5c6fef327d3e48eb23f0d610dcd3a35ab9207f12e0f875701c677978d3', when='@2.6.4')
+    patch('tex-patch-ver1.patch', when='@2.5.39')
 
     @property
     def force_autoreconf(self):
         # The patch for 2.6.4 touches configure
         return self.spec.satisfies('@2.6.4')
+
+    def autoreconf(self, spec, prefix):
+        autoreconf('-ivf')
 
     def url_for_version(self, version):
         url = "https://github.com/westes/flex"
