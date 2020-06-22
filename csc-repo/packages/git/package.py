@@ -1,4 +1,4 @@
-# Copyright 2013-2020 Lawrence Livermore National Security, LLC and other
+# Copyright 2013-2019 Lawrence Livermore National Security, LLC and other
 # Spack Project Developers. See the top-level COPYRIGHT file for details.
 #
 # SPDX-License-Identifier: (Apache-2.0 OR MIT)
@@ -25,9 +25,29 @@ class Git(AutotoolsPackage):
 
     releases = [
         {
-            'version': '2.25.0',
-            'sha256': 'a98c9b96d91544b130f13bf846ff080dda2867e77fe08700b793ab14ba5346f6',
-            'sha256_manpages': '22b2380842ef75e9006c0358de250ead449e1376d7e5138070b9a3073ef61d44'
+            'version': '2.25.4',
+            'sha256': '1b11d0ee481c6735e9f7d81a3576ef0989bde7843cb4adcdef578c0593d279ab',
+            'sha256_manpages': 'd82f242fda461cd6a4b2d6aa3791eb284155d3d5c5e13942ac263f103c456466'
+        },
+        {
+            'version': '2.25.3',
+            'sha256': '7aec7e09acca48b8a7cfea68f5629f7c7fe473d8061464ebf516e18702b2d370',
+            'sha256_manpages': '4dfe7db81f3641dfe8886788f1fd2eaa05cdd5e5663f6221ce8b4495fa95d8db'
+        },
+        {
+            'version': '2.25.2',
+            'sha256': 'c1ec0b9c72b0cd544b99f9e2d219d63b16867fd0a37c4bd3aaf02c655ae8de07',
+            'sha256_manpages': 'e8d394160e4277504fc462bb0a5d768f8d3d5dbdc8c789f058fae00c8e80e4da'
+        },
+        {
+            'version': '2.21.3',
+            'sha256': '4d8d26943357c6b5f42f132fc75def69e86ba8de2384473909fde3a52808fc2b',
+            'sha256_manpages': 'ed74f74fdbac4d5834eccebb2ed1063645c7ace1ba3e5ec50780ff2dc9b67517'
+        },
+        {
+            'version': '2.21.2',
+            'sha256': '4166d010a091aa186a031b4e30cf594c80a520ffa7225f3267ba4be01700cc01',
+            'sha256_manpages': 'ac931ec640a339eb9296c5e8a676d8c2ddf52e6c164cc0764147568291e7d0fe'
         },
         {
             'version': '2.21.0',
@@ -178,10 +198,9 @@ class Git(AutotoolsPackage):
     depends_on('expat')
     depends_on('gettext')
     depends_on('libiconv')
-    depends_on('libidn2')
     depends_on('openssl')
     depends_on('pcre', when='@:2.13')
-    depends_on('pcre2', when='@2.14:')
+    depends_on('pcre+jit', when='@2.14:')
     depends_on('perl')
     depends_on('zlib')
 
@@ -191,13 +210,13 @@ class Git(AutotoolsPackage):
     depends_on('m4',       type='build')
     depends_on('tk',       type=('build', 'link'), when='+tcltk')
 
-    # See the comment in setup_build_environment re EXTLIBS.
+    # See the comment in setup_environment re EXTLIBS.
     def patch(self):
         filter_file(r'^EXTLIBS =$',
                     '#EXTLIBS =',
                     'Makefile')
 
-    def setup_build_environment(self, env):
+    def setup_environment(self, spack_env, run_env):
         # We use EXTLIBS rather than LDFLAGS so that git's Makefile
         # inserts the information into the proper place in the link commands
         # (alongside the # other libraries/paths that configure discovers).
@@ -210,9 +229,9 @@ class Git(AutotoolsPackage):
         # In that case the node in the DAG gets truncated and git DOES NOT
         # have a gettext dependency.
         if 'gettext' in self.spec:
-            env.append_flags('EXTLIBS', '-L{0} -lintl'.format(
+            spack_env.append_flags('EXTLIBS', '-L{0} -lintl'.format(
                 self.spec['gettext'].prefix.lib))
-            env.append_flags('CFLAGS', '-I{0}'.format(
+            spack_env.append_flags('CFLAGS', '-I{0}'.format(
                 self.spec['gettext'].prefix.include))
 
     def configure_args(self):
@@ -222,17 +241,12 @@ class Git(AutotoolsPackage):
             '--with-curl={0}'.format(spec['curl'].prefix),
             '--with-expat={0}'.format(spec['expat'].prefix),
             '--with-iconv={0}'.format(spec['libiconv'].prefix),
+            '--with-libpcre={0}'.format(spec['pcre'].prefix),
             '--with-openssl={0}'.format(spec['openssl'].prefix),
             '--with-perl={0}'.format(spec['perl'].command.path),
             '--with-zlib={0}'.format(spec['zlib'].prefix),
         ]
 
-        if '^pcre' in self.spec:
-            configure_args.append('--with-libpcre={0}'.format(
-                spec['pcre'].prefix))
-        if '^pcre2' in self.spec:
-            configure_args.append('--with-libpcre2={0}'.format(
-                spec['pcre2'].prefix))
         if '+tcltk' in self.spec:
             configure_args.append('--with-tcltk={0}'.format(
                 self.spec['tk'].prefix.bin.wish))
