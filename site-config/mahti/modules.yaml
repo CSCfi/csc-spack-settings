@@ -8,6 +8,7 @@ modules:
     hierarchy:
       - mpi
     whitelist:
+      - amd-blis
       - 'bzip2%gcc@6.0.0:'
       - 'bzip2%intel'
       - gcc
@@ -31,7 +32,9 @@ modules:
       - gromacs
       - 'hdf5%gcc@6.0.0:'
       - 'hdf5%intel'
+      - htop
       - openmpi
+      - openblas
       - hpcx-mpi
       - mariadb
       - 'mc%gcc@4.8.5'
@@ -40,9 +43,12 @@ modules:
       - intel
       - intel-mkl
       - intel-mpi
+      - intel-parallel-studio
+      - jemalloc
       - petsc
       - pgi
       - 'p7zip%gcc@4.8.5'
+      - py-gpaw
       - netlib-scalapack
       - vim
       - relion
@@ -52,7 +58,10 @@ modules:
       - 'netcdf%intel'
       - netcdf-fortran
       - 'metis~int64'
+      - 'patchelf%gcc@4.8.5'
+      - pdsh
       - perl
+      - openfoam-org
       - 'boost%gcc@6.0.0:'
       - 'boost%intel'
       - 'boost%pgi'
@@ -80,7 +89,7 @@ modules:
       - '%gcc@4.8.5'
       - '%gcc@7.4.0'
       - '%gcc@8.3.0'
-      - '%gcc@9.1.0'
+      - '%gcc@9.3.0'
       - '%intel@19.0.4'
       - '%intel@18.0.5'
       - '%pgi'
@@ -111,38 +120,18 @@ modules:
           FC: ifort
           F90: ifort
           F77: ifort
-          ICCCFG: /appl/opt/intel_configs/icc_gcc83_csc.cfg
-          ICPCCFG : /appl/opt/intel_configs/icpc_gcc83_csc.cfg
-          IFORTCFG : /appl/opt/intel_configs/ifort_gcc83_csc.cfg
+          ICCCFG: /appl/opt/intel_configs/icc_gcc93_csc.cfg
+          ICPCCFG : /appl/opt/intel_configs/icpc_gcc93_csc.cfg
+          IFORTCFG : /appl/opt/intel_configs/ifort_gcc93_csc.cfg
           I_MPI_CC: icc
           I_MPI_CXX: icpc
           I_MPI_FC: ifort
           I_MPI_F90: ifort
           I_MPI_F77: ifort
-    mpich:
-      environment:
-        set:
-          SLURM_MPI_TYPE: pmi2
-    hpcx-mpi:
-      suffixes:
-        "+cuda": cuda
-      environment:
-        set:
-          SLURM_MPI_TYPE: pmix_v2
-    openmpi:
-      environment:
-        set:
-          SLURM_MPI_TYPE: pmix_v2
     intel-mpi:
       environment:
         set:
           SLURM_MPI_TYPE: pmi2
-    relion:
-      suffixes:
-        "+cuda": cuda
-    eccodes:
-      suffixes:
-        "+openmp": omp
     fftw:
       suffixes:
         "+mpi": mpi
@@ -164,3 +153,9 @@ modules:
     intel-mkl:
       suffixes:
         "intel-mkl threads=openmp": omp
+    openblas:
+      suffixes:
+        "threads=openmp": omp
+    cp2k:
+      suffixes:
+        "+openmp": omp
