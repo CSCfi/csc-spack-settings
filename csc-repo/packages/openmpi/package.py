@@ -76,35 +76,22 @@ class Openmpi(AutotoolsPackage):
     git = "https://github.com/open-mpi/ompi.git"
 
     maintainers = ['hppritcha']
-    
+
     version('develop', branch='master')
 
     # Mellanox version
     version('4.0.2a1-mlnx', commit='fbd6798bf8')
 
     # Current
-    version('4.0.2', preferred=True, sha256='900bf751be72eccf06de9d186f7b1c4b5c2fa9fa66458e53b77778dffdfe4057') # libmpi.so.40.20.2
-
+    version('4.0.3', preferred=True, sha256='1402feced8c3847b3ab8252165b90f7d1fa28c23b6b2ca4632b6e4971267fd03')
     # Still supported
+
+    version('4.0.2', sha256='900bf751be72eccf06de9d186f7b1c4b5c2fa9fa66458e53b77778dffdfe4057') # libmpi.so.40.20.2
     version('4.0.1', sha256='cce7b6d20522849301727f81282201d609553103ac0b09162cf28d102efb9709')  # libmpi.so.40.20.1
     version('4.0.0', sha256='2f0b8a36cfeb7354b45dda3c5425ef8393c9b04115570b615213faaa3f97366b')  # libmpi.so.40.20.0
-    version('3.1.5', sha256='fbf0075b4579685eec8d56d34d4d9c963e6667825548554f5bf308610af72133')  # libmpi.so.40.10.4
-    version('3.1.4', sha256='17a69e0054db530c7dc119f75bd07d079efa147cf94bf27e590905864fe379d6')  # libmpi.so.40.10.4
-    version('3.1.3', sha256='8be04307c00f51401d3fb9d837321781ea7c79f2a5a4a2e5d4eaedc874087ab6')  # libmpi.so.40.10.3
-    version('3.1.2', sha256='c654ed847f34a278c52a15c98add40402b4a90f0c540779f1ae6c489af8a76c5')  # libmpi.so.40.10.2
-    version('3.1.1', sha256='3f11b648dd18a8b878d057e9777f2c43bf78297751ad77ae2cef6db0fe80c77c')  # libmpi.so.40.10.1
-    version('3.1.0', sha256='b25c044124cc859c0b4e6e825574f9439a51683af1950f6acda1951f5ccdf06c')  # libmpi.so.40.10.0
-    version('3.0.5', sha256='f8976b95f305efc435aa70f906b82d50e335e34cffdbf5d78118a507b1c6efe8')  # libmpi.so.40.00.5
-    version('3.0.4', sha256='2ff4db1d3e1860785295ab95b03a2c0f23420cda7c1ae845c419401508a3c7b5')  # libmpi.so.40.00.5
-    version('3.0.3', sha256='fb228e42893fe6a912841a94cd8a0c06c517701ae505b73072409218a12cf066')  # libmpi.so.40.00.4
-    version('3.0.2', sha256='d2eea2af48c1076c53cabac0a1f12272d7470729c4e1cb8b9c2ccd1985b2fb06')  # libmpi.so.40.00.2
-    version('3.0.1', sha256='663450d1ee7838b03644507e8a76edfb1fba23e601e9e0b5b2a738e54acd785d')  # libmpi.so.40.00.1
-    version('3.0.0', sha256='f699bff21db0125d8cccfe79518b77641cd83628725a1e1ed3e45633496a82d7')  # libmpi.so.40.00.0
-
-    version('2.1.6', sha256='98b8e1b8597bbec586a0da79fcd54a405388190247aa04d48e8c40944d4ca86e')  # libmpi.20.20.10.3
 
     patch('ucx16.patch', when="@4.0.0:4.0.1")
-    patch('fix-ucx-1.7.0-api-instability.patch', when='@4.0.0:4.0.3')
+    patch('fix-ucx-1.7.0-api-instability.patch', when='@4.0.0:4.0.2')
 
     # Fixed in 3.0.3 and 3.1.3
     patch('btl_vader.patch', when='@3.0.1:3.0.2')
@@ -144,6 +131,7 @@ class Openmpi(AutotoolsPackage):
             description='Enable MPI_THREAD_MULTIPLE support')
     variant('cuda', default=False, description='Enable CUDA support')
     variant('pmix', default=True, description='Enable PMIx support')
+    variant('hcoll', default=True, description='Enable HCOLL support')
     variant('cxx_exceptions', default=True, description='Enable C++ Exception support')
     variant('sys_libevent', default=True, description='Enable system version of libevent')
     # Adding support to build a debug version of OpenMPI that activates
@@ -163,6 +151,9 @@ class Openmpi(AutotoolsPackage):
         default=False,
         description='Do not remove mpirun/mpiexec when building with slurm'
     )
+
+    # Include platform tuning parameters from mellanox
+    variant('mlnx-platform', default=True, description='Use Mellanox platform parameters')
 
     provides('mpi')
     provides('mpi@:2.2', when='@1.6.5')
@@ -191,11 +182,12 @@ class Openmpi(AutotoolsPackage):
     depends_on('zlib', when='@3.0.0:')
     depends_on('valgrind~mpi', when='+memchecker')
     depends_on('ucx', when='fabrics=ucx')
-    depends_on('ucx +thread_multiple', when='fabrics=ucx +thread_multiple')
-    depends_on('ucx +thread_multiple', when='@3.0.0: fabrics=ucx')
+    depends_on('ucx +thread_multiple', when='@3.0.0: fabrics=ucx +thread_multiple')
+    depends_on('ucx', when='@3.0.0: fabrics=ucx')
     depends_on('libfabric', when='fabrics=libfabric')
     depends_on('slurm', when='schedulers=slurm')
     depends_on('binutils+libiberty', when='fabrics=mxm')
+    depends_on('hcoll@4.5.3045', when='@4.0.0: +hcoll')
 
     conflicts('+cuda', when='@:1.6')  # CUDA support was added in 1.7
     conflicts('fabrics=psm2', when='@:1.8')  # PSM2 support was added in 1.10.0
@@ -207,10 +199,6 @@ class Openmpi(AutotoolsPackage):
     filter_compiler_wrappers('openmpi/*-wrapper-data*', relative_root='share')
     conflicts('fabrics=libfabric', when='@:1.8')  # libfabric support was added in 1.10.0
     # It may be worth considering making libfabric an exclusive fabrics choice
-
-    def _fabrics_activation(self, option_value):
-        if 'ucx' in option_value:
-            return self.spec['ucx'].prefix
 
     def url_for_version(self, version):
         url = "http://www.open-mpi.org/software/ompi/v{0}/downloads/openmpi-{1}.tar.bz2"
@@ -295,6 +283,14 @@ class Openmpi(AutotoolsPackage):
             line += '={0}'.format(path)
         return line
 
+    def with_or_without_ucx(self, activated):
+        opt='ucx'
+        if not activated:
+            return '--without-{0}'.format(opt)
+        line = '--with-{0}'.format(opt)
+        line += '={0}'.format(self.spec['ucx'].prefix)
+        return line
+
     @run_before('autoreconf')
     def die_without_fortran(self):
         # Until we can pass variants such as +fortran through virtual
@@ -321,6 +317,12 @@ class Openmpi(AutotoolsPackage):
         config_args = [
             '--without-xpmem',
         ]
+
+        # Mellanox parameters
+        if '+mlnx-platform' in spec:
+            config_args.extend([
+                '--with-platform=contrib/platform/mellanox/optimized'
+            ])
 
         # More verbose compile output for problem tracking
         config_args.extend([
@@ -390,6 +392,10 @@ class Openmpi(AutotoolsPackage):
         # RPM version of libevent
         if spec.satisfies('+sys_libevent'):
             config_args.append('--with-libevent=/usr')
+
+        # HCOLL
+        if spec.satisfies('+hcoll'):
+            config_args.append('--with-hcoll={0}'.format(spec['hcoll'].prefix))
 
         # Hwloc support
         if spec.satisfies('@1.5.2:'):
