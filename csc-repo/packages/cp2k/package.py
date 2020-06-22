@@ -27,7 +27,7 @@ class Cp2k(MakefilePackage, CudaPackage):
     version('develop', branch='master', submodules="True")
 
     variant('mpi', default=True, description='Enable MPI support')
-    variant('blas', default='openblas', values=('openblas', 'mkl', 'accelerate'),
+    variant('blas', default='openblas', values=('openblas', 'mkl', 'accelerate', 'amd-blis'),
             description='Enable the use of OpenBlas/MKL/Accelerate')
     variant('openmp', default=False, description='Enable OpenMP support')
     variant('smm', default='libxsmm', values=('libxsmm', 'libsmm', 'blas'),
@@ -77,6 +77,8 @@ class Cp2k(MakefilePackage, CudaPackage):
     # see #1712 for the reason to enumerate BLAS libraries here
     depends_on('openblas threads=none', when='blas=openblas ~openmp')
     depends_on('openblas threads=openmp', when='blas=openblas +openmp')
+    depends_on('amd-blis threads=none', when='blas=amd-blis ~openmp')
+    depends_on('amd-blis threads=openmp', when='blas=amd-blis +openmp')
     depends_on('lapack', when='blas=openblas ~openmp')
 
     depends_on('intel-mkl', when="blas=mkl ~openmp")
@@ -98,7 +100,7 @@ class Cp2k(MakefilePackage, CudaPackage):
         depends_on('libint@2.6.0:+fortran tune=cp2k-lmax-{0}'.format(lmax),
                    when='@7.0: lmax={0}'.format(lmax))
 
-    depends_on('libxc@2.2.2:', when='+libxc@:5.5999', type='build')
+    depends_on('libxc@2.2.2:2.9.9', when='+libxc@:5.5999', type='build')
     depends_on('libxc@4.0.3:', when='+libxc@6.0:6.9', type='build')
     depends_on('libxc@4.0.3:', when='+libxc@7.0:')
 
@@ -144,6 +146,8 @@ class Cp2k(MakefilePackage, CudaPackage):
     conflicts('%cray')
     conflicts('%nag')
     conflicts('%xl')
+
+    patch('line-too-long1.patch', level=1, when='@5.1')
 
     @property
     def makefile_architecture(self):
