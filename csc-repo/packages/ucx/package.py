@@ -44,6 +44,7 @@ class Ucx(AutotoolsPackage):
     depends_on('cuda', when='+cuda')
 
     depends_on('hcoll@4.4.2938', when='@1.7.0-mlnx')
+    depends_on('hcoll@4.5.3045', when='@1.8.0-mlnx')
 
     def configure_args(self):
         spec = self.spec
@@ -68,3 +69,11 @@ class Ucx(AutotoolsPackage):
             config_args.append('--disable-mt')
 
         return config_args
+
+    def setup_dependent_build_evironment(self, spack_env, dependent_spec):
+        spack_env.prepend_path('LD_LIBRARY_PATH', '{0}/ucx'.format(self.prefix.lib))
+        spack_env.prepend_path('LD_LIBRARY_PATH', '{0}'.format(self.prefix.lib))
+
+    def setup_dependent_run_environment(self, run_env, dependent_spec):
+        run_env.prepend_path('LD_LIBRARY_PATH', '{0}/ucx'.format(self.prefix.lib))
+        run_env.prepend_path('LD_LIBRARY_PATH', '{0}'.format(self.prefix.lib))
