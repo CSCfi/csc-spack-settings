@@ -1,5 +1,19 @@
 compilers:
 - compiler:
+    spec: gcc@4.8.5
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment:
+      unset: []
+    extra_rpaths: []
+- compiler:
     spec: gcc@9.3.0
     paths:
       cc: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/gcc

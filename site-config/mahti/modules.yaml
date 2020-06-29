@@ -9,53 +9,37 @@ modules:
       - mpi
     whitelist:
       - amd-blis
+      - amd-scalapack
       - 'bzip2%gcc@6.0.0:'
-      - 'bzip2%intel'
       - gcc
-      - gdal
-      - 'cuda%gcc@6.0.0:'
-      - 'cuda%intel'
-      - 'cuda%pgi'
-      - cudnn
       - cdo
       - cp2k
       - emacs
       - 'fftw%gcc@6.0.0:'
-      - 'fftw%intel'
       - git
       - git-lfs
       - 'gnuplot+X'
       - go
-      - 'grads%gcc@4.8.5'
-      - grass
-      - grib-api
       - gromacs
       - 'hdf5%gcc@6.0.0:'
-      - 'hdf5%intel'
       - htop
       - openmpi
       - openblas
       - hpcx-mpi
       - mariadb
       - 'mc%gcc@4.8.5'
-      - nco
+      - nano
+      - mg
       - mpich
-      - intel
       - intel-mkl
       - intel-mpi
-      - intel-parallel-studio
       - jemalloc
       - petsc
-      - pgi
       - 'p7zip%gcc@4.8.5'
-      - py-gpaw
       - netlib-scalapack
       - vim
-      - relion
       - 'gsl%gcc@6.0.0:'
-      - 'gsl%intel'
       - 'netcdf%gcc@6.0.0:'
-      - 'netcdf%intel'
       - netcdf-fortran
       - 'metis~int64'
       - 'patchelf%gcc@4.8.5'
@@ -63,18 +47,9 @@ modules:
       - perl
       - openfoam-org
       - 'boost%gcc@6.0.0:'
-      - 'boost%intel'
-      - 'boost%pgi'
-      - 'eccodes+fortran'
       - parallel-netcdf
-      - 'udunits2%gcc@6.0.0:'
-      - 'udunits2%intel'
-      - 'hdf%gcc@6.0.0:'
-      - 'hdf%intel'
-      - libemos
       - hpl
       - openjdk
-      - 'openmpi%pgi'
       - namd
       - 'cmake%gcc@4.8.5'
       - 'llvm%gcc@4.8.5'
@@ -85,14 +60,12 @@ modules:
       - zstd
       - nccl
     blacklist:
-      - 'hpcx-mpi ^cuda'
       - '%gcc@4.8.5'
       - '%gcc@7.4.0'
       - '%gcc@8.3.0'
       - '%gcc@9.3.0'
       - '%intel@19.0.4'
       - '%intel@18.0.5'
-      - '%pgi'
     all:
       conflict:
         - '${PACKAGE}'
@@ -128,20 +101,19 @@ modules:
           I_MPI_FC: ifort
           I_MPI_F90: ifort
           I_MPI_F77: ifort
-    intel-mpi:
+    openmpi:
       environment:
         set:
-          SLURM_MPI_TYPE: pmi2
+          SLURM_MPI_TYPE: pmix_v3
     fftw:
       suffixes:
         "+mpi": mpi
-        "+openmp": oml
+        "+openmp": omp
     boost:
       suffixes:
         "+mpi": mpi
     gromacs:
       suffixes:
-        "+cuda": cuda
         "+plumed": plumed
     hdf5:
       suffixes:
