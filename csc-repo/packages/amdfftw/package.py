@@ -11,7 +11,7 @@ import llnl.util.lang
 from spack import *
 
 
-class AmdFftw(AutotoolsPackage):
+class Amdfftw(AutotoolsPackage):
     """AMD Optimized FFTW
 
        FFTW is a C subroutine library for computing the discrete Fourier

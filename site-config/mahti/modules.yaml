@@ -5,16 +5,19 @@ modules:
     hash_length: 0
     core_compilers:
       - gcc@4.8.5
+      - gcc@7.5.0
     hierarchy:
       - mpi
     whitelist:
-      - amd-blis
-      - amd-scalapack
+      - amdblis
+      - amdscalapack
       - 'bzip2%gcc@6.0.0:'
-      - gcc
+      - 'gcc@9.3.0'
+      - 'gcc@7.4.0'
       - cdo
       - cp2k
       - emacs
+      - extrae
       - 'fftw%gcc@6.0.0:'
       - git
       - git-lfs
@@ -25,6 +28,7 @@ modules:
       - htop
       - openmpi
       - openblas
+      - papi
       - hpcx-mpi
       - mariadb
       - 'mc%gcc@4.8.5'
@@ -57,14 +61,21 @@ modules:
       - 'valgrind%gcc@4.8.5'
       - scalasca
       - scorep
+      - subversion
       - zstd
       - nccl
+      - amdlibflame
+      - amdblis
+      - llvm
+      - flang
     blacklist:
       - '%gcc@4.8.5'
       - '%gcc@7.4.0'
+      - '%gcc@7.5.0'
       - '%gcc@8.3.0'
       - '%gcc@9.3.0'
       - '%intel@19.0.4'
+      - '%intel@19.1.1'
       - '%intel@18.0.5'
     all:
       conflict:
@@ -72,6 +83,10 @@ modules:
       environment:
         set:
           ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
+    amdscalapack:
+      suffixes:
+        "^openblas threads=openmp": 'openblas-omp'
+        "^openblas threads=none": 'openblas'
     gcc:
       environment:
         set:
@@ -126,6 +141,12 @@ modules:
       suffixes:
         "intel-mkl threads=openmp": omp
     openblas:
+      suffixes:
+        "threads=openmp": omp
+    amdlibflame:
+      suffixes:
+        "threads=openmp": omp
+    amdblis:
       suffixes:
         "threads=openmp": omp
     cp2k:

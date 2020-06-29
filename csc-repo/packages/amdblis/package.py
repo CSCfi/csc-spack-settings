@@ -5,7 +5,7 @@
 
 from spack import *
 
-class AmdBlis(Package):
+class Amdblis(Package):
     """BLAS-like Library Instantiation Software Framework
 
     BLIS is a portable software framework for instantiating

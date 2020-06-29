@@ -7,7 +7,7 @@ from spack import *
 import sys
 
 
-class AmdScalapack(CMakePackage):
+class Amdscalapack(CMakePackage):
     """ScaLAPACK is a library of high-performance linear algebra routines for
     parallel distributed memory machines
     """

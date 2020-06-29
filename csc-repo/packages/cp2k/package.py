@@ -27,7 +27,7 @@ class Cp2k(MakefilePackage, CudaPackage):
     version('develop', branch='master', submodules="True")
 
     variant('mpi', default=True, description='Enable MPI support')
-    variant('blas', default='openblas', values=('openblas', 'mkl', 'accelerate', 'amd-blis'),
+    variant('blas', default='openblas', values=('openblas', 'mkl', 'accelerate', 'amdblis'),
             description='Enable the use of OpenBlas/MKL/Accelerate')
     variant('openmp', default=False, description='Enable OpenMP support')
     variant('smm', default='libxsmm', values=('libxsmm', 'libsmm', 'blas'),
@@ -77,8 +77,8 @@ class Cp2k(MakefilePackage, CudaPackage):
     # see #1712 for the reason to enumerate BLAS libraries here
     depends_on('openblas threads=none', when='blas=openblas ~openmp')
     depends_on('openblas threads=openmp', when='blas=openblas +openmp')
-    depends_on('amd-blis threads=none', when='blas=amd-blis ~openmp')
-    depends_on('amd-blis threads=openmp', when='blas=amd-blis +openmp')
+    depends_on('amdblis threads=none', when='blas=amdblis ~openmp')
+    depends_on('amdblis threads=openmp', when='blas=amdblis +openmp')
     depends_on('lapack', when='blas=openblas ~openmp')
 
     depends_on('intel-mkl', when="blas=mkl ~openmp")

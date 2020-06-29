@@ -6,7 +6,7 @@
 from spack import *
 
 
-class AmdLibflame(AutotoolsPackage):
+class Amdlibflame(AutotoolsPackage):
     """libflame is a portable library for dense matrix computations,
     providing much of the functionality present in LAPACK, developed
     by current and former members of the Science of High-Performance
