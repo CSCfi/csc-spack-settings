@@ -5,13 +5,13 @@ packages:
       group: m_installation_spack
     compiler: [gcc, intel]
     providers:
-      mpi: [openmpi, hpcx-mpi, mpich]
-      blas: [openblas, amd-blis]
-      lapack: [openblas, amd-libflame]
-      scalapack:: [amd-scalapack, netlib-scalapack]
-  amd-blis:
-    variants: threads=openmp
-  amd-libflame:
+      mpi: [csc.openmpi, hpcx-mpi, mpich]
+      blas: [openblas, amdblis]
+      lapack: [openblas, amdlibflame]
+      scalapack:: [amdscalapack, netlib-scalapack]
+  amdblis:
+    variants: threads=openmp cpuarch=zen2
+  amdlibflame:
     variants: threads=openmp
   libtool:
     version: [2.4.2, 2.4.6]
@@ -54,10 +54,12 @@ packages:
     paths:
       ucx@1.8.0-mlnx~cuda+thread_multiple: /appl/opt/ucx/1.8.0-mlnx/mt
       ucx@1.8.0-mlnx~cuda~thread_multiple: /appl/opt/ucx/1.8.0-mlnx
-  intel-parallel-studio:
+  intel-mkl:
+    variants: threads=openmp
     buildable: false
     paths:
-      intel-parallel-studio@cluster.2020.1%gcc@4.8.5 threads=openmp: /appl/opt/cluster_studio_xe2020
+      intel-mkl@2020.1.217%gcc: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
+      intel-mkl@2020.1.217%intel: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
   intel:
     buildable: false
     paths:
