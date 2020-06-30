@@ -28,6 +28,19 @@ compilers:
       unset: []
     extra_rpaths: []
 - compiler:
+    spec: gcc@7.5.0
+    paths:
+      cc: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-7.5.0-hc2aey/bin/gcc
+      cxx: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-7.5.0-hc2aey/bin/g++
+      f77: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-7.5.0-hc2aey/bin/gfortran
+      fc: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-7.5.0-hc2aey/bin/gfortran
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
     spec: gcc@7.4.0
     paths:
       cc: /appl/spack/v014/install-tree/gcc-4.8.5/gcc-7.4.0-lqxq3g/bin/gcc
@@ -47,12 +60,14 @@ compilers:
       cxx: /appl/opt/cluster_studio_xe2020/bin/icpc
       f77: /appl/opt/cluster_studio_xe2020/bin/ifort
       fc: /appl/opt/cluster_studio_xe2020/bin/ifort
-    flags:
-      cflags: "-gcc-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/gcc -gxx-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/g++ -march=core-avx2"
-      cxxflags: "-gcc-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/gcc -gxx-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/g++ -march=core-avx2"
-      fflags: "-gcc-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/gcc -gxx-name=/appl/spack/v014/install-tree/gcc-4.8.5/gcc-9.3.0-3cdxud/bin/g++ -march=core-avx2"
     operating_system: rhel7
     target: x86_64
     modules: []
-    environment: {}
-    extra_rpaths: []
+    environment:
+        set:
+          LD_LIBRARY_PATH: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin
+          ICCCFG: /appl/opt/intel_configs/icc_gcc93_csc.cfg
+          ICPCCFG: /appl/opt/intel_configs/icpc_gcc93_csc.cfg
+          IFORTCFG: /appl/opt/intel_configs/ifort_gcc93_csc.cfg
+    extra_rpaths:
+        - /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/compiler/lib/intel64_lin/
