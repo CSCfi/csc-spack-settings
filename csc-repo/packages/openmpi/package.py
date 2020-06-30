@@ -93,10 +93,6 @@ class Openmpi(AutotoolsPackage):
     patch('ucx16.patch', when="@4.0.0:4.0.1")
     patch('fix-ucx-1.7.0-api-instability.patch', when='@4.0.0:4.0.2')
 
-    # Fixed in 3.0.3 and 3.1.3
-    patch('btl_vader.patch', when='@3.0.1:3.0.2')
-    patch('btl_vader.patch', when='@3.1.0:3.1.2')
-
     variant(
         'fabrics',
         values=disjoint_sets(
@@ -155,10 +151,7 @@ class Openmpi(AutotoolsPackage):
     # Include platform tuning parameters from mellanox
     variant('mlnx-platform', default=True, description='Use Mellanox platform parameters')
 
-    provides('mpi')
-    provides('mpi@:2.2', when='@1.6.5')
-    provides('mpi@:3.0', when='@1.7.5:')
-    provides('mpi@:3.1', when='@2.0.0:')
+    provides('mpi@:3.1')
 
     if sys.platform != 'darwin':
         depends_on('numactl')
@@ -174,11 +167,9 @@ class Openmpi(AutotoolsPackage):
     # "configure: error: OMPI does not currently support hwloc v2 API"
     # Future ompi releases may support it, needs to be verified.
     # See #7483 for context.
-    depends_on('hwloc@:1.999', when='@:3.9.999')
 
     depends_on('hwloc +cuda', when='+cuda')
     depends_on('java', when='+java')
-    depends_on('sqlite', when='+sqlite3@:1.11')
     depends_on('zlib', when='@3.0.0:')
     depends_on('valgrind~mpi', when='+memchecker')
     depends_on('ucx', when='fabrics=ucx')
@@ -190,9 +181,6 @@ class Openmpi(AutotoolsPackage):
     depends_on('hcoll@4.5.3045', when='@4.0.0: +hcoll')
 
     conflicts('+cuda', when='@:1.6')  # CUDA support was added in 1.7
-    conflicts('fabrics=psm2', when='@:1.8')  # PSM2 support was added in 1.10.0
-    conflicts('fabrics=mxm', when='@:1.5.3')  # MXM support was added in 1.5.4
-    conflicts('+pmix', when='@:2.0.0')  # Check this and the scheduler part!
     conflicts('schedulers=slurm ~pmix', when='@2.0.0:',
               msg='+pmix is required for openmpi to work with SLURM.')
 
@@ -351,10 +339,6 @@ class Openmpi(AutotoolsPackage):
             config_args.append('--enable-static')
             config_args.extend(self.with_or_without('pmix'))
 
-        #if spec.satisfies('@2.0:'):
-            # for Open-MPI 2.0:, C++ bindings are disabled by default.
-        #    config_args.extend(['--enable-mpi-cxx'])
-
         if spec.satisfies('@3.0.0:', strict=True):
             config_args.append('--with-zlib={0}'.format(spec['zlib'].prefix))
 
@@ -413,25 +397,6 @@ class Openmpi(AutotoolsPackage):
                     '--disable-java',
                     '--disable-mpi-java'
                 ])
-
-        # SQLite3 support
-        if spec.satisfies('@1.7.3:1.999'):
-            if '+sqlite3' in spec:
-                config_args.append('--with-sqlite3')
-            else:
-                config_args.append('--without-sqlite3')
-
-        # VampirTrace support
-        if spec.satisfies('@1.3:1.999'):
-            if '+vt' not in spec:
-                config_args.append('--enable-contrib-no-build=vt')
-
-        # Multithreading support
-        if spec.satisfies('@1.5.4:2.999'):
-            if '+thread_multiple' in spec:
-                config_args.append('--enable-mpi-thread-multiple')
-            else:
-                config_args.append('--disable-mpi-thread-multiple')
 
         # CUDA support
         # See https://www.open-mpi.org/faq/?category=buildcuda
