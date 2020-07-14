@@ -18,6 +18,7 @@ class Amdscalapack(CMakePackage):
     maintainers = ['samiilvonen']
 
     version('develop', branch='master')
+    version('2.2', tag = '2.2')
     version('2.1', tag = 'v2.1')
     
     variant(
@@ -39,9 +40,9 @@ class Amdscalapack(CMakePackage):
     depends_on('cmake', when='@2.0.0:', type='build')
 
     # See: https://github.com/Reference-ScaLAPACK/scalapack/issues/9
-    patch("cmake_fortran_mangle.patch", when='@2.0.2:')
+    patch("cmake_fortran_mangle.patch", when='@2.1')
     # See: https://github.com/Reference-ScaLAPACK/scalapack/pull/10
-    patch("mpi2-compatibility.patch", when='@2.0.2:')
+    patch("mpi2-compatibility.patch", when='@2.1')
 
     @property
     def libs(self):

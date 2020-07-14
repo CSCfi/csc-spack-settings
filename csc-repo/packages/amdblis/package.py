@@ -23,6 +23,7 @@ class Amdblis(Package):
     maintainers = ['samiilvonen']
 
     version('develop', branch='master')
+    version('2.2', tag='2.2')
     version('2.1', tag='2.1')
     
     depends_on('python@2.7:2.8,3.4:', type=('build', 'run'))

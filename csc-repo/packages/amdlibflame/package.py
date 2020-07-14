@@ -23,6 +23,7 @@ class Amdlibflame(AutotoolsPackage):
     force_autoreconf = True
     
     version('master', branch='master')
+    version('2.2', tag='2.2')
     version('2.1', tag='v2.1')
 
     provides('lapack', when='+lapack2flame')
@@ -32,9 +33,9 @@ class Amdlibflame(AutotoolsPackage):
             ' to their corresponding native C implementations'
             ' in libflame.')
 
-    variant('threads', default='no',
+    variant('threads', default='none',
             description='Multithreading support',
-            values=('pthreads', 'openmp', 'no'),
+            values=('pthreads', 'openmp', 'none'),
             multi=False)
 
     variant('static', default=True,
@@ -72,6 +73,12 @@ class Amdlibflame(AutotoolsPackage):
             flags.append('-std=gnu99')
         return (flags, None, None)
 
+    def enable_or_disable_threads(self, variant, options):
+        opt_val = self.spec.variants['threads'].value
+        if variant_val == 'none':
+            opt_val = 'no'
+        return ['--enable-multithreading={0}'.format(opt_val)]
+
     def configure_args(self):
         # Libflame has a secondary dependency on BLAS,
         # but doesn't know which library name to expect:
@@ -98,10 +105,9 @@ class Amdlibflame(AutotoolsPackage):
         else:
             config_args.append("--disable-debug")
 
-        config_args.append('--enable-multithreading='
-                           + self.spec.variants['threads'].value)
+        config_args.extend(self.enable_or_disable('threads'))
 
-        if 'no' != self.spec.variants['threads'].value:
+        if 'none' != self.spec.variants['threads'].value:
             config_args.append("--enable-supermatrix")
         else:
             config_args.append("--disable-supermatrix")
