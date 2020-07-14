@@ -6,4 +6,4 @@ config:
     - /local_scratch/spack-stage
   module_roots:
     lmod: /appl/spack/v014/modulefiles
-  source_cache: /appl/spack/v014/spack/sources
+  source_cache: /appl/spack/v014/sources
