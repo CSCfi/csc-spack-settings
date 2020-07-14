@@ -15,7 +15,9 @@ modules:
       - 'gcc@9.3.0'
       - 'gcc@7.4.0'
       - cdo
+      - clang
       - cp2k
+      - 'curl%gcc@4.8.5'
       - emacs
       - extrae
       - 'fftw%gcc@6.0.0:'
@@ -25,14 +27,17 @@ modules:
       - go
       - gromacs
       - 'hdf5%gcc@6.0.0:'
+      - 'hdf5%intel@19.1.1'
       - htop
       - openmpi
       - openblas
       - papi
       - hpcx-mpi
       - mariadb
+      - mumps
       - 'mc%gcc@4.8.5'
       - nano
+      - 'numactl%gcc@4.8.5'
       - mg
       - mpich
       - intel-mkl
@@ -40,17 +45,19 @@ modules:
       - jemalloc
       - petsc
       - 'p7zip%gcc@4.8.5'
+      - pigz
       - netlib-scalapack
       - vim
       - 'gsl%gcc@6.0.0:'
       - 'netcdf%gcc@6.0.0:'
       - netcdf-fortran
+      - netcdf-c
       - 'metis~int64'
       - 'patchelf%gcc@4.8.5'
       - pdsh
-      - perl
+      - 'perl%gcc@4.8.5'
       - openfoam-org
-      - 'boost%gcc@6.0.0:'
+      - 'boost +atomic+chrono~clanglibcpp+context+coroutine cxxstd=14 +date_time~debug+exception+fiber+filesystem+graph+icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
       - parallel-netcdf
       - hpl
       - openjdk
@@ -62,13 +69,16 @@ modules:
       - scalasca
       - scorep
       - subversion
+      - tmux
       - zstd
       - nccl
       - amdlibflame
       - amdblis
-      - llvm
-      - flang
+      - hypre
+      - zoltan
+      - gsl
     blacklist:
+      - '%clang@10.0.0'
       - '%gcc@4.8.5'
       - '%gcc@7.4.0'
       - '%gcc@7.5.0'
@@ -85,8 +95,13 @@ modules:
           ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
     amdscalapack:
       suffixes:
-        "^openblas threads=openmp": 'openblas-omp'
-        "^openblas threads=none": 'openblas'
+        "^amdblis threads=openmp": omp
+    netlib-scalapack:
+      suffixes:
+        "^openblas threads=openmp": omp
+    mumps:
+      suffixes:
+        "^openblas thread=openmp": omp
     gcc:
       environment:
         set:
@@ -125,6 +140,9 @@ modules:
         "+mpi": mpi
         "+openmp": omp
     boost:
+      suffixes:
+        "+mpi": mpi
+    netcdf-c:
       suffixes:
         "+mpi": mpi
     gromacs:

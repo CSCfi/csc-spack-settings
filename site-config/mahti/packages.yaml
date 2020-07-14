@@ -6,8 +6,8 @@ packages:
     compiler: [gcc, intel]
     providers:
       mpi: [csc.openmpi, hpcx-mpi, mpich]
-      blas: [openblas, amdblis]
-      lapack: [openblas, amdlibflame]
+      blas: [csc.openblas, amdblis]
+      lapack: [csc.openblas, amdlibflame]
       scalapack:: [amdscalapack, netlib-scalapack]
   amdblis:
     variants: threads=openmp cpuarch=zen2
@@ -16,7 +16,7 @@ packages:
   libtool:
     version: [2.4.2, 2.4.6]
   openblas:
-    variants: threads=openmp
+    variants: +consistent_fpcsr threads=openmp
   openssl:
     buildable: false
     paths:
@@ -54,12 +54,12 @@ packages:
     paths:
       ucx@1.8.0-mlnx~cuda+thread_multiple: /appl/opt/ucx/1.8.0-mlnx/mt
       ucx@1.8.0-mlnx~cuda~thread_multiple: /appl/opt/ucx/1.8.0-mlnx
-  intel-mkl:
-    variants: threads=openmp
-    buildable: false
-    paths:
-      intel-mkl@2020.1.217%gcc: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
-      intel-mkl@2020.1.217%intel: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
+###  intel-mkl:
+###    variants: threads=openmp
+###    buildable: false
+###    paths:
+###      intel-mkl@2020.1.217%gcc: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
+###      intel-mkl@2020.1.217%intel: /appl/opt/cluster_studio_xe2020/compilers_and_libraries_2020.1.217/linux/mkl/
   intel:
     buildable: false
     paths:
