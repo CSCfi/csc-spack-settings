@@ -11,6 +11,7 @@ modules:
     whitelist:
       - amdblis
       - amdscalapack
+      - amdfftw
       - 'bzip2%gcc@6.0.0:'
       - 'gcc@9.3.0'
       - 'gcc@7.4.0'
@@ -96,6 +97,10 @@ modules:
     amdscalapack:
       suffixes:
         "^amdblis threads=openmp": omp
+    amdfftw:
+      suffixes:
+        "+mpi": mpi
+        "+openmp": omp
     netlib-scalapack:
       suffixes:
         "^openblas threads=openmp": omp
