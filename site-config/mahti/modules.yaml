@@ -10,6 +10,8 @@ modules:
       - mpi
     whitelist:
       - amdblis
+      - 'darshan-runtime%gcc@9.3.0'
+      - 'darshan-util%gcc@9.3.0'
       - amdscalapack
       - amdfftw
       - 'bzip2%gcc@6.0.0:'
@@ -19,6 +21,7 @@ modules:
       - clang
       - cp2k
       - 'curl%gcc@4.8.5'
+      - eccodes
       - emacs
       - extrae
       - 'fftw%gcc@6.0.0:'
@@ -35,6 +38,7 @@ modules:
       - papi
       - hpcx-mpi
       - mariadb
+      - mpip
       - mumps
       - 'mc%gcc@4.8.5'
       - nano
@@ -45,6 +49,7 @@ modules:
       - intel-mpi
       - jemalloc
       - petsc
+      - parallel-netcdf
       - 'p7zip%gcc@4.8.5'
       - pigz
       - netlib-scalapack
@@ -59,6 +64,7 @@ modules:
       - 'perl%gcc@4.8.5'
       - openfoam-org
       - 'boost +atomic+chrono~clanglibcpp+context+coroutine cxxstd=14 +date_time~debug+exception+fiber+filesystem+graph+icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
+      - 'boost@1.68.0+atomic+chrono~clanglibcpp~context~coroutine cxxstd=98 +date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math+mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
       - parallel-netcdf
       - hpl
       - openjdk
@@ -69,6 +75,7 @@ modules:
       - 'valgrind%gcc@4.8.5'
       - scalasca
       - scorep
+      - spindle
       - subversion
       - tmux
       - zstd
@@ -78,6 +85,9 @@ modules:
       - hypre
       - zoltan
       - gsl
+      - flux-core
+      - flux-sched
+      - tau
     blacklist:
       - '%clang@10.0.0'
       - '%gcc@4.8.5'
@@ -101,12 +111,20 @@ modules:
       suffixes:
         "+mpi": mpi
         "+openmp": omp
+    tau:
+      suffixes:
+        "+mpi": mpi
+        "+openmp": omp
+        "+pdt": pdt
     netlib-scalapack:
       suffixes:
         "^openblas threads=openmp": omp
     mumps:
       suffixes:
         "^openblas thread=openmp": omp
+    hpl:
+      suffixes:
+        "+openmp": omp
     gcc:
       environment:
         set:
@@ -140,6 +158,7 @@ modules:
       environment:
         set:
           SLURM_MPI_TYPE: pmix_v3
+          OMPI_MCA_coll_hcoll_enable: "0"
     fftw:
       suffixes:
         "+mpi": mpi
