@@ -90,6 +90,8 @@ class Openmpi(AutotoolsPackage):
     version('4.0.1', sha256='cce7b6d20522849301727f81282201d609553103ac0b09162cf28d102efb9709')  # libmpi.so.40.20.1
     version('4.0.0', sha256='2f0b8a36cfeb7354b45dda3c5425ef8393c9b04115570b615213faaa3f97366b')  # libmpi.so.40.20.0
 
+    version('3.1.6', sha256='50131d982ec2a516564d74d5616383178361c2f08fdd7d1202b80bdf66a0d279')
+
     patch('ucx16.patch', when="@4.0.0:4.0.1")
     patch('fix-ucx-1.7.0-api-instability.patch', when='@4.0.0:4.0.2')
 
@@ -162,7 +164,7 @@ class Openmpi(AutotoolsPackage):
     depends_on('m4',       type='build', when='@develop')
     depends_on('perl',     type='build', when='@develop')
 
-    depends_on('hwloc')
+    depends_on('hwloc', when='shedulers=none')
     # ompi@:3.0.0 doesn't support newer hwloc releases:
     # "configure: error: OMPI does not currently support hwloc v2 API"
     # Future ompi releases may support it, needs to be verified.
@@ -383,7 +385,12 @@ class Openmpi(AutotoolsPackage):
 
         # Hwloc support
         if spec.satisfies('@1.5.2:'):
-            config_args.append('--with-hwloc={0}'.format(spec['hwloc'].prefix))
+            # When using slurm + pmix + openmpi, hwloc should be same for all
+            if spec.satisfies('schedulers=slurm'):
+                config_args.append('--with-hwloc={0}'.format(spec['slurm'].prefix))
+            else:
+                config_args.append('--with-hwloc={0}'.format(spec['hwloc'].prefix))
+
         # Java support
         if spec.satisfies('@1.7.4:'):
             if '+java' in spec:
