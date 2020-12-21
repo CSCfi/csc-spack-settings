@@ -20,6 +20,7 @@ class Mariadb(CMakePackage):
     homepage = "https://mariadb.org/about/"
     url = "http://ftp.hosteurope.de/mirror/archive.mariadb.org/mariadb-10.2.8/source/mariadb-10.2.8.tar.gz"
 
+    version('10.4.14', sha256='f92fcd59e0122461482f28c67c5ea01c7cf6979494a571db68074396864c86fc')
     version('10.4.8', sha256='10cc2c3bdb76733c9c6fd1e3c6c860d8b4282c85926da7d472d2a0e00fffca9b')
     version('10.4.7', sha256='c8e6a6d0bb4f22c416ed675d24682a3ecfa383c5283efee70c8edf131374d817')
     version('10.2.8', sha256='8dd250fe79f085e26f52ac448fbdb7af2a161f735fae3aed210680b9f2492393')
@@ -44,6 +45,8 @@ class Mariadb(CMakePackage):
     depends_on('libevent', when='+nonblocking')
     depends_on('ncurses')
     depends_on('zlib')
+
+    build_directory = '.'
 
     def cmake_args(self):
         spec = self.spec

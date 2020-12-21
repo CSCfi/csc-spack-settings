@@ -18,6 +18,7 @@ class Openblas(MakefilePackage):
     git      = 'https://github.com/xianyi/OpenBLAS.git'
 
     version('develop', branch='develop')
+    version('0.3.12', sha256='65a7d3a4010a4e3bd5c0baa41a234797cd3a1735449a4a5902129152601dc57b')
     version('0.3.10', sha256='0484d275f87e9b8641ff2eecaa9df2830cbe276ac79ad80494822721de6e1693')
     version('0.3.9', sha256='17d4677264dfbc4433e97076220adc79b050e4f8a083ea3f853a53af253bc380')
     version('0.3.8', sha256='8f86ade36f0dbed9ac90eb62575137388359d97d8f93093b38abe166ad7ef3a8')
@@ -73,6 +74,12 @@ class Openblas(MakefilePackage):
     # Fix CMake export symbol error
     # https://github.com/xianyi/OpenBLAS/pull/1703
     patch('openblas-0.3.2-cmake.patch', when='@0.3.1:0.3.2')
+
+    # Fix OpenMP thread binding issues
+    # https://github.com/xianyi/OpenBLAS/commit/10a2923f640e9b1aa3f8bca34e71481586aa3acd
+    patch('https://github.com/xianyi/OpenBLAS/commit/10a2923f640e9b1aa3f8bca34e71481586aa3acd.patch',
+          sha256='4a4b50523db9295924dc9cd1ba845bce4d9cc01de876a546469720a1cc29c884',
+          when='@0.3.10')
 
     # Disable experimental TLS code that lead to many threading issues
     # https://github.com/xianyi/OpenBLAS/issues/1735#issuecomment-422954465

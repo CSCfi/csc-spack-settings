@@ -28,7 +28,7 @@ class Clang(Package):
     def url_for_version(self, version):
         return "file://{0}/aocc-compiler-{1}.tar".format(os.getcwd(), version)
 
-    def setup_dependent_environment(self, spack_env, run_env, dependent_spec):
+    def setup_dependent_build_environment(self, spack_env, dependent_spec):
         """Add paths to dependent environments.
 
         Note that lib32 is skipped intentionally"""
@@ -36,10 +36,17 @@ class Clang(Package):
         spack_env.prepend_path('LIBRARY_PATH',        self.prefix.lib)
         spack_env.prepend_path('C_INCLUDE_PATH',      self.prefix.include)
         spack_env.prepend_path('C_PLUS_INCLUDE_PATH', self.prefix.include)
-        run_env.prepend_path('LD_LIBRARY_PATH',     self.prefix.lib)
-        run_env.prepend_path('LIBRARY_PATH',        self.prefix.lib)
+
+    def setup_run_environment(self, run_env):
+        """Add paths to run environments.
+
+        Note that lib32 is skipped intentionally"""
         run_env.prepend_path('C_INCLUDE_PATH',      self.prefix.include)
         run_env.prepend_path('C_PLUS_INCLUDE_PATH', self.prefix.include)
 
     def install(self, spec, prefix):
         install_tree('.', prefix)
+
+    #@run_after('install')
+    #def link_gcc(self):
+    #    ln = which('ln')
