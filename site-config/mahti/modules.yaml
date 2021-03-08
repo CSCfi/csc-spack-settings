@@ -15,6 +15,7 @@ modules:
       - amdscalapack
       - amdfftw
       - 'bzip2%gcc@6.0.0:'
+      - blitz
       - 'gcc@9.3.0'
       - 'gcc@7.4.0'
       - cdo
@@ -30,10 +31,12 @@ modules:
       - 'gnuplot+X'
       - go
       - gromacs
+      - grib-api
       - 'hdf5%gcc@6.0.0:'
       - 'hdf5%intel@19.1.1'
       - htop
       - openmpi
+      - slepc
       - openblas
       - papi
       - hpcx-mpi
@@ -48,6 +51,7 @@ modules:
       - intel-mkl
       - intel-mpi
       - jemalloc
+      - jasper
       - petsc
       - parallel-netcdf
       - 'p7zip%gcc@4.8.5'
@@ -73,6 +77,7 @@ modules:
       - 'llvm%gcc@4.8.5'
       - 'intel%gcc@4.8.5'
       - 'valgrind%gcc@4.8.5'
+      - 'rsync%gcc@4.8.5'
       - scalasca
       - scorep
       - spindle
