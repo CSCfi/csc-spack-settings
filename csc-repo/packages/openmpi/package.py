@@ -164,7 +164,10 @@ class Openmpi(AutotoolsPackage):
     depends_on('m4',       type='build', when='@develop')
     depends_on('perl',     type='build', when='@develop')
 
-    depends_on('hwloc', when='shedulers=none')
+    # This update is pending and waiting for openmpi update
+    # Enabling this breaks the concretizer for current installations!
+    # depends_on('hwloc', when='shedulers=none')
+    depends_on('hwloc')
     # ompi@:3.0.0 doesn't support newer hwloc releases:
     # "configure: error: OMPI does not currently support hwloc v2 API"
     # Future ompi releases may support it, needs to be verified.
