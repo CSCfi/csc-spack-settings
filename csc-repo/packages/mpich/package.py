@@ -12,13 +12,14 @@ class Mpich(AutotoolsPackage):
     """MPICH is a high performance and widely portable implementation of
     the Message Passing Interface (MPI) standard."""
 
-    homepage = "http://www.mpich.org"
-    url      = "http://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz"
+    homepage = "https://www.mpich.org"
+    url      = "https://www.mpich.org/static/downloads/3.0.4/mpich-3.0.4.tar.gz"
     git      = "https://github.com/pmodels/mpich.git"
-    list_url = "http://www.mpich.org/static/downloads/"
+    list_url = "https://www.mpich.org/static/downloads/"
     list_depth = 1
 
     version('develop', submodules=True)
+    version('3.4',   sha256='ce5e238f0c3c13ab94a64936060cff9964225e3af99df1ea11b130f20036c24b')
     version('3.3.2', sha256='4bfaf8837a54771d3e4922c84071ef80ffebddbb6971a006038d91ee7ef959b9')
     version('3.3.1', sha256='fe551ef29c8eea8978f679484441ed8bb1d943f6ad25b63c235d4b9243d551e5')
     version('3.3',   sha256='329ee02fe6c3d101b6b30a7b6fb97ddf6e82b28844306771fa9dd8845108fa0b')
@@ -32,7 +33,6 @@ class Mpich(AutotoolsPackage):
     version('3.0.4', sha256='cf638c85660300af48b6f776e5ecd35b5378d5905ec5d34c3da7a27da0acf0b3')
 
     variant('hydra', default=True,  description='Build the hydra process manager')
-    variant('hcoll', default=False, description='Build with hcoll support')
     variant('romio', default=True,  description='Enable ROMIO MPI I/O implementation')
     variant('verbs', default=False, description='Build support for OpenFabrics verbs.')
     variant('slurm', default=False, description='Enable SLURM support')
@@ -65,6 +65,8 @@ spack package at this time.''',
     variant('pci', default=(sys.platform != 'darwin'),
             description="Support analyzing devices on PCI bus")
 
+    variant('hcoll', default=True, description='Enable HCOLL support')
+
     provides('mpi')
     provides('mpi@:3.0', when='@3:')
     provides('mpi@:1.3', when='@1:')
@@ -81,9 +83,11 @@ spack package at this time.''',
     # Fix SLURM node list parsing
     # See https://github.com/pmodels/mpich/issues/3572
     # and https://github.com/pmodels/mpich/pull/3578
+    # Even though there is no version 3.3.0, we need to specify 3.3:3.3.0 in
+    # the when clause, otherwise the patch will be applied to 3.3.1, too.
     patch('https://github.com/pmodels/mpich/commit/b324d2de860a7a2848dc38aefb8c7627a72d2003.patch',
           sha256='c7d4ecf865dccff5b764d9c66b6a470d11b0b1a5b4f7ad1ffa61079ad6b5dede',
-          when='@3.3.0')
+          when='@3.3:3.3.0')
 
     depends_on('findutils', type='build')
     depends_on('pkgconfig', type='build')
@@ -109,6 +113,8 @@ spack package at this time.''',
     depends_on("m4", when="@develop", type=("build")),
     depends_on("autoconf@2.67:", when='@develop', type=("build"))
 
+    depends_on("hcoll@4.5.3045", when="+hcoll")
+
     conflicts('device=ch4', when='@:3.2')
     conflicts('netmod=ofi', when='@:3.1.4')
     conflicts('netmod=ucx', when='device=ch3')
@@ -118,41 +124,6 @@ spack package at this time.''',
     conflicts('pmi=pmi2', when='device=ch3 netmod=ofi')
     conflicts('pmi=pmix', when='device=ch3')
 
-    # Copied from OpenMPI package
-    @property
-    def _mxm_dir(self):
-        """Look for default directory where the Mellanox package is
-        installed. Return None if not found.
-        """
-        # Only using default directory; make this more flexible in the future
-        path = "/opt/mellanox/mxm"
-        if os.path.isdir(path):
-            return path
-        else:
-            return None
-
-    @property
-    def _hcoll_dir(self):
-        """Look for default directory where the Mellanox package is
-        installed. Return None if not found.
-        """
-        path = "/opt/mellanox/hcoll"
-        if os.path.isdir(path):
-            return path
-        else:
-            return None
-
-    @property
-    def _ucx_dir(self):
-        """Look for default directory where the Mellanox package is
-        installed. Return None if not found.
-        """
-        path = "/usr"
-        if os.path.isdir(path):
-            return path
-        else:
-            return None
-        
     def setup_build_environment(self, env):
         env.unset('F90')
         env.unset('F90FLAGS')
@@ -214,14 +185,13 @@ spack package at this time.''',
 
     def configure_args(self):
         spec = self.spec
-        hcdir = self._hcoll_dir
         config_args = [
             '--enable-shared',
-            '--disable-gl',
             '--with-pm={0}'.format('hydra' if '+hydra' in spec else 'no'),
             '--{0}-romio'.format('enable' if '+romio' in spec else 'disable'),
             '--{0}-ibverbs'.format('with' if '+verbs' in spec else 'without'),
-            '--with-hcoll={0}'.format(hcdir if '+hcoll' in spec and hcdir else 'no')
+            '--enable-wrapper-rpath={0}'.format('no' if '~wrapperrpath' in
+                                                spec else 'yes')
         ]
 
         if '+slurm' in spec:
@@ -242,15 +212,9 @@ spack package at this time.''',
         elif 'pmi=pmix' in spec:
             config_args.append('--with-pmix={0}'.format(spec['pmix'].prefix))
 
-        # mxm, assume default location
-        if 'netmod=mxm' in spec:
-            if self._mxm_dir:
-                config_args.append('--with-mxm={0}'.format(self._mxm_dir))
-            else:
-                raise InstallError(
-                    'Variant mxm requested, but library not found!'
-                    )
-            
+        if '+hcoll' in spec:
+            config_args.append('--with-hcoll={0}'.format(spec['hcoll'].prefix))
+
         # setup device configuration
         device_config = ''
         if 'device=ch4' in spec:
@@ -269,13 +233,13 @@ spack package at this time.''',
 
         config_args.append(device_config)
 
-        # Specify libfabric's path explicitly, otherwise configure might fall
-        # back to an embedded version of libfabric.
+        # Specify libfabric or ucx path explicitly, otherwise
+        # configure might fall back to an embedded version.
         if 'netmod=ofi' in spec:
             config_args.append('--with-libfabric={0}'.format(
                 spec['libfabric'].prefix))
-
         if 'netmod=ucx' in spec:
-            config_args.append('--with-ucx={0}'.format('/usr'))
+            config_args.append('--with-ucx={0}'.format(
+                spec['ucx'].prefix))
 
         return config_args
