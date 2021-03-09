@@ -43,6 +43,7 @@ modules:
       - 'htop%gcc@4.8.5'
       - ipm
       - mariadb
+      - 'papi%gcc@4.8.5'
       - 'mc%gcc@4.8.5'
       - 'nano%gcc@4.8.5'
       - nco
