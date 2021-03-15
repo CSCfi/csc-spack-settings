@@ -45,6 +45,7 @@ modules:
       - mumps
       - 'mc%gcc@4.8.5'
       - nano
+      - nco
       - 'numactl%gcc@4.8.5'
       - mg
       - mpich
