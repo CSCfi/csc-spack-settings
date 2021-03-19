@@ -10,90 +10,87 @@ modules:
       - mpi
     whitelist:
       - amdblis
-      - 'darshan-runtime%gcc@9.3.0'
-      - 'darshan-util%gcc@9.3.0'
-      - amdscalapack
       - amdfftw
-      - 'bzip2%gcc@6.0.0:'
+      - amdlibflame
+      - amdscalapack
       - blitz
-      - 'gcc@9.3.0'
-      - 'gcc@7.4.0'
+      - 'boost +atomic+chrono~clanglibcpp+context+coroutine cxxstd=14 +date_time~debug+exception+fiber+filesystem+graph+icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
+      - 'boost@1.68.0+atomic+chrono~clanglibcpp~context~coroutine cxxstd=98 +date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math+mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
+      - 'bzip2%gcc@6.0.0:'
       - cdo
       - clang
+      - 'cmake%gcc@4.8.5'
       - cp2k
       - 'curl%gcc@4.8.5'
+      - 'darshan-runtime%gcc@9.3.0'
+      - 'darshan-util%gcc@9.3.0'
       - eccodes
-      - emacs
+      - 'emacs%gcc@4.8.5'
       - extrae
       - 'fftw%gcc@6.0.0:'
+      - flux-core
+      - flux-sched
+      - 'gcc@7.4.0'
+      - 'gcc@9.3.0'
       - git
       - git-lfs
       - 'gnuplot+X'
       - go
-      - gromacs
       - grib-api
+      - gromacs
+      - 'gsl%gcc@6.0.0:'
       - 'hdf5%gcc@6.0.0:'
       - 'hdf5%intel@19.1.1'
-      - htop
-      - openmpi
-      - slepc
-      - openblas
-      - papi
       - hpcx-mpi
-      - mariadb
-      - mpip
-      - mumps
-      - 'mc%gcc@4.8.5'
-      - nano
-      - nco
-      - 'numactl%gcc@4.8.5'
-      - mg
-      - mpich
+      - hpl
+      - htop
+      - hypre
+      - 'intel%gcc@4.8.5'
       - intel-mkl
       - intel-mpi
-      - jemalloc
       - jasper
-      - petsc
-      - parallel-netcdf
-      - 'p7zip%gcc@4.8.5'
-      - pigz
-      - netlib-scalapack
-      - vim
-      - 'gsl%gcc@6.0.0:'
-      - 'netcdf%gcc@6.0.0:'
-      - netcdf-fortran
-      - netcdf-c
+      - jemalloc
+      - 'llvm%gcc@4.8.5'
+      - mariadb
+      - 'mc%gcc@4.8.5'
       - 'metis~int64'
+      - mg
+      - mpich
+      - mpip
+      - mumps
+      - namd
+      - nano
+      - nccl
+      - 'nco%gcc@4.8.5'
+      - 'netcdf%gcc@6.0.0:'
+      - 'netcdf-c%gcc@6.0.0:'
+      - 'netcdf-fortran%gcc@6.0.0:'
+      - netlib-scalapack
+      - 'numactl%gcc@4.8.5'
+      - openblas
+      - openfoam-org
+      - openjdk
+      - openmpi
+      - 'p7zip%gcc@4.8.5'
+      - papi
+      - parallel-netcdf
       - 'patchelf%gcc@4.8.5'
       - pdsh
       - 'perl%gcc@4.8.5'
-      - openfoam-org
-      - 'boost +atomic+chrono~clanglibcpp+context+coroutine cxxstd=14 +date_time~debug+exception+fiber+filesystem+graph+icu+iostreams+locale+log+math~mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
-      - 'boost@1.68.0+atomic+chrono~clanglibcpp~context~coroutine cxxstd=98 +date_time~debug+exception~fiber+filesystem+graph~icu+iostreams+locale+log+math+mpi+multithreaded~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded+system~taggedlayout+test+thread+timer~versionedlayout visibility=hidden +wave'
-      - parallel-netcdf
-      - hpl
-      - openjdk
-      - namd
-      - 'cmake%gcc@4.8.5'
-      - 'llvm%gcc@4.8.5'
-      - 'intel%gcc@4.8.5'
-      - 'valgrind%gcc@4.8.5'
+      - petsc
+      - pigz
       - 'rsync%gcc@4.8.5'
       - scalasca
       - scorep
+      - slepc
       - spindle
       - subversion
-      - tmux
-      - zstd
-      - nccl
-      - amdlibflame
-      - amdblis
-      - hypre
-      - zoltan
-      - gsl
-      - flux-core
-      - flux-sched
       - tau
+      - tmux
+      - 'valgrind%gcc@4.8.5'
+      - vim
+      - zoltan
+      - zstd
     blacklist:
       - '%clang@10.0.0'
       - '%gcc@4.8.5'
@@ -101,35 +98,37 @@ modules:
       - '%gcc@7.5.0'
       - '%gcc@8.3.0'
       - '%gcc@9.3.0'
+      - '%intel@18.0.5'
       - '%intel@19.0.4'
       - '%intel@19.1.1'
-      - '%intel@18.0.5'
     all:
       conflict:
         - '${PACKAGE}'
       environment:
         set:
           ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
-    amdscalapack:
+    amdblis:
       suffixes:
-        "^amdblis threads=openmp": omp
+        "threads=openmp": omp
     amdfftw:
       suffixes:
         "+mpi": mpi
         "+openmp": omp
-    tau:
+    amdlibflame:
+      suffixes:
+        "threads=openmp": omp
+    amdscalapack:
+      suffixes:
+        "^amdblis threads=openmp": omp
+    boost:
       suffixes:
         "+mpi": mpi
+    cp2k:
+      suffixes:
         "+openmp": omp
-        "+pdt": pdt
-    netlib-scalapack:
+    fftw:
       suffixes:
-        "^openblas threads=openmp": omp
-    mumps:
-      suffixes:
-        "^openblas thread=openmp": omp
-    hpl:
-      suffixes:
+        "+mpi": mpi
         "+openmp": omp
     gcc:
       environment:
@@ -144,6 +143,15 @@ modules:
           I_MPI_FC: gfortran
           I_MPI_F90: gfortran
           I_MPI_F77: gfortran
+    gromacs:
+      suffixes:
+        "+plumed": plumed
+    hdf5:
+      suffixes:
+        "+mpi": mpi
+    hpl:
+      suffixes:
+        "+openmp": omp
     intel:
       environment:
         set:
@@ -160,43 +168,32 @@ modules:
           I_MPI_FC: ifort
           I_MPI_F90: ifort
           I_MPI_F77: ifort
+    intel-mkl:
+      suffixes:
+        "intel-mkl threads=openmp": omp
+    mumps:
+      suffixes:
+        "^openblas thread=openmp": omp
+    netcdf-c:
+      suffixes:
+        "+mpi": mpi
+    netlib-scalapack:
+      suffixes:
+        "^openblas threads=openmp": omp
+    openblas:
+      suffixes:
+        "threads=openmp": omp
     openmpi:
       environment:
         set:
           SLURM_MPI_TYPE: pmix_v3
           OMPI_MCA_coll_hcoll_enable: "0"
-    fftw:
-      suffixes:
-        "+mpi": mpi
-        "+openmp": omp
-    boost:
-      suffixes:
-        "+mpi": mpi
-    netcdf-c:
-      suffixes:
-        "+mpi": mpi
-    gromacs:
-      suffixes:
-        "+plumed": plumed
-    hdf5:
-      suffixes:
-        "+mpi": mpi
     petsc:
       suffixes:
         "+complex+double": cmplx
         "+int64": int64
-    intel-mkl:
+    tau:
       suffixes:
-        "intel-mkl threads=openmp": omp
-    openblas:
-      suffixes:
-        "threads=openmp": omp
-    amdlibflame:
-      suffixes:
-        "threads=openmp": omp
-    amdblis:
-      suffixes:
-        "threads=openmp": omp
-    cp2k:
-      suffixes:
+        "+mpi": mpi
         "+openmp": omp
+        "+pdt": pdt
