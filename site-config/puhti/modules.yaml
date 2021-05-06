@@ -97,7 +97,7 @@ modules:
       - slepc
       - 'splits%gcc@9.1.0+gui'
       - 'subversion%gcc@4.8.5+perl'
-      - tar%gcc@4.8.5'
+      - 'tar%gcc@4.8.5'
       - 'udunits2%gcc@6.0.0:'
       - 'udunits2%intel'
       - 'valgrind%gcc@4.8.5'
