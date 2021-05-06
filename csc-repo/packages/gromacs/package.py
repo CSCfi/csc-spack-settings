@@ -25,6 +25,8 @@ class Gromacs(CMakePackage):
     maintainers = ['junghans', 'marvinbernhardt']
 
     version('develop', branch='master')
+    version('2021.2', sha256='d940d865ea91e78318043e71f229ce80d32b0dc578d64ee5aa2b1a4be801aadb')
+    version('2021.1', sha256='bc1d0a75c134e1fb003202262fe10d3d32c59bbb40d714bc3e5015c71effe1e5')
     version('2020.5', sha256='7b6aff647f7c8ee1bf12204d02cef7c55f44402a73195bd5f42cf11850616478')
     version('2020.4', sha256='5519690321b5500c7951aaf53ff624042c3edd1a5f5d6dd1f2d802a3ecdbf4e6')
     version('2020.3', sha256='903183691132db14e55b011305db4b6f4901cc4912d2c56c131edfef18cc92a9')
@@ -100,12 +102,20 @@ class Gromacs(CMakePackage):
         if '~shared' in self.spec:
             options.append('-DBUILD_SHARED_LIBS:BOOL=OFF')
 
-        if '+cuda' in self.spec:
-            options.append('-DGMX_GPU:BOOL=ON')
-            options.append('-DCUDA_TOOLKIT_ROOT_DIR:STRING=' +
-                           self.spec['cuda'].prefix)
+        if self.version >= Version('2021'):
+            if '+cuda' in self.spec:
+                options.append('-DGMX_GPU:STRING=CUDA')
+            elif '+opencl' in self.spec:
+                options.append('-DGMX_GPU:STRING=OpenCL')
+            else:
+                options.append('-DGMX_GPU:STRING=OFF')
         else:
-            options.append('-DGMX_GPU:BOOL=OFF')
+            if '+cuda' in self.spec:
+                options.append('-DGMX_GPU:BOOL=ON')
+                options.append('-DCUDA_TOOLKIT_ROOT_DIR:STRING=' +
+                               self.spec['cuda'].prefix)
+            else:
+                options.append('-DGMX_GPU:BOOL=OFF')
 
         simd_value = self.spec.variants['simd'].value
         if simd_value == 'auto':
