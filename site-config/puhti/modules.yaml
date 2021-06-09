@@ -168,6 +168,10 @@ modules:
       environment:
         set:
           PMIX_MCA_gds: ^21
+    hpcx-mpi+cuda:
+      environment:
+        set:
+          UCX_MAX_RNDV_RAILS: '1'
     intel:
       environment:
         set:
@@ -199,6 +203,10 @@ modules:
       environment:
         set:
           SLURM_MPI_TYPE: pmix_v2
+    openmpi+cuda:
+      environment:
+        set:
+          UCX_MAX_RNDV_RAILS: '1'
       suffixes:
         "+cuda": cuda
     petsc:
