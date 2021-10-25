@@ -5,9 +5,9 @@ packages:
       group: p_installation_spack
     compiler: [gcc, intel]
     providers:
-      mpi: [csc.openmpi, intel-mpi]
-      blas: [mkl]
-      lapack: [mkl]
+      mpi: [csc.openmpi, intel-mpi, mpich]
+      blas: [mkl, openblas]
+      lapack: [mkl, openblas]
       scalapack: [netlib-scalapack]
   fftw:
     variants: +fma simd=avx512
