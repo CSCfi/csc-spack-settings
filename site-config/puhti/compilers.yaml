@@ -12,3 +12,76 @@ compilers:
       fc: /usr/bin/gfortran
     spec: gcc@4.8.5
     target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@8.4.0
+    paths:
+      cc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-8.4.0-tvvvod/bin/gcc
+      cxx: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-8.4.0-tvvvod/bin/g++
+      f77: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-8.4.0-tvvvod/bin/gfortran
+      fc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-8.4.0-tvvvod/bin/gfortran
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@2021.3.0
+    paths:
+      cc: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/intel64/icc
+      cxx: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/intel64/icpc
+      f77: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/intel64/ifort
+      fc: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/intel64/ifort
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment:
+      set:
+        ICCCFG: /appl/opt/intel_configs/icc_gcc83_csc.cfg
+        ICPCCFG: /appl/opt/intel_configs/icpc_gcc83_csc.cfg
+        IFORTCFG: /appl/opt/intel_configs/ifort_gcc83_csc.cfg
+    extra_rpaths: []
+- compiler:
+    spec: oneapi@2021.3.0
+    paths:
+      cc: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/icx
+      cxx: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/icpx
+      f77: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/ifx
+      fc: /appl/spack/v016/install-tree/gcc-8.4.0/intel-oneapi-compilers-2021.3.0-ud4z6f/compiler/2021.3.0/linux/bin/ifx
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@9.4.0
+    paths:
+      cc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-9.4.0-56abzq/bin/gcc
+      cxx: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-9.4.0-56abzq/bin/g++
+      f77: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-9.4.0-56abzq/bin/gfortran
+      fc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-9.4.0-56abzq/bin/gfortran
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@11.2.0
+    paths:
+      cc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-11.2.0-co37hp/bin/gcc
+      cxx: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-11.2.0-co37hp/bin/g++
+      f77: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-11.2.0-co37hp/bin/gfortran
+      fc: /appl/spack/v016/install-tree/gcc-4.8.5/gcc-11.2.0-co37hp/bin/gfortran
+    flags: {}
+    operating_system: rhel7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths:
+      - /appl/spack/v016/install-tree/gcc-4.8.5/binutils-2.35.1-tf62ij/lib/
