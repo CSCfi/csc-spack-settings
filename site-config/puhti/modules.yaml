@@ -1,21 +1,39 @@
 modules:
   enable::
     - lmod
+    - tcl
   lmod:
     hash_length: 0
     core_compilers:
       - gcc@4.8.5
+      - gcc@8.4.0
     hierarchy:
       - mpi
     whitelist:
+      - intel-oneapi-compilers
+      - intel-oneapi-mkl
+      - intel-oneapi-mpi
+      - intel-oneapi-tbb
+      - 'fftw%intel'
+      - 'hdf5%intel'
+      - 'netcdf-c%intel'
+      - 'netcdf-fortran%intel'
     blacklist:
-      - '%gcc@4.8.5'
+      - '%gcc'
+      - '%intel'
     all:
       conflict:
         - '${PACKAGE}'
       environment:
         set:
           ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
+    darshan-runtime:
+      suffixes:
+        "~mpi": serial
+    fftw:
+      suffixes:
+        "+mpi~openmp": mpi
+        "~mpi+openmp": omp
     gcc:
       environment:
         set:
@@ -44,9 +62,9 @@ modules:
           FC: ifort
           F90: ifort
           F77: ifort
-          ICCCFG: /appl/opt/intel_configs/icc_gcc83_csc.cfg
-          ICPCCFG : /appl/opt/intel_configs/icpc_gcc83_csc.cfg
-          IFORTCFG : /appl/opt/intel_configs/ifort_gcc83_csc.cfg
+          ICCCFG: /appl/opt/intel_configs/icc_gcc91_csc.cfg
+          ICPCCFG: /appl/opt/intel_configs/icpc_gcc91_csc.cfg
+          IFORTCFG: /appl/opt/intel_configs/ifort_gcc91_csc.cfg
           I_MPI_CC: icc
           I_MPI_CXX: icpc
           I_MPI_FC: ifort
@@ -55,6 +73,14 @@ modules:
     intel-mkl:
       suffixes:
         "intel-mkl threads=openmp": omp
+    intel-oneapi-mpi:
+      environment:
+        set:
+          FI_PROVIDER: mlx
+          I_MPI_PMI_VALUE_LENGTH_MAX: "900"
+          SLURM_MPI_TYPE: pmi2
+        prepend_path:
+          LD_LIBRARY_PATH: '/appl/opt/ucx/1.10.1-noibcm/lib:/appl/opt/ucx/1.10.1-noibcm/lib/ucx'
     openblas:
       suffixes:
         "threads=openmp": omp
@@ -62,3 +88,6 @@ modules:
       suffixes:
         "+complex+double": cmplx
         "+int64": int64
+  tcl:
+    projections:
+      all: '{name}-{version}-{compiler.name}-{compiler.version}'
