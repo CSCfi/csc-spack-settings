@@ -21,15 +21,27 @@ packages:
     externals:
     - spec: gnutls@3.3.29
       prefix: /appl/spack/syslibs
+  lustre:
+    buildable: false
+    externals:
+    - spec: lustre@2.12.3
+      prefix: /appl/spack/syslibs
+  openblas:
+    variants: +consistent_fpcsr threads=openmp
   openssl:
     buildable: false
     externals:
     - spec: openssl@1.0.2k
       prefix: /appl/spack/syslibs
+  pmix:
+    buildable: false
+    externals:
+    - spec: pmix@3.2.3
+      prefix: /opt/pmix/3.2.3
   slurm:
     buildable: false
     externals:
-    - spec: slurm@19.05.0 %gcc@4.8.5
+    - spec: slurm@19.05.0
       prefix: /appl/spack/syslibs
   ucx:
     variants: +thread_multiple
