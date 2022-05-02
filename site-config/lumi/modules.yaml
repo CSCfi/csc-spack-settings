@@ -1,0 +1,127 @@
+modules:
+  prefix_inspections:
+    include:
+    - CPATH
+    lib:
+    - LIBRARY_PATH
+    lib64:
+    - LIBRARY_PATH
+    man:
+    - MANPATH
+    share/man:
+    - MANPATH
+    share/aclocal:
+    - ACLOCAL_PATH
+  default:
+    enable:
+    - lmod
+    lmod:
+      hash_length: 0
+      core_compilers:
+      - gcc@7.5.0
+      hierarchy:
+      - mpi
+      whitelist:
+      - amber
+      - amdblis
+      - amdlibflame
+      - aocc
+      - boost+mpi
+      - bzip2%gcc@8.5.0
+      - cce
+      - cdo
+      - cgal
+      - cp2k
+      - cmake%gcc@8.5.0
+      - cuda
+      - cudnn
+      - eccodes
+      - emacs
+      - fio
+      - fish
+      - fftw
+      - 'gcc@9.4.0'
+      - 'gcc@11.2.0'
+      - git
+      - git-lfs
+      - go
+      - gnuplot%gcc@8.5.0
+      - gromacs
+      - gsl+external-cblas
+      - hdf5
+      - hpl
+      - htop
+      - jasper
+      - jemalloc
+      - molden
+      - mpich
+      - mumps
+      - namd
+      - nco
+      - netcdf-c
+      - netcdf-fortran
+      - netlib-scalapack
+      - openblas
+      - openmpi
+      - parallel-netcdf
+      - pdsh
+      - proj
+      - scalasca
+      - scorep
+      - scotch
+      - screen
+      - subversion
+      - tmux
+      - vim
+      blacklist:
+      - '%aocc@3.1.0'
+      - '%aocc@3.2.0'
+      - '%gcc@8.5.0'
+      - '%gcc@7.5.0'
+      - '%gcc@9.4.0'
+      - '%gcc@10.3.0'
+      - '%gcc@11.2.0'
+      - '%cce@13.0.0'
+      all:
+        conflict:
+        - ${PACKAGE}
+        environment:
+          set:
+            ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
+      amdblis:
+        suffixes:
+          threads=openmp: omp
+      boost:
+        suffixes:
+          +mpi: mpi
+      fftw:
+        suffixes:
+          +mpi: mpi
+          +openmp: omp
+      gcc:
+        environment:
+          set:
+            CC: gcc
+            CXX: g++
+            FC: gfortran
+            F90: gfortran
+            F77: gfortran
+            I_MPI_CC: gcc
+            I_MPI_CXX: g++
+            I_MPI_FC: gfortran
+            I_MPI_F90: gfortran
+            I_MPI_F77: gfortran
+      gromacs:
+        suffixes:
+          +cuda: cuda
+          +plumed: plumed
+      hdf5:
+        suffixes:
+          +mpi: mpi
+      openblas:
+        suffixes:
+          threads=openmp: omp
+      petsc:
+        suffixes:
+          +complex+double: cmplx
+          +int64: int64

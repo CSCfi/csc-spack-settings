@@ -1,0 +1,10 @@
+config:
+  build_jobs: 20
+  install_tree:
+    projections:
+      all: ${COMPILERNAME}-${COMPILERVER}/${PACKAGE}-${VERSION}-${HASH:6}
+    root: /appl/local/csc/spack/v017/install-tree
+  build_stage: /appl/local/csc/spack/v017/spack-stage
+  module_roots:
+    lmod: /appl/local/csc/spack/v017/modulefiles
+  source_cache: /appl/local/csc/spack/v017/sources
