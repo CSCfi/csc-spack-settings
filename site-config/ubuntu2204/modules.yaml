@@ -1,0 +1,167 @@
+modules:
+  prefix_inspections:
+    include:
+    - CPATH
+    lib:
+    - LIBRARY_PATH
+    lib64:
+    - LIBRARY_PATH
+    man:
+    - MANPATH
+    share/man:
+    - MANPATH
+    share/aclocal:
+    - ACLOCAL_PATH
+  default:
+    enable::
+    - lmod
+    roots:
+      lmod: /appl/spack/v020/modulefiles
+    lmod:
+      hash_length: 0
+      core_compilers:
+      - gcc@8.5.0
+      hierarchy:
+      - mpi
+      whitelist:
+      - aocc
+      - 'gcc@12.2.0'
+      blacklist:
+      - '%aocc'
+      - '%gcc'
+      - '%nvhpc'
+      - '%oneapi'
+      - '%intel'
+      all:
+        conflict:
+        - ${PACKAGE}
+        environment:
+          set:
+            ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
+      amber:
+        suffixes:
+          +cuda: cuda
+      amdblis:
+        suffixes:
+          threads=openmp: omp
+      boost:
+        suffixes:
+          +mpi: mpi
+      cuda:
+        environment:
+          append_path:
+            LIBRARY_PATH: ${PREFIX}/lib64/stubs
+      fftw:
+        suffixes:
+          +mpi: mpi
+          +openmp: omp
+      gcc:
+        environment:
+          set:
+            CC: gcc
+            CXX: g++
+            FC: gfortran
+            F90: gfortran
+            F77: gfortran
+            I_MPI_CC: gcc
+            I_MPI_CXX: g++
+            I_MPI_FC: gfortran
+            I_MPI_F90: gfortran
+            I_MPI_F77: gfortran
+      gromacs:
+        suffixes:
+          +cuda: cuda
+          +plumed: plumed
+      hdf5:
+        suffixes:
+          +mpi: mpi
+      intel:
+        environment:
+          set:
+            CC: icc
+            CXX: icpc
+            FC: ifort
+            F90: ifort
+            F77: ifort
+            ICCCFG: /appl/opt/intel_configs/icc_gcc83_csc.cfg
+            ICPCCFG: /appl/opt/intel_configs/icpc_gcc83_csc.cfg
+            IFORTCFG: /appl/opt/intel_configs/ifort_gcc83_csc.cfg
+            I_MPI_CC: icc
+            I_MPI_CXX: icpc
+            I_MPI_FC: ifort
+            I_MPI_F90: ifort
+            I_MPI_F77: ifort
+      intel-mkl:
+        suffixes:
+          intel-mkl threads=openmp: omp
+      nextflow:
+        autoload: all
+      openblas:
+        suffixes:
+          threads=openmp: omp
+      openmpi:
+        environment:
+          set:
+            OMPI_MCA_io: ^ompio
+        suffixes:
+          +cuda: cuda
+      petsc:
+        suffixes:
+          +complex+double: cmplx
+          +int64: int64
+  unsupported_set:
+    enable::
+    - lmod
+    roots:
+      lmod: /appl/spack/v020/unsupported
+    lmod:
+      hash_length: 0
+      core_compilers:
+      - gcc@8.5.0
+      hierarchy:
+      - mpi
+      blacklist:
+      - '%aocc'
+      - '%gcc'
+      - '%nvhpc'
+      - '%oneapi'
+      - '%intel'
+      whitelist: []
+      intel-oneapi-mpi:
+        environment:
+          prepend_path:
+            LD_LIBRARY_PATH: "/appl/opt/ucx/1.12.1/lib:/appl/opt/ucx/1.12.1/lib/ucx"
+          set:
+            FI_PROVIDER: "mlx"
+            I_MPI_PMI_VALUE_LENGTH_MAX: "512"
+            SLURM_MPI_TYPE: "pmi2"
+  testing_set:
+    enable::
+    - lmod
+    roots:
+      lmod: /appl/spack/v020/testing
+    lmod:
+      hash_length: 0
+      core_compilers:
+      - gcc@8.5.0
+      hierarchy:
+      - mpi
+      blacklist:
+      - '%aocc'
+      - '%gcc'
+      - '%nvhpc'
+      - '%oneapi'
+      - '%intel'
+      whitelist:
+      - 'gcc@9.4.0'
+      - 'openmpi%gcc@9.4.0 ~cuda'
+      - 'cp2k +elpa ^amdblis'
+      intel-oneapi-mpi:
+        environment:
+          prepend_path:
+            LD_LIBRARY_PATH: "/appl/opt/ucx/1.12.1/lib:/appl/opt/ucx/1.12.1/lib/ucx"
+          set:
+            FI_PROVIDER: "mlx"
+            I_MPI_PMI_VALUE_LENGTH_MAX: "512"
+            SLURM_MPI_TYPE: "pmi2"
+

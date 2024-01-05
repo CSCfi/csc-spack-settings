@@ -1,0 +1,113 @@
+packages:
+  all:
+    permissions:
+      write: group
+      group: m_installation_spack
+    compiler: [gcc, aocc]
+    providers:
+      mpi: [csc.openmpi, csc.mpich]
+      blas: [openblas, amdblis]
+      lapack: [openblas, amdlibflame]
+      scalapack:: [amdscalapack, netlib-scalapack]
+  amdblis:
+    variants: threads=openmp cpuarch=zen2
+  amdlibflame:
+    variants: threads=openmp
+  curl:
+    variants: ~gssapi~ldap+libidn2~librtmp~libssh+libssh2+nghttp2 tls=gnutls
+  gcc:
+    variants: +binutils
+  gromacs:
+    variants: +shared build_type=Release ~hwloc simd=AVX2_256
+  libevent:
+    buildable: false
+    externals:
+    - spec: libevent@2.1.8
+      prefix: /appl/spack/syslibs
+  libtool:
+    version: [2.4.2, 2.4.6]
+  lua:
+    version: [5.3.4]
+  pmix:
+    buildable: false
+    externals:
+    - spec: pmix@3.2.3
+      prefix: /appl/spack/syslibs/pmix/3.2.3
+  openmpi:
+    variants: fabrics=ucx schedulers=slurm ~static +pmix +lustre +thread_multiple +mlnx_platform +sys_libevent ~gpfs
+  openblas:
+    variants: +consistent_fpcsr threads=openmp
+  openssh:
+    buildable: false
+    externals:
+    - spec: openssh@8.0p1
+      prefix: /usr
+  openssl:
+    buildable: false
+    externals:
+    - spec: openssl@1.1.1k
+      prefix: /appl/spack/syslibs
+  gnutls:
+    buildable: false
+    externals:
+    - spec: gnutls@3.6.16
+      prefix: /appl/spack/syslibs
+  nettle:
+    buildable: false
+    externals:
+    - spec: nettle@3.4.1
+      prefix: /appl/spack/syslibs
+  libidn2:
+    buildable: false
+    externals:
+    - spec: libidn2@2.2.0
+      prefix: /appl/spack/syslibs
+  libtasn1:
+    buildable: false
+    externals:
+    - spec: libtasn1@4.13
+      prefix: /appl/spack/syslibs
+  p11-kit:
+    buildable: false
+    externals:
+    - spec: p11-kit@0.23.22
+      prefix: /appl/spack/syslibs
+  slurm:
+    buildable: false
+    externals:
+    - spec: slurm@20.02.6
+      prefix: /appl/spack/syslibs
+  sharp:
+    buildable: false
+    externals:
+    - spec: sharp@2.1
+      prefix: /appl/opt/sharp/2.1
+    - spec: sharp@2.2
+      prefix: /appl/opt/sharp/2.2
+  hcoll:
+    buildable: false
+    externals:
+    - spec: hcoll@4.5.3045
+      prefix: /appl/opt/hcoll/4.5.3045
+    - spec: hcoll@4.6.3125
+      prefix: /appl/opt/hcoll/4.6.3125
+  hwloc:
+    buildable: true
+    externals:
+    - spec: hwloc@2.2.0
+      prefix: /appl/spack/syslibs
+  lustre:
+    buildable: false
+    externals:
+    - spec: lustre@2.12.3
+      prefix: /appl/spack/syslibs
+  ucx:
+    variants: +thread_multiple
+    buildable: false
+    externals:
+    - spec: ucx@1.12.0~cuda+thread_multiple
+      prefix: /appl/opt/ucx/1.12.0
+    - spec: ucx@1.12.1+cuda+gdrcopy+thread_multiple
+      prefix: /appl/opt/ucx/1.12.1-c11.5
+    - spec: ucx@1.14.0~cuda+thread_multiple
+      prefix: /appl/opt/ucx/1.14.0

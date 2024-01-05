@@ -3,6 +3,8 @@
 #*
 .#*
 *.simg
+alternatives/*.yaml
+alternatives/admindir/config.yaml
 /test-environment/home
 !/test-environment/home/.bashrc
 !/test-environment/home/.bash_profile
