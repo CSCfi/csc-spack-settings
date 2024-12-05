@@ -28,8 +28,10 @@ modules:
       - amdblis
       - amdlibflame
       - aocc
+      - armadillo
       - blitz
-      - boost+mpi
+      - boost+atomic+mpi
+      - boost+atomic
       - bzip2%gcc@8.5.0
       - cdo
       - cgal
@@ -37,52 +39,91 @@ modules:
       - cmake%gcc@8.5.0
       - cuda
       - cudnn
-      - eccodes
+      - dmtcp
+      - 'eccodes%gcc@9.4.0'
+      - 'eccodes%gcc@11.3.0'
+      - 'eccodes%intel@2021.6.0'
       - emacs
       - fio
       - fish
+      - 'ffmpeg%gcc@8.5.0'
       - fftw
       - 'gcc@9.4.0'
       - 'gcc@11.3.0'
+      - gdal
+      - 'ghostscript%gcc@8.5.0'
       - git
       - git-lfs
       - go
       - gnuplot%gcc@8.5.0
+      - grace
       - grib-api
       - gromacs
       - gsl+external-cblas
       - hdf5
+      - hipify-clang
       - hpl
       - htop
+      - hyperqueue
+      - intel-oneapi-advisor
       - intel-oneapi-compilers
       - intel-oneapi-compilers-classic
+      - intel-oneapi-itac
       - intel-oneapi-mkl
+      - intel-oneapi-mpi
+      - intel-oneapi-tbb
+      - intel-oneapi-vtune
       - jasper
       - jemalloc
+      - 'libaec%gcc@11.3.0'
+      - libzip
+      - makedepf90
+      - 'mariadb@10.8.2+without_server'
+      - 'mariadb@11.4.3+without_server'
+      - mc
       - 'metis ~int64 ~real64'
       - molden
       - mpich
       - mumps
       - 'namd interface=tcl'
+      - nano
+      - ncftp
+      - ncl
       - nco
+      - ncview
       - netcdf-c
       - netcdf-fortran
       - netlib-scalapack
+      - 'octave%gcc@8.5.0'
+      - openbabel
       - openblas
+      - 'openjdk@11.0.15_10%gcc@8.5.0'
+      - 'openjdk@11.0.25_9%gcc@8.5.0'
+      - 'openjdk@17.0.3_7%gcc@8.5.0'
       - openmpi
+      - 'p7zip%gcc@8.5.0'
       - papi
+      - parallel
       - parallel-netcdf
       - pdsh
+      - 'pigz%gcc@8.5.0'
       - plumed
       - proj
+      - 'rclone%gcc@8.5.0'
+      - 'restic%gcc@8.5.0'
       - scalasca
       - scorep
       - scotch
       - screen
       - subversion
+      - 'sqlite%gcc@8.5.0'
       - tmux
+      - 'udunits%gcc@9.4.0'
+      - 'udunits%gcc@11.3.0'
+      - valgrind
       - vim
-      - zlib
+      - vmd
+      - zlib%gcc@8.5.0
       blacklist:
       - '%aocc@3.1.0'
       - '%aocc@3.2.0'
@@ -90,6 +131,11 @@ modules:
       - '%gcc@8.5.0'
       - '%gcc@9.4.0'
       - '%gcc@11.3.0'
+      - '%intel@2021.6.0'
+      - '%oneapi@2022.1.0'
+      - '%nvhpc'
+      defaults:
+      - 'openmpi@4.1.4%gcc@11.34.0 ~cuda'
       all:
         autoload: none
         conflict:
@@ -134,7 +180,7 @@ modules:
       hdf5:
         suffixes:
           +mpi: mpi
-      intel:
+      intel-oneapi-compilers-classic:
         environment:
           set:
             CC: icc
@@ -142,9 +188,9 @@ modules:
             FC: ifort
             F90: ifort
             F77: ifort
-            ICCCFG: /appl/opt/intel_configs/icc_gcc83_csc.cfg
-            ICPCCFG: /appl/opt/intel_configs/icpc_gcc83_csc.cfg
-            IFORTCFG: /appl/opt/intel_configs/ifort_gcc83_csc.cfg
+            ICCCFG: /appl/opt/intel_configs/intel2021.6.0/icc_gcc113_csc.cfg
+            ICPCCFG: /appl/opt/intel_configs/intel2021.6.0/icpc_gcc113_csc.cfg
+            IFORTCFG: /appl/opt/intel_configs/intel2021.6.0/ifort_gcc113_csc.cfg
             I_MPI_CC: icc
             I_MPI_CXX: icpc
             I_MPI_FC: ifort
@@ -159,8 +205,12 @@ modules:
             LD_LIBRARY_PATH: "/appl/opt/ucx/1.12.1/lib:/appl/opt/ucx/1.12.1/lib/ucx"
           set:
             FI_PROVIDER: "mlx"
+            I_MPI_PMI_LIBRARY: "/usr/lib64/libpmi2.so"
             I_MPI_PMI_VALUE_LENGTH_MAX: "512"
             SLURM_MPI_TYPE: "pmi2"
+      namd:
+        suffixes:
+          +cuda: cuda
       openblas:
         suffixes:
           threads=openmp: omp
@@ -168,6 +218,9 @@ modules:
         environment:
           set:
             OMPI_MCA_io: ^ompio
+            SLURM_MPI_TYPE: pmix_v3
+        suffixes:
+          +cuda: cuda
       petsc:
         suffixes:
           +complex+double: cmplx
@@ -187,6 +240,48 @@ modules:
       - '%gcc@8.5.0'
       - '%gcc@9.4.0'
       - '%gcc@11.3.0'
+      - '%aocc@3.1.0'
+      - '%aocc@3.2.0'
+      - '%gcc@7.5.0'
+      - '%gcc@8.5.0'
+      - '%gcc@9.4.0'
+      - '%gcc@11.3.0'
+      - '%intel@2021.6.0'
+      - '%oneapi@2022.1.0'
       whitelist:
       - nvhpc
-
+      - 'gcc@11.3.0'
+      - 'cuda@11.7.0'
+      - openmpi
+      - rust
+      defaults:
+      - openmpi~cuda
+      openmpi:
+        environment:
+          set:
+            OMPI_MCA_io: ^ompio
+            SLURM_MPI_TYPE: pmix_v3
+        suffixes:
+          +cuda: cuda
+      nvhpc:
+        environment:
+          set:
+            ${PACKAGE}_INSTALL_ROOT: ${PREFIX}
+  testing_set:
+    enable::
+    - lmod
+    roots:
+      lmod: /appl/spack/v018/testing
+    lmod:
+      hash_length: 0
+      core_compilers:
+      - gcc@8.5.0
+      hierarchy:
+      - mpi
+      blacklist:
+      - '%intel'
+      - '%gcc'
+      - '%nvhpc'
+      - '%oneapi'
+      whitelist:
+      - 'mariadb@11.4.3+without_server'

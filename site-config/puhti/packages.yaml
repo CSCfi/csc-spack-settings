@@ -9,10 +9,19 @@ packages:
       blas: [inte-oneapi-mkl]
       lapack: [intel-oneapi-mkl]
       scalapack:: [netlib-scalapack, intel-oneapi-mkl]
+  boost:
+    variants: +context+container+coroutine+fibber+icu~mpi cxxstd=17
   curl:
     variants: ~gssapi~ldap+libidn2~librtmp~libssh+libssh2+nghttp2 tls=gnutls
+  fftw:
+    variants: +fma simd=avx512
   gcc:
     variants: +binutils
+  gnutls:
+    buildable: false
+    externals:
+    - spec: gnutls@3.6.16
+      prefix: /appl/spack/syslibs
   libevent:
     buildable: false
     externals:
@@ -22,11 +31,11 @@ packages:
     version: [2.4.2, 2.4.6]
   lua:
     version: [5.3.4]
-  pmix:
+  lustre:
     buildable: false
     externals:
-    - spec: pmix@3.2.3
-      prefix: /appl/spack/syslibs/pmix/3.2.3
+    - spec: lustre@2.12.3
+      prefix: /appl/spack/syslibs
   openmpi:
     variants: fabrics=ucx schedulers=slurm ~static +pmix +lustre +thread_multiple +mlnx_platform +sys_libevent ~gpfs
   openblas:
@@ -41,22 +50,15 @@ packages:
     externals:
     - spec: openssl@1.1.1k
       prefix: /appl/spack/syslibs
-  gnutls:
+  pmix:
     buildable: false
     externals:
-    - spec: gnutls@3.6.16
-      prefix: /appl/spack/syslibs
+    - spec: pmix@3.2.3
+      prefix: /appl/spack/syslibs/pmix/3.2.3
   slurm:
     buildable: false
     externals:
     - spec: slurm@20.02.6
-      prefix: /appl/spack/syslibs
-  fftw:
-    variants: +fma simd=avx512
-  lustre:
-    buildable: false
-    externals:
-    - spec: lustre@2.12.3
       prefix: /appl/spack/syslibs
   ucx:
     variants: +thread_multiple
@@ -64,3 +66,5 @@ packages:
     externals:
     - spec: ucx@1.12.1~cuda+thread_multiple
       prefix: /appl/opt/ucx/1.12.1
+    - spec: ucx@1.13.1+cuda+thread_multiple
+      prefix: /appl/opt/ucx/1.13.1-c11.7
