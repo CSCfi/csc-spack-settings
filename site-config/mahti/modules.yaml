@@ -4,8 +4,10 @@ modules:
     - CPATH
     lib:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     lib64:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     man:
     - MANPATH
     share/man:
@@ -31,20 +33,28 @@ modules:
       - amdlibm
       - amdscalapack
       - aocl-sparse
+      - 'boost@1.82.0+atomic+chrono~clanglibcpp+container+context+contract+coroutine+date_time~debug+exception+fiber+filesystem+graph~graph_parallel+icu~iostreams+json+locale+log+math+mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared~signals~singlethreaded~stacktrace~system~taggedlayout~test+thread+timer~type_erasure~versionedlayout~wave build_system=generic context-impl=fcontext'
       - cgal
       - cp2k
       - 'cuda@12.1.1%gcc@10.4.0'
+      - 'cuda@12.6.1%gcc@10.4.0'
       - fftw
       - 'gcc@10.4.0'
       - 'gcc@13.1.0'
+      - 'gdb@13.1'
+      - 'git%gcc@=8.5.0'
       - gromacs
       - gsl
       - jasper
-      - mariadb
+      - jemalloc
+      - 'mariadb@10.8.2'
+      - 'mariadb@11.4.3'
       - openblas
       - openmpi
+      - papi
       - rclone
       - restic
+      - scorep
       exclude:
       - '%aocc'
       - '%gcc'
@@ -188,6 +198,7 @@ modules:
       - 'gcc@9.4.0'
       - 'openmpi%gcc@9.4.0 ~cuda'
       - 'cp2k +elpa ^amdblis'
+      - 'mariadb@11.4.3+without_server'
       intel-oneapi-mpi:
         environment:
           prepend_path:
