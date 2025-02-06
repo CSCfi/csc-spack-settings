@@ -38,23 +38,30 @@ modules:
       - cmake%gcc@8.5.0
       - cuda
       - cudnn
+      - dmtcp
       - eccodes
       - emacs
       - extrae
       - fio
       - fish
-      - fftw
+      - 'fftw%aocc@3.2.0'
+      - 'fftw%gcc@9.4.0'
+      - 'fftw%gcc@11.2.0'
       - 'flux-core@0.43.0'
       - gcc@9.4.0
       - gcc@11.2.0
+      - 'ghostscript%gcc@8.5.0'
       - git
       - git-lfs
       - go
       - gnuplot%gcc@8.5.0
+      - grace
       - grib-api
       - gromacs
       - gsl+external-cblas
-      - hdf5
+      - 'hdf5%aocc@3.2.0'
+      - 'hdf5%gcc@9.4.0'
+      - 'hdf5%gcc@11.2.0'
       - hpl
       - htop
       - hyperqueue
@@ -62,16 +69,22 @@ modules:
       - imagemagick%gcc@8.5.0
       - jasper
       - jemalloc
+      - 'libaec%gcc@11.2.0'
       - mc
       - 'metis ~int64 ~real64'
       - molden
       - mpich
       - mumps
       - 'namd interface=tcl'
+      - nano
       - nco
-      - netcdf-c
-      - netcdf-fortran
-      - netlib-scalapack
+      - 'netcdf-c%aocc@3.2.0'
+      - 'netcdf-c%gcc@9.4.0'
+      - 'netcdf-c%gcc@11.2.0'
+      - 'netcdf-fortran%aocc@3.2.0'
+      - 'netcdf-fortran%gcc@9.4.0'
+      - 'netcdf-fortran%gcc@11.2.0'
+      - netlib-scalapack+pic
       - nextflow
       - openblas
       - openjdk
@@ -88,6 +101,7 @@ modules:
       - scotch
       - screen
       - subversion
+      - 'sqlite%gcc@8.5.0'
       - tmux
       - valgrind
       - vim
@@ -141,6 +155,9 @@ modules:
       hdf5:
         suffixes:
           +mpi: mpi
+      hypre:
+        suffixes:
+          +cuda: cuda
       intel:
         environment:
           set:
@@ -169,6 +186,7 @@ modules:
         environment:
           set:
             OMPI_MCA_io: ^ompio
+            SLURM_MPI_TYPE: pmix_v3
         suffixes:
           +cuda: cuda
       petsc:
