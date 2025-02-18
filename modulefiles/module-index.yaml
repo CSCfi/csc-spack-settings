@@ -1,0 +1,25 @@
+module_index:
+  stifyyaeruim6jabo6scfncy4otqwoej:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/gcc/12.2.0/openmpi/4.1.5.lua
+    use_name: openmpi/4.1.5
+  27k7g4ycazftcgrqo3ebrtiwlwjn6bee:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/Core/aocc/4.0.0.lua
+    use_name: aocc/4.0.0
+  vklslmuy4jso2jghfejqegso56alkhjy:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/aocc/4.0.0/amdlibm/4.0.lua
+    use_name: amdlibm/4.0
+  4jodzrusn6tymlykm5coxxvos6clg3vn:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/aocc/4.0.0/amdblis/4.0-omp.lua
+    use_name: amdblis/4.0-omp
+  3pswpsu52jmlgx7dbknctvbvbas4e2aq:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/aocc/4.0.0/amdlibflame/4.0.lua
+    use_name: amdlibflame/4.0
+  bdsjdwsoebi65d2373hgd2ghyuu3abc2:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/openmpi/4.1.5-kwhtt25/aocc/4.0.0/amdscalapack/3.2.lua
+    use_name: amdscalapack/3.2
+  jxoce4ssdccss6ktcry2qqrg6vfd2vyv:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/Core/gcc/12.2.0.lua
+    use_name: gcc/12.2.0
+  kwhtt256225d6wlcxjf2taixkfus6mcn:
+    path: /appl/spack/v019/modulefiles/linux-rhel8-x86_64/aocc/4.0.0/openmpi/4.1.5.lua
+    use_name: openmpi/4.1.5
