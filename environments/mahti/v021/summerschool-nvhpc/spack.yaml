@@ -1,0 +1,77 @@
+spack:
+  specs:
+    - "nvhpc@24.3%gcc@=8.5.0 +blas+lapack+default_cuda arch=linux-rhel8-zen"
+    - "cuda@11.8%nvhpc@=24.3"
+    - "openmpi@4.1.5%nvhpc@=24.3 fabrics=ucx schedulers=slurm +cuda cuda_arch=80"
+    - hip%gcc@=8.5.0 +cuda
+    - hipblas%gcc@=8.5.0 +cuda cuda_arch=80
+    - hipcub%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none
+    - hipfft%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none
+    - hipfort%gcc@=8.5.0
+    - hiprand%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none
+  view: false
+  concretizer:
+    unify: when_possible
+  packages:
+    nvhpc:
+      externals:
+      - spec: "nvhpc@24.3%gcc@=8.5.0 +blas+lapack+default_cuda arch=linux-rhel8-zen"
+        prefix: /appl/opt/nvhpc
+      buildable: False
+    cuda:
+      externals:
+      - spec: "cuda@11.8%nvhpc@=24.3"
+        prefix: /appl/opt/nvhpc/Linux_x86_64/24.3/cuda/11.8
+      buildable: False
+    openmpi:
+      externals:
+      - spec: "openmpi@4.1.5%nvhpc@=24.3 fabrics=ucx schedulers=slurm +cuda cuda_arch=80"
+        prefix: /appl/opt/nvhpc/Linux_x86_64/24.3/comm_libs/12.3/openmpi4/openmpi-4.1.5
+      buildable: False
+    ucx:
+      externals:
+      - spec: "ucx@1.14.1%nvhpc@=24.3 +cuda cuda_arch=80"
+        prefix: /appl/opt/nvhpc/Linux_x86_64/24.3/comm_libs/12.3/openmpi4/openmpi-4.1.5
+      buildable: False
+  modules:
+    default:
+      enable::
+      - lmod
+      roots:
+        lmod: /appl/spack/v021/summerschool/modules
+      lmod:
+        hash_length: 0
+        core_compilers:
+        - gcc@8.5.0
+        hierarchy:
+        - mpi
+        include:
+        - nvhpc
+        - cuda
+        - openmpi
+        - hip
+        - hipblas
+        - hipcub
+        - hipfft
+        - hipfort
+        - hiprand
+  compilers:
+    - compiler:
+        spec: nvhpc@=24.3
+        paths:
+          cc: /appl/opt/nvhpc/Linux_x86_64/24.3/compilers/bin/nvc
+          cxx: /appl/opt/nvhpc/Linux_x86_64/24.3/compilers/bin/nvc++
+          f77: /appl/opt/nvhpc/Linux_x86_64/24.3/compilers/bin/nvfortran
+          fc: /appl/opt/nvhpc/Linux_x86_64/24.3/compilers/bin/nvfortran
+        flags: {}
+        operating_system: rhel8
+        target: any
+        modules: []
+        environment: {}
+        extra_rpaths: []
+
+###    - hip%gcc@=8.5.0 +cuda
+###    - hipblas%gcc@=8.5.0 +cuda cuda_arch=80
+###    - hipcub%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none
+###    - hipfft%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none
+###    - hiprand%gcc@=8.5.0 +cuda cuda_arch=80 amdgpu_target=none

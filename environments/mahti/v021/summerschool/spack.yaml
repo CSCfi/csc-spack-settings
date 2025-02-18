@@ -1,0 +1,32 @@
+spack:
+  specs:
+    - openmpi
+    - hdf5
+    - hip%gcc@=8.5.0
+    - hipcub%gcc@=8.5.0
+    - hipsycl%gcc@=14.0.1+cuda
+  view: false
+  concretizer:
+    unify: when_possible
+  packages:
+    all:
+      compiler: [gcc@=14.0.1]
+      target: [zen2]
+      providers:
+        blas: [openblas]
+        lapack: [openblas]
+        scalapack: [netlib-scalapack]
+    hdf5:
+      variants: +threadsafe+szip+fortran+cxx+hl+mpi+tools
+    openmpi:
+      variants: fabrics=ucx schedulers=slurm +cuda+sys_libevent+lustre+pmix~gpfs~static+thread_multiple
+    python:
+      variants: +tls
+    hip:
+      variants: +cuda
+    hipcub:
+      variants: +cuda cuda_arch=80 amdgpu_target=none
+    hiprand:
+      variants: +cuda cuda_arch=80 amdgpu_target=none
+    hipsycl:
+      variants: +cuda
