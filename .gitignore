@@ -9,6 +9,9 @@
 /test-environment/temp/tmp
 !/test-environment/temp/.keepthis
 alternatives/config.yaml
-modulefiles
 install-tree
 sources
+views
+bootstrap
+environments/puhti/gpaw/.spack-env
+environments/puhti/gpaw/spack.lock
