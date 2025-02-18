@@ -1,0 +1,13 @@
+module_index:
+  mdlhizvf6c47v7illup35yqmaavryfqc:
+    path: /appl/spack/v021/modulefiles/linux-rhel8-x86_64/Core/cuda/12.2.1.lua
+    use_name: cuda/12.2.1
+  5wayw56shaccjcigc5khjjbkx3kt6wwh:
+    path: /appl/spack/v021/modulefiles/linux-rhel8-x86_64/Core/gcc/14.0.1.lua
+    use_name: gcc/14.0.1
+  fmcdbb6ol4v74mwtiuuckzakbxrobvst:
+    path: /appl/spack/v021/modulefiles/linux-rhel8-x86_64/Core/hip/5.6.1.lua
+    use_name: hip/5.6.1
+  oyztg5vcb5mjzlqfcxsocjhwctfolxy5:
+    path: /appl/spack/v021/modulefiles/linux-rhel8-x86_64/Core/openmpi/4.1.6-cuda.lua
+    use_name: openmpi/4.1.6-cuda
