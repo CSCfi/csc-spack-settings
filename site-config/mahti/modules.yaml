@@ -4,8 +4,10 @@ modules:
     - CPATH
     lib:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     lib64:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     man:
     - MANPATH
     share/man:
@@ -24,27 +26,10 @@ modules:
       hierarchy:
       - mpi
       include:
-      - 'aocc@4.0.0'
-      - amdblis
-      - amdfftw
-      - amdlibflame
-      - amdlibm
-      - amdscalapack
-      - aocl-sparse
-      - cgal
-      - cp2k
-      - 'cuda@12.1.1%gcc@10.4.0'
-      - fftw
-      - 'gcc@10.4.0'
-      - 'gcc@13.1.0'
-      - gromacs
-      - gsl
-      - jasper
-      - mariadb
-      - openblas
+      - gcc
+      - hip
+      - cuda
       - openmpi
-      - rclone
-      - restic
       exclude:
       - '%aocc'
       - '%gcc'
@@ -152,13 +137,13 @@ modules:
       - gcc@8.5.0
       hierarchy:
       - mpi
-      blacklist:
+      exclude:
       - '%aocc'
       - '%gcc'
       - '%nvhpc'
       - '%oneapi'
       - '%intel'
-      whitelist: []
+      include: []
       intel-oneapi-mpi:
         environment:
           prepend_path:
@@ -167,33 +152,3 @@ modules:
             FI_PROVIDER: "mlx"
             I_MPI_PMI_VALUE_LENGTH_MAX: "512"
             SLURM_MPI_TYPE: "pmi2"
-  testing_set:
-    enable::
-    - lmod
-    roots:
-      lmod: /appl/spack/v021/testing
-    lmod:
-      hash_length: 0
-      core_compilers:
-      - gcc@8.5.0
-      hierarchy:
-      - mpi
-      blacklist:
-      - '%aocc'
-      - '%gcc'
-      - '%nvhpc'
-      - '%oneapi'
-      - '%intel'
-      whitelist:
-      - 'gcc@9.4.0'
-      - 'openmpi%gcc@9.4.0 ~cuda'
-      - 'cp2k +elpa ^amdblis'
-      intel-oneapi-mpi:
-        environment:
-          prepend_path:
-            LD_LIBRARY_PATH: "/appl/opt/ucx/1.12.1/lib:/appl/opt/ucx/1.12.1/lib/ucx"
-          set:
-            FI_PROVIDER: "mlx"
-            I_MPI_PMI_VALUE_LENGTH_MAX: "512"
-            SLURM_MPI_TYPE: "pmi2"
-
