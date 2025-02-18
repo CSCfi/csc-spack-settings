@@ -1,0 +1,37 @@
+module_index:
+  gkv6dxkfx5tgembvzpozwem27lkejzv4:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/gcc/11.3.0/openmpi/4.1.4-cuda.lua
+    use_name: openmpi/4.1.4-cuda
+  zucvj4pgf5vbsorslkjsknyso5v5434a:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/gcc/11.3.0/cuda/11.7.0.lua
+    use_name: cuda/11.7.0
+  i44hho5cpu3c4he5waip5adei3wts7cs:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/gcc/11.3.0.lua
+    use_name: gcc/11.3.0
+  2sr2yf5pjp2nk6jxenaraa3ggsgkmnpl:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/gcc/9.4.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  w2aekqa2d6zmibaxrmzfuhwdkzg2x6kj:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/gcc/11.3.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  qcaixnj4kbtqjj65bx7rdggxmmwjmp24:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/intel/2021.6.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  fu5nme2zxrwb7joahrixr6zce3g4s2wv:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/oneapi/2022.1.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  xvesu7kctn7cfmb36w46igsj2b3dml5d:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/rust/1.60.0.lua
+    use_name: rust/1.60.0
+  rqpykndtyyxlqr5pheyqtzpa2jhtwlxt:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/rust/1.65.0.lua
+    use_name: rust/1.65.0
+  ferefm65w2rzutl4cgrgg6mipeuro5rj:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/nvhpc/21.3.lua
+    use_name: nvhpc/21.3
+  z47edzb63prfom5cghl4inxobto5ovsj:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/nvhpc/21.7.lua
+    use_name: nvhpc/21.7
+  uej2zbkiug4kqysmkj276vvc7vpqyucf:
+    path: /appl/spack/v018/unsupported/linux-rhel8-x86_64/Core/nvhpc/22.7.lua
+    use_name: nvhpc/22.7

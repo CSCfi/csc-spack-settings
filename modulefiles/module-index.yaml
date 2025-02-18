@@ -1,0 +1,613 @@
+module_index:
+  exiqrawsj7hmevaiwvh7lkpe6ployeqk:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/autoconf/2.69.lua
+    use_name: autoconf/2.69
+  s5a2iqlmta5vmgrfhdy666irtxpvky6g:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/autoconf/2.69.lua
+    use_name: autoconf/2.69
+  5p56uzpvi4vtf4n4c4hko23psu6whxu5:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/automake/1.16.5.lua
+    use_name: automake/1.16.5
+  qamt2476h2uhyyb3m7bduyvzgjp7i6a7:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/automake/1.16.5.lua
+    use_name: automake/1.16.5
+  mnhsa5fd4zk2pezbb5vbmlqv2spn233z:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/berkeley-db/18.1.40.lua
+    use_name: berkeley-db/18.1.40
+  gf3yvmaiiubebxzxckuwf4gbkvn5gh5f:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/berkeley-db/18.1.40.lua
+    use_name: berkeley-db/18.1.40
+  qpb6tvpe2l5ht7xakujnkmvop3z4skce:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/blitz/1.0.2.lua
+    use_name: blitz/1.0.2
+  2b4hnagb7rgbuwa3xt3engytobpdn7sb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/blitz/1.0.2.lua
+    use_name: blitz/1.0.2
+  x2pksxpyyz5hca5zmv76cjnbfujs3wws:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  fczz5q5wdfi5p4vfaha6wt6auyatmpeg:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/bzip2/1.0.8.lua
+    use_name: bzip2/1.0.8
+  sc4lxm4vczvf3cmeanxaf5fdxotabx3n:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/bzip2/1.0.8.lua
+    use_name: bzip2/1.0.8
+  6vnchvl7iwfl6mrej3n5wz542fakh74x:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/bzip2/1.0.8.lua
+    use_name: bzip2/1.0.8
+  ekebfuweoyvvd335cntnxhw2hpknutnm:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  vrdlmyqjoacatswcm2lpmyuondez36tz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/cmake/3.23.1.lua
+    use_name: cmake/3.23.1
+  tifw4s2f4qqjqgnhqng365ei6ntizo3n:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/cmake/3.23.1.lua
+    use_name: cmake/3.23.1
+  jz7jpkm5xzd6zfskhi7pk53gsugvrrcp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/cmake/3.23.1.lua
+    use_name: cmake/3.23.1
+  6kjovuj65zvslibi7i3kv44hn6ysjqjt:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/diffutils/3.8.lua
+    use_name: diffutils/3.8
+  g5qgvg46upty3erei5bnpbys5irpp6xc:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/diffutils/3.8.lua
+    use_name: diffutils/3.8
+  oi2fnp4eskho4uoozuc4eqlsg2ogckv6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  2qesroosof5o74wjkdtri7oxe56v44hx:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/emacs/27.2.lua
+    use_name: emacs/27.2
+  5pmmjoteqanzk37f2get6emyhoqwca6o:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/expat/2.4.8.lua
+    use_name: expat/2.4.8
+  5hvhpb4ibw6d54kdf6toh675c5o5spv2:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/expat/2.4.8.lua
+    use_name: expat/2.4.8
+  ug4bi5mw2nnm3eyscfd7hlt6sw3yancq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  ekf6g5ywiellvx5reniwcne5yidirold:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/gcc/9.4.0.lua
+    use_name: gcc/9.4.0
+  i44hho5cpu3c4he5waip5adei3wts7cs:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/gcc/11.3.0.lua
+    use_name: gcc/11.3.0
+  fx5tl7bdg53ekmksslekhvxw4mfcng5l:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/gdbm/1.19.lua
+    use_name: gdbm/1.19
+  pnzodnmcyc3m2nj2ggj2sksv2jvh7mom:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/gdbm/1.19.lua
+    use_name: gdbm/1.19
+  d2wgt23crdj57t7r5hqeglgqcb7smmk7:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/gettext/0.21.lua
+    use_name: gettext/0.21
+  pg3edvkdnw6atu2ncg4547sksclezbxl:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/gettext/0.21.lua
+    use_name: gettext/0.21
+  z47wj647f3xyjtort7fjmfqhu2hiyfba:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/git/2.35.2.lua
+    use_name: git/2.35.2
+  u4tpljeoyfjdfyzxeh77bzt7a26d7bg6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/git-lfs/3.1.2.lua
+    use_name: git-lfs/3.1.2
+  amvdul2udwrxbl7b5preqiavv6uq2htf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/gnuplot/5.4.3.lua
+    use_name: gnuplot/5.4.3
+  6c7wdasza3si26u25wlfdagvbxvx32zz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/go/1.18.lua
+    use_name: go/1.18
+  hulv5zuxivn23poypdxgq3qwzqdgdbej:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/gsl/2.7.1.lua
+    use_name: gsl/2.7.1
+  sbwgo6qlcbqmkdefngm7p32lqk2xdtsg:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/gsl/2.7.1.lua
+    use_name: gsl/2.7.1
+  fapixth72mrelski6tr346mfvzquey5y:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/gsl/2.7.1.lua
+    use_name: gsl/2.7.1
+  t4mnjwcytji6yulindf2qt77q5xgtn3n:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/hdf5/1.12.2-mpi.lua
+    use_name: hdf5/1.12.2-mpi
+  epyq4kcem2fwqfrtvxnrtdzu5m6wzyag:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/htop/3.2.0.lua
+    use_name: htop/3.2.0
+  fogriryd22hlcwq73s2flvn7ganfvf2d:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-compilers/2022.1.0.lua
+    use_name: intel-oneapi-compilers/2022.1.0
+  ueqpf7jl7emrnxdsfe6eh634uvpjv3ue:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-compilers-classic/2022.1.0.lua
+    use_name: intel-oneapi-compilers-classic/2022.1.0
+  p2wpb4ztu3ehvgvvfowe7drhwnddw43s:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/intel-oneapi-mkl/2022.1.0.lua
+    use_name: intel-oneapi-mkl/2022.1.0
+  tr5vm2kwjq3upqmleskvpoumuu34yy7j:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/intel-oneapi-mkl/2022.1.0.lua
+    use_name: intel-oneapi-mkl/2022.1.0
+  hkk5cw5svwi3aweb65qv35b3oh4dyku3:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/intel-oneapi-mkl/2022.1.0.lua
+    use_name: intel-oneapi-mkl/2022.1.0
+  riotvcv777km6uofispdbhtcatipd4i3:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/intel-oneapi-tbb/2021.6.0.lua
+    use_name: intel-oneapi-tbb/2021.6.0
+  oerr4mfahwfa6gy6xi24fo724lx5pzhp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/intel-oneapi-tbb/2021.6.0.lua
+    use_name: intel-oneapi-tbb/2021.6.0
+  knik5oydu44zkfxf4dojy5ggcy6zjbiu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/jasper/2.0.32.lua
+    use_name: jasper/2.0.32
+  rgjyjbf7nr6f3pg4cl2fju6y27xruyun:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/jasper/3.0.3.lua
+    use_name: jasper/3.0.3
+  c3jauzj5ommf3vwyppdc3ynvv47s7wd4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/jasper/3.0.3.lua
+    use_name: jasper/3.0.3
+  b5tnvpg5o34op5umpxo2qje7smetinhv:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/jasper/3.0.3.lua
+    use_name: jasper/3.0.3
+  2wh6il22zdca2fxiohmhf2dqrihjtbj4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/jemalloc/5.2.1.lua
+    use_name: jemalloc/5.2.1
+  67z27h4w4cylkxbencn4pd52e7hzqwps:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libbsd/0.11.5.lua
+    use_name: libbsd/0.11.5
+  vjd4nln2iify4ke3p34orgqytuiwdrlb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libbsd/0.11.5.lua
+    use_name: libbsd/0.11.5
+  4whdclsatrke6tdgihpsw5jt6bvndyfc:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libffi/3.4.2.lua
+    use_name: libffi/3.4.2
+  spifhgbosfne2oeruc2dwvgn6y5x7gol:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libffi/3.4.2.lua
+    use_name: libffi/3.4.2
+  wi2esy7menrekxjrkjeh37suja44ywcp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libiconv/1.16.lua
+    use_name: libiconv/1.16
+  obgyk73neelihi4yj6vodyudcuyhjurr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libiconv/1.16.lua
+    use_name: libiconv/1.16
+  es3diboxbqldwfnchtgewdu6u535azhw:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libjpeg-turbo/2.1.3.lua
+    use_name: libjpeg-turbo/2.1.3
+  duhq23kq7kyc3vveldnmfx4uc6xlpgrp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libjpeg-turbo/2.1.3.lua
+    use_name: libjpeg-turbo/2.1.3
+  xn43ulkykblkiz5uavoii7cqpmbyoamx:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libmd/1.0.4.lua
+    use_name: libmd/1.0.4
+  uvm4ewmeopp7yqb6v4hpdal4qg4zml76:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libmd/1.0.4.lua
+    use_name: libmd/1.0.4
+  kqjqfb6izwok6oqgus5m32zbadfenmff:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libsigsegv/2.13.lua
+    use_name: libsigsegv/2.13
+  opcoaoysy4buggrkti4v7az3hlgh5vzk:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libsigsegv/2.13.lua
+    use_name: libsigsegv/2.13
+  4gqe7hz2afprilqgo6jprswlew3beece:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libtool/2.4.6.lua
+    use_name: libtool/2.4.6
+  nlpwtuy6aicakna7qbi63fqzgln6q4xy:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libtool/2.4.6.lua
+    use_name: libtool/2.4.6
+  2ktxbspjlc3wrs5suo3n6lej7yhqdfuj:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/libxml2/2.9.13.lua
+    use_name: libxml2/2.9.13
+  c2ckcc4zi6mqasgu7kfoshjlv2epncuo:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/libxml2/2.9.13.lua
+    use_name: libxml2/2.9.13
+  2zhvnejhc4gicysiue4zmgzdtvxiw5iy:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/m4/1.4.19.lua
+    use_name: m4/1.4.19
+  qpqnol4sccnl3udq4xyb4cszeletzrga:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/m4/1.4.19.lua
+    use_name: m4/1.4.19
+  tj5nfel4u7zo6n6qbjbdajuxujcbutpr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/mc/4.8.26.lua
+    use_name: mc/4.8.26
+  glofehfvgbx6tkbaykhsaeoidbpo7aaq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  dr3utiiw3tw6ap2wxeryf2yiz5hlrml6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  mvpgklwwjuf7cmnpe22zqmwylltjhbb3:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  zbqggmy24wmzxnba36pr3xvbzfbhv5nq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/nasm/2.15.05.lua
+    use_name: nasm/2.15.05
+  oiksf4sz3m74w2azx4pzj2i45szgxmdz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/nasm/2.15.05.lua
+    use_name: nasm/2.15.05
+  v47jjrr6o6eie3kgjmg4fdesvjmfyi46:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/ncurses/6.2.lua
+    use_name: ncurses/6.2
+  os4y446l66umqneih5azcyx7vq56mnw2:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/ncurses/6.2.lua
+    use_name: ncurses/6.2
+  cf62wm7gqrcv45ywg44zovdsuvzj3mru:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  p6xyanovu4iymnu2rwv65xiaahf4cdkv:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/netcdf-fortran/4.5.4.lua
+    use_name: netcdf-fortran/4.5.4
+  pkz3fhhkhhm7lkua5uojcz7a2jo4sofo:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/netlib-scalapack/2.2.0.lua
+    use_name: netlib-scalapack/2.2.0
+  w2aekqa2d6zmibaxrmzfuhwdkzg2x6kj:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  kvcmdsduhxmjz5wgpv4vgatjqacjxaa5:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/openssl/1.1.1k.lua
+    use_name: openssl/1.1.1k
+  hj77le2brvrfqvo4xax2tumiiproet26:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/openssl/1.1.1k.lua
+    use_name: openssl/1.1.1k
+  opigiqotj6i3wi6okbxdwojbxnmii6w6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/papi/6.0.0.1.lua
+    use_name: papi/6.0.0.1
+  46nl4f4fv74faizkpcvlk6s3icaphekq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  pe5rrqwdf4m5pkqzwpui7xn2yr4pzukz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/pdsh/2.31.lua
+    use_name: pdsh/2.31
+  fctqjy2twzhodflizds3pe6hni2l45al:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/perl/5.34.1.lua
+    use_name: perl/5.34.1
+  4jz5nac2pxxznk5rmlnbyxpmvb4lpsro:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/perl/5.34.1.lua
+    use_name: perl/5.34.1
+  p3vyp5eoo4wnkuxqlurh45zvzqtseyy6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/pigz/2.7.lua
+    use_name: pigz/2.7
+  brl7ds2f4gnqrwrpd4emjhwladanfvmf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/pigz/2.7.lua
+    use_name: pigz/2.7
+  vcrqwnmp4vtyeqmtq7wp5fy6onpqth5z:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/pkgconf/1.8.0.lua
+    use_name: pkgconf/1.8.0
+  x2hp6hvnrh3uzkem4xvtw2va3axiiexe:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/pkgconf/1.8.0.lua
+    use_name: pkgconf/1.8.0
+  zj2plnn5zi2zhuoxoy3fa5lkbqg6behf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/proj/8.2.1.lua
+    use_name: proj/8.2.1
+  66ufyowc3on252gc2kksktj6ipnvfdng:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/python/3.9.12.lua
+    use_name: python/3.9.12
+  sawavosm7nz5u7lagki2a6m4qdrvhnur:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/python/3.9.12.lua
+    use_name: python/3.9.12
+  k2ent52qlniu6zmcplr7b62qscj3gw6z:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/readline/8.1.lua
+    use_name: readline/8.1
+  xoy7nv3nhvzxyczycnvdnrdsb7mmzfwi:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/readline/8.1.lua
+    use_name: readline/8.1
+  hcdrw43voxhyua3ul6ekewevh3setg33:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/scalasca/2.6.lua
+    use_name: scalasca/2.6
+  hp7mng27wsolqejz2uftka65is55ghcu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/scorep/7.0.lua
+    use_name: scorep/7.0
+  drieqwkuclox763qm4gnuobdmfglog44:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/scotch/7.0.1.lua
+    use_name: scotch/7.0.1
+  wa6a6mopvikgj2e2mmvwjydm3bh27vkc:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/screen/4.9.0.lua
+    use_name: screen/4.9.0
+  tgirolodx4dcecenlucg56em62vw7b6f:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/sqlite/3.38.5.lua
+    use_name: sqlite/3.38.5
+  eidep6mjlu3jroeccti3jzonpnisxmuk:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/sqlite/3.38.5.lua
+    use_name: sqlite/3.38.5
+  y2f3iskhn72pkpfgxiajw47nxqf67mo6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/subversion/1.14.1.lua
+    use_name: subversion/1.14.1
+  2hrdscqykomnkakfh5f4be4i2e2hgv5r:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/tar/1.34.lua
+    use_name: tar/1.34
+  jhveajcoywbpzyic5y4lf4imyihsmd5j:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/tar/1.34.lua
+    use_name: tar/1.34
+  bwx7n2oheau3wfdjckjh73yd3nb7uez4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/tmux/3.2a.lua
+    use_name: tmux/3.2a
+  exp7ut2vmydvondctab5cj6zryshxrkz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/util-linux-uuid/2.37.4.lua
+    use_name: util-linux-uuid/2.37.4
+  7wcjxujwdcfrsjvn3p4xf6j3fem7h42w:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/util-linux-uuid/2.37.4.lua
+    use_name: util-linux-uuid/2.37.4
+  x5nlw45i7leitkic3gquocsabzguu5h5:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/vim/8.2.2541.lua
+    use_name: vim/8.2.2541
+  yb7uguly3deqaohweukm3futhoohmxus:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/xz/5.2.5.lua
+    use_name: xz/5.2.5
+  raqmkwucio6y3rmwkbymsf2rrvj5yu3t:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/xz/5.2.5.lua
+    use_name: xz/5.2.5
+  zpeil5ofj7u7rwzviowptxjakat5qxi7:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/zlib/1.2.12.lua
+    use_name: zlib/1.2.12
+  tpcwxhrgaoabnpjyahlkfmij7diq3yon:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/zlib/1.2.12.lua
+    use_name: zlib/1.2.12
+  j2l2jbsvdd52w5hf6oqk3a5gpsw2s4aj:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/zlib/1.2.12.lua
+    use_name: zlib/1.2.12
+  rjx26mqneut33vaonc4kwro3prsyew7h:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/zlib/1.2.12.lua
+    use_name: zlib/1.2.12
+  46oshlieuo7erwotzpgh6ke6qjylwem4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/zstd/1.5.2.lua
+    use_name: zstd/1.5.2
+  qqy4dla5xerhlkhi5weo3wv4j26aop6z:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/zstd/1.5.2.lua
+    use_name: zstd/1.5.2
+  qcaixnj4kbtqjj65bx7rdggxmmwjmp24:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  fu5nme2zxrwb7joahrixr6zce3g4s2wv:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/openmpi/4.1.4.lua
+    use_name: openmpi/4.1.4
+  daxcijffokwniitbb4b26ibx7q3hcwlu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-compilers-classic/2021.6.0.lua
+    use_name: intel-oneapi-compilers-classic/2021.6.0
+  i3ickjufigge2k7cev5ivu32miakwfmp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/openjdk/11.0.15_10.lua
+    use_name: openjdk/11.0.15_10
+  nc2bkc2bskjbgtbox2gd2efbu2tjsc2g:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/openjdk/17.0.3_7.lua
+    use_name: openjdk/17.0.3_7
+  gawbnpaztiaz324qhkvgczy3tuxmf5uh:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ncftp/3.2.6.lua
+    use_name: ncftp/3.2.6
+  rkox7buf5rdd7jwvcy4ikdjnrjhbtsch:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/grace/5.1.25.lua
+    use_name: grace/5.1.25
+  ujces6lfxvgfelochyavpp6n3wv4jwzf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/intel-oneapi-mpi/2021.6.0.lua
+    use_name: intel-oneapi-mpi/2021.6.0
+  j7op2otziou5uzwyqis7qqgeivmm5tnb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ffmpeg/4.4.1.lua
+    use_name: ffmpeg/4.4.1
+  wklxyi2j4d7nl3xtfraf4ypwzalwmssq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/boost/1.79.0-mpi.lua
+    use_name: boost/1.79.0-mpi
+  nnjeblrszl56a4taqz6gpqb7rfwlvq2w:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  6a4vs6kz6zgt7zdzeiqjlgoofj2tsta3:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  rzlc7bmfu7bcnk65dmga4vkoaty7ntmi:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/hdf5/1.12.2-mpi.lua
+    use_name: hdf5/1.12.2-mpi
+  4acir6x4h22qbfzo7y2oennbm7orwwpr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/jasper/2.0.32.lua
+    use_name: jasper/2.0.32
+  x5mttm3s2i6g2qmnctybbhpv7axmjy3u:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  nucfzesbf5e6mzghxpbw4sz56cj7zblt:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/netcdf-fortran/4.5.4.lua
+    use_name: netcdf-fortran/4.5.4
+  cqvneerywm4b5qmuggkfrbnjnilac6tc:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/papi/6.0.0.1.lua
+    use_name: papi/6.0.0.1
+  qp3uqsp75r3dxezsusiczla6pxhxdj6a:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  ny4jfnusevprhwj73mqsgbkn3s763ie7:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/proj/8.2.1.lua
+    use_name: proj/8.2.1
+  2yypoygg4vjrbs7eozil3mnjqnxnrky6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-vtune/2022.3.0.lua
+    use_name: intel-oneapi-vtune/2022.3.0
+  rswllwmsthbsbmazi6k7xbgq4a72h5pu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/intel-oneapi-mpi/2021.6.0.lua
+    use_name: intel-oneapi-mpi/2021.6.0
+  ldaiqr7shu3wwfbtuj6l2osp24r4kxsr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/vmd/1.9.3.lua
+    use_name: vmd/1.9.3
+  u66kamaurscw2qmlbg47k2ybxnqvjs7i:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/netlib-scalapack/2.2.0.lua
+    use_name: netlib-scalapack/2.2.0
+  j2kmpc6qgoocenif3sctajkcgm7hro6t:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ncview/2.1.8.lua
+    use_name: ncview/2.1.8
+  jtvxn5s2lnenv2op4hfdlihq5moekzhh:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ncl/6.6.2.lua
+    use_name: ncl/6.6.2
+  txfgubfkbok7pyzdoqt4gopaegj6gsra:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/udunits/2.2.28.lua
+    use_name: udunits/2.2.28
+  q55oyu46sx4dk3ayw3woc2wewwfi2lzu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/udunits/2.2.28.lua
+    use_name: udunits/2.2.28
+  pyfc6x22wzuczujpz7ywn24jlcafztdi:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/makedepf90/2.8.9.lua
+    use_name: makedepf90/2.8.9
+  4rzm3rgxdutwwreahvah2yvajl5vuuvs:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/openbabel/3.1.1.lua
+    use_name: openbabel/3.1.1
+  osommyk2vu773sdicgm2fkpegcrzufgk:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/gsl/2.7.1.lua
+    use_name: gsl/2.7.1
+  vabqjeeqbjzmphgnmgxiutlfmvgqowdr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/hdf5/1.10.8.lua
+    use_name: hdf5/1.10.8
+  v37qbm5kafrlnf2ugbeme24k6cvpqxdp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-mkl/2022.1.0.lua
+    use_name: intel-oneapi-mkl/2022.1.0
+  2fey3jzpp7743x3rnwyosjlwhwc7b7pd:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ncl/6.6.2.lua
+    use_name: ncl/6.6.2
+  yifm226d6euws6cf23abibukzwlgpz6y:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/nco/5.0.1.lua
+    use_name: nco/5.0.1
+  yjid7zvsefw7wsxp74u3e3racohc7xaf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ncview/2.1.8.lua
+    use_name: ncview/2.1.8
+  3a6b7znm7dfmw4ib2lgtq6gyc4y35oxs:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  tlszzstbs42wc33gvdo43fq25znib2mz:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/netcdf-fortran/4.5.4.lua
+    use_name: netcdf-fortran/4.5.4
+  qrsaci4sezmxanf3wjaejjyxfntwdefe:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/gdal/3.4.3.lua
+    use_name: gdal/3.4.3
+  l5nk3hbpalbpsgvfuvbdokn4mcqsd2oe:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/gdal/3.4.3.lua
+    use_name: gdal/3.4.3
+  4o64xpjih2azxbigrrpd22zjv7vi4q2i:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/restic/0.12.1.lua
+    use_name: restic/0.12.1
+  dz7pidm7eqntademarjzosqgtnrsanvv:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/rclone/1.57.0.lua
+    use_name: rclone/1.57.0
+  rs3nvswx6psbat432b5jajh2z4jfgxkf:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-itac/2021.6.0.lua
+    use_name: intel-oneapi-itac/2021.6.0
+  3eudf5li37ru2z4g2gnhrkqh42wiiopp:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  hffqgatr4exzktqtjaevmu3va5p7s7bq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  nt4blstew44kokuesqswoz6axux5cynb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  bxxq5526mtnhkzsz3x2n2dz2ie3mijlr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  hwrwnyfvszqiqj5jr3ief2zsc4nyjmrs:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  fhua6hvouyb5ycirqebhgyvcrxlnkkfk:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-advisor/2022.1.0.lua
+    use_name: intel-oneapi-advisor/2022.1.0
+  56tgo3qvgznn2lkkmssynvnhb5ym6vcv:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/intel-oneapi-tbb/2021.6.0.lua
+    use_name: intel-oneapi-tbb/2021.6.0
+  zb7r5fyze77jnvcgtwmpzuw7xebrrupr:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/intel-oneapi-tbb/2021.6.0.lua
+    use_name: intel-oneapi-tbb/2021.6.0
+  iot3rvrju6mdav5kdpxkt3budqpf45qw:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/intel-oneapi-tbb/2021.6.0.lua
+    use_name: intel-oneapi-tbb/2021.6.0
+  3i5eaetbghngxzysfqea5llfbl7g2f4m:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/armadillo/10.5.0.lua
+    use_name: armadillo/10.5.0
+  pwmc26rmjejxkb7f7c64z6sewaubuazh:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/hyperqueue/0.11.0.lua
+    use_name: hyperqueue/0.11.0
+  fepp2bllbzqv5rlymbprqldtfmqv2mai:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  zn2mjlno6lcrlypz3jrehfiupa754z73:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  ete4eszhcqr6ffjrvju7syejk26kavgm:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel-oneapi-mpi/2021.6.0-ujces6l/intel/2021.6.0/eccodes/2.25.0.lua
+    use_name: eccodes/2.25.0
+  zpo6xzgc3omenqh4qig32eblr4rdti2k:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  2e7ghkx2hhc4waggluvm4oivklqxbhha:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  vk3w3ghj5ixxrsxzxfi4dx6nluen6izb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/cdo/2.0.5.lua
+    use_name: cdo/2.0.5
+  6mhsmscwtkerqbtzzy456c5jugc2yb5z:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/parallel/20210922.lua
+    use_name: parallel/20210922
+  swkv5w6wrzuachlt5ixp5mygf5g65jzo:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/scalasca/2.6.lua
+    use_name: scalasca/2.6
+  eipty5wrzykgp6xacornxwmeal37dcmo:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  764bzv57kwksqbqfqxqz6zf63kf3omwe:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/oneapi/2022.1.0/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  g5ny77xcbrbwzs5w6vm2r33icjfc2xzy:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  xijhcknvr5b4vyvgzgc2niheku5iz7y5:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  r7ju7rw7tr6orphjcanpphqyvlgkw3rq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/intel/2021.6.0/boost/1.79.0.lua
+    use_name: boost/1.79.0
+  fb4ztnulzoqoagspmya26lt5vp6uobu6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/boost/1.79.0-mpi.lua
+    use_name: boost/1.79.0-mpi
+  544ifx6w7wgiyyyzovqn7z5bhfdkbews:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-w2aekqa/gcc/11.3.0/boost/1.79.0-mpi.lua
+    use_name: boost/1.79.0-mpi
+  bshr4hiencohghypr622vki5e2s3eon4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/mariadb/10.8.2.lua
+    use_name: mariadb/10.8.2
+  sw6j24sb77o355zpx6otdauf4xahrz5q:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/pigz/2.7.lua
+    use_name: pigz/2.7
+  ymnetb2miaoitkvig6jk3dea2wmcjws6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/sqlite/3.38.5.lua
+    use_name: sqlite/3.38.5
+  gvasned6cftogaoqzkgjf76536pxl2ry:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/hip/5.1.0.lua
+    use_name: hip/5.1.0
+  mjw7erg4oyhjgearky4nvrayrddclhc6:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/hipify-clang/5.1.0.lua
+    use_name: hipify-clang/5.1.0
+  gkv6dxkfx5tgembvzpozwem27lkejzv4:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/openmpi/4.1.4-cuda.lua
+    use_name: openmpi/4.1.4-cuda
+  ngeilk5t645apa3l6eiddqtf46bnjqhq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/octave/7.1.0.lua
+    use_name: octave/7.1.0
+  ujeahcdtlog7t3ft7j36ylekzcrk5ozb:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/amber/20.lua
+    use_name: amber/20
+  5qqu2q5xuzmggcerolairwjuty6tgiau:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/amber/22.lua
+    use_name: amber/22
+  7bl3xbvoi6kv2bsltebpvypywas4levx:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/openmpi/4.1.4-2sr2yf5/gcc/9.4.0/amber/22.lua
+    use_name: amber/22
+  kk2gxoblifdrapygb3hth6lzz4iq7pzu:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/nano/4.9.lua
+    use_name: nano/4.9
+  smvqiyxg3db2d7tsujyobbfjbufmtv6x:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/p7zip/16.02.lua
+    use_name: p7zip/16.02
+  k3gad2utinenijlc3z4moxg6momjada3:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/dmtcp/3.0.0.lua
+    use_name: dmtcp/3.0.0
+  sktxok3kf5m5m7v2b3ts2loz425wbqjh:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/libzip/1.10.1.lua
+    use_name: libzip/1.10.1
+  5yr3a2sm5ckib47r7d5dmv4f5jm3qnlq:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/gcc/11.3.0/libaec/1.0.6.lua
+    use_name: libaec/1.0.6
+  r6s6skuazkivqkaez5xyvckkcaac6kgt:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/ghostscript/9.54.0.lua
+    use_name: ghostscript/9.54.0
+  ojrvja43u56m4giidujwt4mr56v3vjam:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/mariadb/11.4.3.lua
+    use_name: mariadb/11.4.3
+  zz3lpntcpvvodhjdaafif6fyo746phis:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/openjdk/11.0.25_9.lua
+    use_name: openjdk/11.0.25_9
+  pdl4xfvlwrbvsb27f3aqnkacc2sgbore:
+    path: /appl/spack/v018/modulefiles/linux-rhel8-x86_64/Core/openjdk/17.0.13_11.lua
+    use_name: openjdk/17.0.13_11

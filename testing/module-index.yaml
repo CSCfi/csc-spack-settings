@@ -1,0 +1,4 @@
+module_index:
+  ojrvja43u56m4giidujwt4mr56v3vjam:
+    path: /appl/spack/v018/testing/linux-rhel8-x86_64/Core/mariadb/11.4.3.lua
+    use_name: mariadb/11.4.3
