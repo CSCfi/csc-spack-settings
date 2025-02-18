@@ -1,0 +1,28 @@
+spack:
+  specs:
+  - elpa%gcc@11.3.0
+  - openmpi
+  - intel-oneapi-mkl
+  - libxc
+  - fftw
+  - python
+  - py-numpy
+  - py-pip
+  - py-scipy
+  - py-matplotlib
+  view: /appl/spack/v018/views/gpaw-python-env
+  packages:
+    all:
+      compiler: [gcc@11.3.0]
+      target: [cascadelake]
+      providers:
+        blas: [intel-oneapi-mkl]
+        lapack: [intel-oneapi-mkl]
+        scalapack: [netlib-scalapack]
+    python:
+      version: [3.9.12]
+      variants: +tkinter +tls
+    netlib-scalapack:
+      variants: +pic
+  concretizer:
+    unify: true
