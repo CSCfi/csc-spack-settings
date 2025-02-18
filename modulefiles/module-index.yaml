@@ -1,0 +1,448 @@
+module_index:
+  tb6ubtizfe6hzscto4zuh45hub3x37jp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/amdblis/3.1-omp.lua
+    use_name: amdblis/3.1-omp
+  fqyfbc4iljqsdolf33hasxqr5weiypld:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/amdlibflame/3.1.lua
+    use_name: amdlibflame/3.1
+  7nrfi4e4kuqluds54sr6exg2mdr2xchv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/aocc/3.2.0.lua
+    use_name: aocc/3.2.0
+  mp3cekah5ufw7hxnwjhbg47ehkzow4xk:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/boost/1.77.0-mpi.lua
+    use_name: boost/1.77.0-mpi
+  xcvljwf3w3tsg6wjorjjsx5ant7j5ggn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/boost/1.77.0-mpi.lua
+    use_name: boost/1.77.0-mpi
+  xid55e2mm4lgwduhgpsh3sh72yfkxja6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/boost/1.77.0-mpi.lua
+    use_name: boost/1.77.0-mpi
+  eriqoypb542ykw5ppjjd6v6ohww57zag:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/boost/1.77.0-mpi.lua
+    use_name: boost/1.77.0-mpi
+  qzaxv5kxg7cqcdvpoo3ard6kuf326m7u:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/bzip2/1.0.8.lua
+    use_name: bzip2/1.0.8
+  hdg632gtcqwdty54kwgngn6zu24jnpy3:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/cdo/1.9.10.lua
+    use_name: cdo/1.9.10
+  gaubsv4zekcjuusxxiz4v5ko2krrt62t:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/cdo/1.9.10.lua
+    use_name: cdo/1.9.10
+  dmfzvrrjofrgskady2pwjbkw6lblcsea:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/cdo/1.9.10.lua
+    use_name: cdo/1.9.10
+  zsucgfx5sfglncl33azj3pq2nnsxojgh:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/cgal/5.0.3.lua
+    use_name: cgal/5.0.3
+  5wb5gpmskdpo447rnhpstwzkbkrserrm:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/cgal/5.0.3.lua
+    use_name: cgal/5.0.3
+  elesn4lk6pmlu3c4p2kaj5idu6etr5ne:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/cmake/3.21.4.lua
+    use_name: cmake/3.21.4
+  x7d5cx3bbpkgvf3dfigja3iffw4cm7fx:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/cp2k/8.2.lua
+    use_name: cp2k/8.2
+  go3te6f4usqbvjegu42alvhlen5fo37s:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/cp2k/9.1.lua
+    use_name: cp2k/9.1
+  mg4ztbnkr4gb6a6jdb35zygp3wlnblqj:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/cuda/11.5.0.lua
+    use_name: cuda/11.5.0
+  oixn6upxyjpryv2tbmqmzbopv4sdo4ws:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/eccodes/2.24.2.lua
+    use_name: eccodes/2.24.2
+  m7dwu3sfpap5y2w2ng7flmv56g3s4vh5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/eccodes/2.24.2.lua
+    use_name: eccodes/2.24.2
+  mtulpwy5ohnlmjspeodhssm4tbricdaq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/eccodes/2.24.2.lua
+    use_name: eccodes/2.24.2
+  bkuzwgx62glb45hcatjufww3iygaiuiw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/eccodes/2.24.2.lua
+    use_name: eccodes/2.24.2
+  ejv7kheu7fc2lbqw3lsg23bsme6z3ni3:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/emacs/27.2.lua
+    use_name: emacs/27.2
+  6tph5fwfvnkbomtismotp5fbopf3zaef:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  dsrtoibtzyucjzl4lesaxggo52m3ykhp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  jseoutysi4rlucryvbdemzuslizjp7xr:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  jmkbjqtft6zelciucp3zlsr7rfm3ytbn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/fftw/3.3.10-mpi-omp.lua
+    use_name: fftw/3.3.10-mpi-omp
+  nfm4wc635upjl7ezzjd42nky3th4w7pd:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/gcc/9.4.0.lua
+    use_name: gcc/9.4.0
+  f5wawrzfdgg6mv5imoklj2rqkf3hbtfn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/gcc/10.3.0.lua
+    use_name: gcc/10.3.0
+  zshp2ky5cbsonav6wkzaf5ynydi74k63:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/gcc/11.2.0.lua
+    use_name: gcc/11.2.0
+  cad5vklecj6e5uirb4a67oy3hi2mjtrw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/git/2.31.1.lua
+    use_name: git/2.31.1
+  7ueugbhffoms6lookxqb5a7r6dyik7sn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/git-lfs/2.11.0.lua
+    use_name: git-lfs/2.11.0
+  fmncns5kraygjlfsm77azrz2h4zksqoq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/go/1.17.2.lua
+    use_name: go/1.17.2
+  6gdzgfr5oigikygcqttxbrz4747h4f2h:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/gromacs/2020.4-plumed.lua
+    use_name: gromacs/2020.4-plumed
+  lrcm4vunjmcy7wxhtdcu3ime7u5o3kvq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/gromacs/2021.3.lua
+    use_name: gromacs/2021.3
+  my62ih46st2645a5bvfclhjqcvgcta6k:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/gromacs/2021.5.lua
+    use_name: gromacs/2021.5
+  gkw226xn57xn55nhymadyvqbsl6qn3pn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/hdf5/1.10.7-mpi.lua
+    use_name: hdf5/1.10.7-mpi
+  ztyta2swbhc4ajoxxv64rupy2viuzlmg:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/hdf5/1.10.7-mpi.lua
+    use_name: hdf5/1.10.7-mpi
+  veijpfeb24jpftvdf6t3ofqyzcesryom:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/hdf5/1.10.7-mpi.lua
+    use_name: hdf5/1.10.7-mpi
+  qc3apkkxmocwxv7iapxut5lxsevd7r7g:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/hdf5/1.10.7-mpi.lua
+    use_name: hdf5/1.10.7-mpi
+  dzzsadz4s6qzoi2viagcmadluh6poqwx:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/jasper/2.0.32.lua
+    use_name: jasper/2.0.32
+  jrixupyk22uiakxza66cnjl4rjsrvjij:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/jasper/2.0.32.lua
+    use_name: jasper/2.0.32
+  j2yyteauyib5pp7hnmzx2223m2cvj6nv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/jasper/2.0.32.lua
+    use_name: jasper/2.0.32
+  j7p3pi2w247f6fypmx22puuhgtj7ul52:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/jemalloc/5.2.1.lua
+    use_name: jemalloc/5.2.1
+  5avdrzr4zy3mmnq5bsxyawdgkne65zcy:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/jemalloc/5.2.1.lua
+    use_name: jemalloc/5.2.1
+  rz4hjayrxuuwxiosd7saqecoupsiogca:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/mpich/4.0.1.lua
+    use_name: mpich/4.0.1
+  oja7fgr4pd6l76qwn5qopsuzbprhkzwl:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/mpich/4.0.1.lua
+    use_name: mpich/4.0.1
+  ljlxhmnuq3zir73yvd3s3ibed4llj5ad:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/mumps/5.4.0.lua
+    use_name: mumps/5.4.0
+  g7cohqcao52jviw3vvfubkq63l6qqs2o:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/mumps/5.4.0.lua
+    use_name: mumps/5.4.0
+  5yo7re7bfyi6j6qovrwhcuoslogzr5r4:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/mumps/5.4.0.lua
+    use_name: mumps/5.4.0
+  haiggrnvpoflplmhpcnrdkaiyp3g3gf5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/mumps/5.4.0.lua
+    use_name: mumps/5.4.0
+  tbd3ilarntm2vh27nuwj7fq5gh763b4r:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  ewvkdv2kjq6o7xeaczylpmlpfwsuj6eo:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  k66cgqthvgi4b3iea4fbewqu2rq4fm2m:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  zwgxgafqkpohs37chrdqhm6gxjtbzxzl:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/netcdf-c/4.8.1.lua
+    use_name: netcdf-c/4.8.1
+  6ghytbnur4fnl733ecqmj7vcss33dqcc:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/netcdf-fortran/4.5.3.lua
+    use_name: netcdf-fortran/4.5.3
+  yxu75d2xxm5uqfjzxfx2qxw6z472mlrp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/netcdf-fortran/4.5.3.lua
+    use_name: netcdf-fortran/4.5.3
+  oooptomaqzja4rqkoqg2wcxps5f2gnre:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/netcdf-fortran/4.5.3.lua
+    use_name: netcdf-fortran/4.5.3
+  y5m33p3xuufjdiurb3a7shnkley4cnqs:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/netcdf-fortran/4.5.3.lua
+    use_name: netcdf-fortran/4.5.3
+  6fc4dih3izdmeqscjagqkiwx37w4mwpo:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/netlib-scalapack/2.1.0.lua
+    use_name: netlib-scalapack/2.1.0
+  xfqy3wkrccvzssqg3v3ygalz3i7b3vli:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/netlib-scalapack/2.1.0.lua
+    use_name: netlib-scalapack/2.1.0
+  ia2oka6ycfwcagegsj474daq4sv77zvk:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/netlib-scalapack/2.1.0.lua
+    use_name: netlib-scalapack/2.1.0
+  j4uvb7xwvftda3fyt2junonskhnpi6b2:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/openblas/0.3.18-omp.lua
+    use_name: openblas/0.3.18-omp
+  eb6g7ne7jy2mgytdgtppgmfzgyrnbm6j:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/openblas/0.3.18-omp.lua
+    use_name: openblas/0.3.18-omp
+  kmnp2gos7h2dkam53qbscuov4scdsd4e:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2
+  h6c3zeoxl6nbh64dge2ffrfhd4xk2s3b:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2
+  7xl2mg3yjmhx66e63u3lnyz6wysmtokm:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  kwu46l32xyobylasqfbjkh3ozffl2fs6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  fwpj6rrzj7z77iuu2izdnc6xvrg3s4l6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  f3ctm3z2ta4akrtxcp4zo3b74qwpbi4a:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/parallel-netcdf/1.12.2.lua
+    use_name: parallel-netcdf/1.12.2
+  lks7uvzot3te6yvicf7cwt5fgy6j26mp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/pdsh/2.31.lua
+    use_name: pdsh/2.31
+  tc6wrkfhgjc4hwmuw2do2xlgrcynushf:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/scalasca/2.6.lua
+    use_name: scalasca/2.6
+  zjea67ht5o55oxsizisal2st2h67b4pd:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/scalasca/2.6.lua
+    use_name: scalasca/2.6
+  6xrpgb5r6q74aj5u5lzps25hfp5ag5js:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/scalasca/2.6.lua
+    use_name: scalasca/2.6
+  fbuicsernehyg6hhq5ocy3gvjzgk35ho:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/scorep/7.0.lua
+    use_name: scorep/7.0
+  kdbvth6zw3qaiwswnchmm6x2yxoamkgw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/scorep/7.0.lua
+    use_name: scorep/7.0
+  b7qajkngt7j6d44lzzbmbakzjpauthvq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/scorep/7.0.lua
+    use_name: scorep/7.0
+  2v42fsvndyylvkusf5l2ys3qfgeflhjn:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/scotch/6.1.1.lua
+    use_name: scotch/6.1.1
+  bqwjoqssefxzldmdrxaiq57zpnqxahuk:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/scotch/6.1.1.lua
+    use_name: scotch/6.1.1
+  5uectfkzlqtdtvrqwj3ctk2pyx64jpq4:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/scotch/6.1.1.lua
+    use_name: scotch/6.1.1
+  g4poukmxounle64pdqzg7n4ne6tborwj:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/scotch/6.1.1.lua
+    use_name: scotch/6.1.1
+  ba2gk3n5tpw2yp5zgf63ulpmmtto62uw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/screen/4.8.0.lua
+    use_name: screen/4.8.0
+  de43whhitlccvxc2tgd3pjmin6fgclgj:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/subversion/1.14.0.lua
+    use_name: subversion/1.14.0
+  7kfncigkhrxvskslqfwd253624hlc26m:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/tmux/3.2a.lua
+    use_name: tmux/3.2a
+  f63laz37c4twm7h72el67sn2br6tsb5n:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/vim/8.2.2541.lua
+    use_name: vim/8.2.2541
+  urjiskquye6m2dhqhryjaizrqwwivhgf:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/gnuplot/5.4.2.lua
+    use_name: gnuplot/5.4.2
+  apf5omqlcqm3sm7z5zntpvq3sqfkvnrp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/gsl/2.7.lua
+    use_name: gsl/2.7
+  nkyshrjcwadbbd7akopgnq6iz46qh5sh:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/gsl/2.7.lua
+    use_name: gsl/2.7
+  z7r57sbatzqz54qtcvt4vpnvqohypdi5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/molden/6.7.lua
+    use_name: molden/6.7
+  pfezjmhck7jymcebvirjzgtbq4xinxya:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/fio/3.26.lua
+    use_name: fio/3.26
+  nfkv4nebhubzmq4ixxdr2qmmtdgb2k2u:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/htop/3.1.1.lua
+    use_name: htop/3.1.1
+  w7iljqbsmif3aviwwzfjngtkguovky5n:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/fish/3.3.1.lua
+    use_name: fish/3.3.1
+  xdpfcfapr3ykujrcaawt25fi5evw4og5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/namd/2.14.lua
+    use_name: namd/2.14
+  slpwkmixfl64qyceyjhdw5kmsdvp6ooq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/amber/20.lua
+    use_name: amber/20
+  w7gkdprlqhqoyho5dqkxt5fbaa4xsaiy:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/namd/2.14.lua
+    use_name: namd/2.14
+  crjjbvz4ckjxmq3kjdlmlzxegd7vxxtl:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/cudnn/8.3.3.40-11.5.lua
+    use_name: cudnn/8.3.3.40-11.5
+  pyldjkih7pob2k6aobxlyhx54uhtvc6y:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/nco/5.0.1.lua
+    use_name: nco/5.0.1
+  2ak27hmtu4zbplhnliyjdr5csn24qsdd:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/nco/5.0.1.lua
+    use_name: nco/5.0.1
+  mxect5tp3raqvvdnu22mo4rp7bweprrx:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/hpl/2.3.lua
+    use_name: hpl/2.3
+  co2xtapgcjuxxblsfiraofdwdsqqzk3u:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/proj/8.1.0.lua
+    use_name: proj/8.1.0
+  72rqsvl6bydlbhltmfiiaswrbqrjw7pv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/proj/8.1.0.lua
+    use_name: proj/8.1.0
+  eur4yv5m5i6gsgymdxyzllyspgb6nbh6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/papi/6.0.0.1.lua
+    use_name: papi/6.0.0.1
+  zeasylvxru5ybvkmtpcj4whmqdtitblt:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/papi/6.0.0.1.lua
+    use_name: papi/6.0.0.1
+  zpwy5p5omf5xxgmhqa3t4deloovaybvv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-yayasiw/gcc/9.4.0/fftw/3.3.10-mpi.lua
+    use_name: fftw/3.3.10-mpi
+  xcycqxhhslotkhz7vh2x37a2jk2zf5wf:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-yayasiw/gcc/9.4.0/fftw/3.3.10-mpi-omp.lua
+    use_name: fftw/3.3.10-mpi-omp
+  uylcvoxynydndnbipvcjx47kspz5ctvh:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-oja7fgr/gcc/11.2.0/fftw/3.3.10-mpi-omp.lua
+    use_name: fftw/3.3.10-mpi-omp
+  6siicpcxrw4fzl7i7mq2sy22c7vtqx3w:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/fftw/3.3.10-mpi-omp.lua
+    use_name: fftw/3.3.10-mpi-omp
+  ykjvthpgyqj4xgmrt5u5oaetrux2omj7:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/git/2.31.1.lua
+    use_name: git/2.31.1
+  lipimxgsyoi5xsmwxdfsvimpyrsm2faw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/cuda/11.5.0.lua
+    use_name: cuda/11.5.0
+  qp6rzjxpxk3a2zfeurfibfx4pvkcrdgx:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/blitz/1.0.2.lua
+    use_name: blitz/1.0.2
+  xifrgsyyuce5naltxh22azoucqxuegw5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/grib-api/1.24.0.lua
+    use_name: grib-api/1.24.0
+  rn4oirrktlwld47eqrcadkfpk5f7dbqu:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  comw3laq5to64ygnkw6xgnwlswmpacid:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  rlnyf7ouq3rw5kpuwogung5zsaw7xozc:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/metis/5.1.0.lua
+    use_name: metis/5.1.0
+  llgwhqhycixm4ny4cutsaq5qdjjvnwvc:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/plumed/2.6.3.lua
+    use_name: plumed/2.6.3
+  pwzd4uso57yfx5sbetivakqutvjfejz3:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/amber/20-cuda.lua
+    use_name: amber/20-cuda
+  heyqg2kncijvxitv7fhv7oq3hi7zdep6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/namd/2.14.lua
+    use_name: namd/2.14
+  3mo6flvby4h4yheqvkq5hkafbeabqdxv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/namd/2.14.lua
+    use_name: namd/2.14
+  ovmxmskbwyoxucodh5aptouk33d3wemv:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/extrae/3.8.3.lua
+    use_name: extrae/3.8.3
+  tpsaruyoi3z3ins57l4zolqcwr7cjw7z:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-yayasiw/gcc/9.4.0/boost/1.77.0-mpi.lua
+    use_name: boost/1.77.0-mpi
+  cgr4nzqmveegeytfabspmlm3grxrtzgw:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/9.4.0/openmpi/4.1.2-cuda.lua
+    use_name: openmpi/4.1.2-cuda
+  3s27jy2zwkvovjtulyffdulke7o7elyy:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-h6c3zeo/gcc/11.2.0/hypre/2.23.0.lua
+    use_name: hypre/2.23.0
+  n6nlti4k6zjdgr6bhevaqrceztunipyr:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/mc/4.8.26.lua
+    use_name: mc/4.8.26
+  c2yrz7dh7cw25tezyrkw7o3tdngqlxqt:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/imagemagick/7.0.8-7.lua
+    use_name: imagemagick/7.0.8-7
+  borxsogvvfcmraexqgqtefiannkbntfd:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/hyperqueue/0.11-dev.lua
+    use_name: hyperqueue/0.11-dev
+  63xfu7vdsxgz3ulodkahx2mik5kqlh34:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/nextflow/22.05.0-edge.lua
+    use_name: nextflow/22.05.0-edge
+  uhood3znwk6scwc5m6bibet2vovvz7oe:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/openjdk/11.0.12_7.lua
+    use_name: openjdk/11.0.12_7
+  vjgc44wrrkxwwfqvcfjvwjgkjhmxh3ci:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2
+  2zcs25ebuh5nxnlqjjfwtcjm5ctrhuv4:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/amdfftw/3.1.lua
+    use_name: amdfftw/3.1
+  d5gjzl4qp67liebxqfxx5bsdszo5rfez:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-vjgc44w/aocc/3.2.0/amdfftw/3.1.lua
+    use_name: amdfftw/3.1
+  nozd3c6wvml3ehbdff4tlxq3fsidqqxf:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/mpich/4.0.1-rz4hjay/aocc/3.2.0/amdscalapack/3.0.lua
+    use_name: amdscalapack/3.0
+  3wvfcl77riod2ygcvovy56jadzcoqjn5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-vjgc44w/aocc/3.2.0/amdscalapack/3.0.lua
+    use_name: amdscalapack/3.0
+  jvyblznphwaerl5iqtvsecdfxt7f2j2l:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/aocc/3.2.0/aocl-sparse/3.1.lua
+    use_name: aocl-sparse/3.1
+  uh7nqd7xfhuxius2wklfrutt5m6keqtm:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/7.5.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2
+  ndd6qmdlj5ujo6euexuswxarvm475jft:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/parallel/20210922.lua
+    use_name: parallel/20210922
+  e7vsfivtspq3bzqgdnoxfvreehykgdlr:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/flux-core/0.43.0.lua
+    use_name: flux-core/0.43.0
+  yxjkrcg5pciponkcm27poo5j6fq4wdtp:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/yaml-cpp/0.7.0.lua
+    use_name: yaml-cpp/0.7.0
+  sxaxnkffhmvuwn7taclckdy4wq24cr5p:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/11.2.0/cp2k/2022.2.lua
+    use_name: cp2k/2022.2
+  cfkgt554ppuivy4m6ei4luf5de4hnofq:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/valgrind/3.17.0.lua
+    use_name: valgrind/3.17.0
+  xrksftv6jnjwoyuseaofisev6qepstf5:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/p7zip/16.02.lua
+    use_name: p7zip/16.02
+  bylozwpg3fcksvkrv6dpte7neryjho4k:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/openmpi/4.1.2-cuda.lua
+    use_name: openmpi/4.1.2-cuda
+  hsmnupqrd73js5vt2do7rvr4l3ncuixz:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/nano/4.9.lua
+    use_name: nano/4.9
+  fem63n7qrdb43fccvdx3avzbevgcrxj6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/nano/4.9.lua
+    use_name: nano/4.9
+  rapzjamxp7hpmg2qgtp56mr2jy7nlz5m:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-bylozwp/gcc/11.2.0/netlib-scalapack/2.1.0.lua
+    use_name: netlib-scalapack/2.1.0
+  p3xxmqgqoefpc4iy3bknjtvz2z6fazg6:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-bylozwp/gcc/11.2.0/hypre/2.23.0.lua
+    use_name: hypre/2.23.0
+  5fk3k2apvrhpsh5slmlhpgycyshq5m67:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/openmpi/4.1.2-bylozwp/gcc/11.2.0/hypre/2.23.0-cuda.lua
+    use_name: hypre/2.23.0-cuda
+  knnqnhblofgj32qjs7uzyf64hs2b3mrf:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/grace/5.1.25.lua
+    use_name: grace/5.1.25
+  rtizu5r5pcoabzlijkali4y5oldes2h4:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/sqlite/3.36.0.lua
+    use_name: sqlite/3.36.0
+  h2xp6jrwxfw2in27psqp7dsbdf2js7st:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/gcc/11.2.0/libaec/1.0.5.lua
+    use_name: libaec/1.0.5
+  jtwhhpnpgtzfnelffrrb4chaoec3ik7w:
+    path: /appl/spack/v017/modulefiles/linux-rhel8-x86_64/Core/ghostscript/9.54.0.lua
+    use_name: ghostscript/9.54.0

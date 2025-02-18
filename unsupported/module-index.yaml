@@ -1,0 +1,43 @@
+module_index:
+  6qdsxqmmostcx54qcdkyiramm2p6n2yt:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/gcc/7.5.0.lua
+    use_name: gcc/7.5.0
+  5nfsx5hhjwpuo7p3j65aad7e6ldd4p7r:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/intel-oneapi-compilers/2021.4.0.lua
+    use_name: intel-oneapi-compilers/2021.4.0
+  4uu7xznfhgkgtuehnmoovj4zynfigzqg:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/intel-oneapi-mkl/2021.4.0.lua
+    use_name: intel-oneapi-mkl/2021.4.0
+  dsfcbgywrmm646uhkazsctoiqhpkoupa:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/intel-oneapi-mpi/2021.4.0.lua
+    use_name: intel-oneapi-mpi/2021.4.0
+  gmxlp6pz2qvnyq5jkfe65a46ylk65eoc:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/intel-oneapi-tbb/2021.4.0.lua
+    use_name: intel-oneapi-tbb/2021.4.0
+  dazgrtrhzewx6cpbhjhzyngxfcern77p:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/nvhpc/21.11.lua
+    use_name: nvhpc/21.11
+  o3jbyolkvbnptr2x3ajxu3rfc7yhek5o:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/nvhpc/22.3.lua
+    use_name: nvhpc/22.3
+  65hlhmbtsf662qljycesz4wa5j7eu322:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/nvhpc/21.11.lua
+    use_name: nvhpc/21.11
+  237mkkxr3bx2rqciiihoupij5vg55rtt:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/nvhpc/22.3.lua
+    use_name: nvhpc/22.3
+  uh7nqd7xfhuxius2wklfrutt5m6keqtm:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/gcc/7.5.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2
+  cu6flumecb3mglszoemqf2cegigi4rks:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/cp2k/8.2.lua
+    use_name: cp2k/8.2
+  3d5k5gu7hz3cim3gkwgp7s7pytn7zqqp:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/openmpi/4.1.2-kmnp2go/gcc/9.4.0/cp2k/9.1.lua
+    use_name: cp2k/9.1
+  nfm4wc635upjl7ezzjd42nky3th4w7pd:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/Core/gcc/9.4.0.lua
+    use_name: gcc/9.4.0
+  kmnp2gos7h2dkam53qbscuov4scdsd4e:
+    path: /appl/spack/v017/unsupported/linux-rhel8-x86_64/gcc/9.4.0/openmpi/4.1.2.lua
+    use_name: openmpi/4.1.2

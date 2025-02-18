@@ -9,6 +9,9 @@
 /test-environment/temp/tmp
 !/test-environment/temp/.keepthis
 alternatives/config.yaml
-modulefiles
+bootstrap
 install-tree
 sources
+environments
+test
+views
