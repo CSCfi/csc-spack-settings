@@ -4,8 +4,10 @@ modules:
     - CPATH
     lib:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     lib64:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     man:
     - MANPATH
     share/man:
@@ -25,7 +27,12 @@ modules:
       - mpi
       whitelist:
       - aocc
+      - amdlibm
+      - amdblis
+      - amdlibflame
+      - amdscalapack
       - 'gcc@12.2.0'
+      - openmpi
       blacklist:
       - '%aocc'
       - '%gcc'
@@ -103,6 +110,7 @@ modules:
         environment:
           set:
             OMPI_MCA_io: ^ompio
+            UCX_NET_DEVICES: mlx5_0:1
         suffixes:
           +cuda: cuda
       petsc:

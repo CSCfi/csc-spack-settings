@@ -33,6 +33,11 @@ packages:
     externals:
     - spec: pmix@3.2.3
       prefix: /appl/spack/syslibs/pmix/3.2.3
+  numactl:
+    buildable: true
+    externals:
+    - spec: numactl@2.0.12
+      prefix: /appl/spack/syslibs
   openmpi:
     variants: fabrics=ucx schedulers=slurm ~static +pmix +lustre +thread_multiple +mlnx_platform +sys_libevent ~gpfs
   openblas:
@@ -75,7 +80,7 @@ packages:
   slurm:
     buildable: false
     externals:
-    - spec: slurm@20.02.6
+    - spec: slurm@22.05.8
       prefix: /appl/spack/syslibs
   sharp:
     buildable: false
@@ -99,7 +104,7 @@ packages:
   lustre:
     buildable: false
     externals:
-    - spec: lustre@2.12.3
+    - spec: lustre@2.12.8
       prefix: /appl/spack/syslibs
   ucx:
     variants: +thread_multiple
