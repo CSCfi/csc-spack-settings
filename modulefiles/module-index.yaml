@@ -101,3 +101,6 @@ module_index:
   tauwpvtz56raddw7x7tmleua2yjf3aaj:
     path: /appl/spack/v020/modulefiles/linux-rhel8-x86_64/gcc/10.4.0/cuda/12.6.1.lua
     use_name: cuda/12.6.1
+  cbe6h57a3wpxeaz435uu7n4qbyahdmvg:
+    path: /appl/spack/v020/modulefiles/linux-rhel8-x86_64/gcc/10.4.0/cudnn/9.2.0.82-12.lua
+    use_name: cudnn/9.2.0.82-12

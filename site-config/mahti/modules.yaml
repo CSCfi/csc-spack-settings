@@ -38,6 +38,7 @@ modules:
       - cp2k
       - 'cuda@12.1.1%gcc@10.4.0'
       - 'cuda@12.6.1%gcc@10.4.0'
+      - 'cudnn@9.2.0.82-12'
       - fftw
       - 'gcc@10.4.0'
       - 'gcc@13.1.0'
@@ -162,13 +163,13 @@ modules:
       - gcc@8.5.0
       hierarchy:
       - mpi
-      blacklist:
+      exclude:
       - '%aocc'
       - '%gcc'
       - '%nvhpc'
       - '%oneapi'
       - '%intel'
-      whitelist: []
+      include: []
       intel-oneapi-mpi:
         environment:
           prepend_path:
@@ -188,13 +189,13 @@ modules:
       - gcc@8.5.0
       hierarchy:
       - mpi
-      blacklist:
+      exclude:
       - '%aocc'
       - '%gcc'
       - '%nvhpc'
       - '%oneapi'
       - '%intel'
-      whitelist:
+      include:
       - 'gcc@9.4.0'
       - 'openmpi%gcc@9.4.0 ~cuda'
       - 'cp2k +elpa ^amdblis'
