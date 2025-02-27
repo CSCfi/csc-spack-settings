@@ -1,0 +1,9 @@
+spack:
+  specs:
+  - gcc@14.2.0 +binutils~bootstrap+graphite+strip languages=c,c++,fortran,jit
+  - intel-oneapi-compilers@2025.0.4
+  view: false
+  packages:
+    all:
+      compiler: [gcc@=8.5.0]
+      target: [cascadelake]

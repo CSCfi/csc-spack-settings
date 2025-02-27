@@ -27,11 +27,30 @@ modules:
       hierarchy:
       - mpi
       include:
+      - boost
+      - cdo
+      - cmake
+      - eccodes
+      - fftw
+      - gdal
+      - gsl
+      - jasper
+      - jemalloc
+      - hdf5
+      - libaec
+      - parallel-netcdf
+      - netcdf-c
+      - netcdf-fortran
+      - intel-oneapi-mkl
+      - intel-tbb
+      - openmpi
+      - proj
+      - udunits
       - 'gcc@14.2.0'
       - intel-oneapi-compilers
       exclude:
       - '%gcc@8.5.0'
-      - '%gcc@13.2.0'
+      - '%gcc@14.2.0'
       all:
         autoload: direct
         conflict:

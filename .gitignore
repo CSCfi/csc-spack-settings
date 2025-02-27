@@ -3,13 +3,13 @@
 #*
 .#*
 *.simg
+**/spack.lock
+**/.spack-env
 /test-environment/home
 !/test-environment/home/.bashrc
 !/test-environment/home/.bash_profile
 /test-environment/temp/tmp
 !/test-environment/temp/.keepthis
-/environments/
-!/environments/**/spack.yaml
 alternatives/config.yaml
 install-tree
 sources
