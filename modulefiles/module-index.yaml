@@ -1,70 +1,64 @@
 module_index:
-  5yth6efz3z55sdtqiq3zpkb6uu7lirx3:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/boost/1.85.0.lua
-    use_name: boost/1.85.0
-  gzn5t4srzr6xyuzkztahjaafyaeoqusl:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/cdo/2.4.0.lua
-    use_name: cdo/2.4.0
-  4lxlsxek6otrtrzv5fmqbqt4c33ab6tv:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/cmake/3.27.9.lua
-    use_name: cmake/3.27.9
-  yuz5jbbua52uegcmq2p6ekh2rbuwac64:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/eccodes/2.34.0.lua
+  cyjpmnuo7rfnyxnjjjzp2nqfmtw5i2jn:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/boost/1.86.0.lua
+    use_name: boost/1.86.0
+  i6d3fi5kansfab4povmmwo3vdpyeo3x6:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/cdo/2.4.4.lua
+    use_name: cdo/2.4.4
+  gg7zjkenad4vqntljgrv4qpwwtgxau5t:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/cmake/3.30.5.lua
+    use_name: cmake/3.30.5
+  o57oz7b4w2te5t6fxtjbirqanjqzciud:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/eccodes/2.34.0.lua
     use_name: eccodes/2.34.0
-  tj75jr7nagku7gnixhjn5row62npf6lu:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/fftw/3.3.10-mpi.lua
+  x6mjumixklihnls4xc6qb26yfpotzx3n:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/fftw/3.3.10-mpi.lua
     use_name: fftw/3.3.10-mpi
-  hgaeyz2xb2bgd43nhoauikn5zmc5qn3c:
-    path: /appl/spack/v022/modulefiles/Core/gcc/13.2.0.lua
-    use_name: gcc/13.2.0
-  infqqvucv5sqklhtzeottb5hdje3gcx7:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/hdf5/1.14.3-mpi.lua
-    use_name: hdf5/1.14.3-mpi
-  rm55cl7hbiq2gxov55nzwalqjwqszjl4:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/intel-oneapi-mkl/2024.0.0.lua
-    use_name: intel-oneapi-mkl/2024.0.0
-  6lfhysqjyvpcwl2ifatya5eauuh2fnk5:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/netcdf-c/4.9.2.lua
-    use_name: netcdf-c/4.9.2
-  wwft3xtdayvw7vhbja3zb3hfmdmio5lg:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/netcdf-fortran/4.6.1.lua
-    use_name: netcdf-fortran/4.6.1
-  tpby2mhl2ueb5yv3jrwsmrifrm5gwvcd:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/openmpi/5.0.5.lua
-    use_name: openmpi/5.0.5
-  swrs3ufcqkizusggesfuhuapqd2b6434:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/parallel-netcdf/1.12.3.lua
-    use_name: parallel-netcdf/1.12.3
-  afd2d6zbfbwluktiiuknvh7qtdgz23o5:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/proj/9.2.1.lua
-    use_name: proj/9.2.1
-  py22bj5lwc72h7ceeqnhauzntx3mdjs2:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/libaec/1.0.6.lua
-    use_name: libaec/1.0.6
-  pckgfv7gwcycg6ccqd7dly7xzbpabs5u:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/udunits/2.2.28.lua
-    use_name: udunits/2.2.28
-  3czso77p4sji2yxe62zdtrdxtiuzauao:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/gsl/2.7.1.lua
-    use_name: gsl/2.7.1
-  ihmvergsli4yvdf7axrv67ixzhcgbtk2:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/jasper/3.0.3.lua
-    use_name: jasper/3.0.3
-  7bzdwuexkgjmczz7vtihfpjmumzsprgk:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/jemalloc/5.3.0.lua
+  poi6qadg6vmpo2efmy3ke577jcokbzuo:
+    path: /appl/spack/v023/modulefiles/Core/gcc/14.2.0.lua
+    use_name: gcc/14.2.0
+  mmruqicdi3ndgne65shcnzcgc2n5lal5:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/gsl/2.8.lua
+    use_name: gsl/2.8
+  tkfyecivg4rmuwluolevpnthhhq5uj47:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/hdf5/1.14.5-mpi.lua
+    use_name: hdf5/1.14.5-mpi
+  tsbq3scyktqnklm2oqhtexjypaapvgna:
+    path: /appl/spack/v023/modulefiles/Core/intel-oneapi-compilers/2025.0.0.lua
+    use_name: intel-oneapi-compilers/2025.0.0
+  apr4zciarty4he5pzzdezwrktxtl5bdn:
+    path: /appl/spack/v023/modulefiles/Core/intel-oneapi-compilers/2025.0.4.lua
+    use_name: intel-oneapi-compilers/2025.0.4
+  jjgtgywg6awpssil5fkdpj5zd4gy25j4:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/intel-oneapi-mkl/2024.2.2.lua
+    use_name: intel-oneapi-mkl/2024.2.2
+  b2sltp5tqw3n4nydg3tl5xrff7egzyrb:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/intel-tbb/2021.12.0.lua
+    use_name: intel-tbb/2021.12.0
+  4rrdfu7rrssr4tidzdg4ya3d2k5z4ysg:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/jasper/4.2.4.lua
+    use_name: jasper/4.2.4
+  4d3bnfnjxqzlulyco4v4vvj5sxmlp3jp:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/jemalloc/5.3.0.lua
     use_name: jemalloc/5.3.0
-  lpbfi3xbtgjfegqj56quobsspxvkszlt:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/intel-tbb/2021.9.0.lua
-    use_name: intel-tbb/2021.9.0
-  h4kg64yud3aldtaobir6tvh5zqk2tug3:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/cp2k/2024.2.lua
-    use_name: cp2k/2024.2
-  y4hqsnckofq2vzmfxjug3dl76x7hlk6z:
-    path: /appl/spack/v022/modulefiles/gcc/13.2.0/cuda/12.6.0.lua
-    use_name: cuda/12.6.0
-  3yarew6qpj7rumbr5gwetfdborggk2ia:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/gromacs/2024.3.lua
-    use_name: gromacs/2024.3
-  sryrb4iljjgjvbgii57wig6a6znivoxe:
-    path: /appl/spack/v022/modulefiles/openmpi/5.0.5-tpby2mh/gcc/13.2.0/gdal/3.8.5.lua
-    use_name: gdal/3.8.5
+  ax6gorbka4vwc6buq5vaetwg43ji442e:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/libaec/1.0.6.lua
+    use_name: libaec/1.0.6
+  znjms2c6iaceaccuy5wg762yzukspux7:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/netcdf-c/4.9.2.lua
+    use_name: netcdf-c/4.9.2
+  c3ftvpltzrwvkygelwyadbpubp7q6ymf:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/netcdf-fortran/4.6.1.lua
+    use_name: netcdf-fortran/4.6.1
+  wl55f52f5j2mxx7us3o6vbrlinjn6m2p:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/openmpi/5.0.6.lua
+    use_name: openmpi/5.0.6
+  ynk67apydhovxgf5h3toh4rh54gigver:
+    path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/parallel-netcdf/1.12.3.lua
+    use_name: parallel-netcdf/1.12.3
+  qkprcyqhwozgqj4mnxdov5v46x6yn3pv:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/proj/9.4.1.lua
+    use_name: proj/9.4.1
+  j6sfypbq2elyctvf2s7mom23c4tndd23:
+    path: /appl/spack/v023/modulefiles/gcc/14.2.0/udunits/2.2.28.lua
+    use_name: udunits/2.2.28
