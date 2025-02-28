@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.866707
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.166119
 --
 -- netcdf-fortran@4.6.1%gcc@14.2.0~doc+pic+shared build_system=autotools arch=linux-rocky8-cascadelake/c3ftvpl
 --
@@ -25,6 +25,7 @@ conflict("netcdf-fortran")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/lib", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/netcdf-fortran-4.6.1-c3ftvp/share/man", ":")

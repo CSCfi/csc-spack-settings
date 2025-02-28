@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:23.793493
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.090213
 --
 -- cdo@2.4.4%gcc@14.2.0+curl~external-grib1+fftw3+hdf5+libxml2~magics+netcdf+openmp+proj+szip+udunits2 build_system=autotools grib2=eccodes arch=linux-rocky8-cascadelake/i6d3fi5
 --

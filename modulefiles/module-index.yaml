@@ -23,9 +23,6 @@ module_index:
   tkfyecivg4rmuwluolevpnthhhq5uj47:
     path: /appl/spack/v023/modulefiles/openmpi/5.0.6-wl55f52/gcc/14.2.0/hdf5/1.14.5-mpi.lua
     use_name: hdf5/1.14.5-mpi
-  tsbq3scyktqnklm2oqhtexjypaapvgna:
-    path: /appl/spack/v023/modulefiles/Core/intel-oneapi-compilers/2025.0.0.lua
-    use_name: intel-oneapi-compilers/2025.0.0
   apr4zciarty4he5pzzdezwrktxtl5bdn:
     path: /appl/spack/v023/modulefiles/Core/intel-oneapi-compilers/2025.0.4.lua
     use_name: intel-oneapi-compilers/2025.0.4

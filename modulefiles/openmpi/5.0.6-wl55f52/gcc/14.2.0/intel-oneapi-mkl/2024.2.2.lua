@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.502696
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.825622
 --
 -- intel-oneapi-mkl@2024.2.2%gcc@14.2.0+cluster+envmods~gfortran~ilp64+shared build_system=generic mpi_family=openmpi threads=tbb arch=linux-rocky8-cascadelake/jjgtgyw
 --

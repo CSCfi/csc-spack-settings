@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:25.081065
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.423764
 --
 -- udunits@2.2.28%gcc@14.2.0+shared build_system=autotools arch=linux-rocky8-cascadelake/j6sfypb
 --
@@ -21,6 +21,7 @@ conflict("udunits")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp/lib", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp/bin", ":")
 prepend_path("CMAKE_PREFIX_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp/.", ":")
 setenv("UDUNITS_INSTALL_ROOT", "/appl/spack/v023/install-tree/gcc-14.2.0/udunits-2.2.28-j6sfyp")

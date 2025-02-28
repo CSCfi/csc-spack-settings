@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.669817
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.975967
 --
 -- jasper@4.2.4%gcc@14.2.0~ipo+jpeg~opengl+shared build_system=cmake build_type=Release generator=make arch=linux-rocky8-cascadelake/4rrdfu7
 --
@@ -20,6 +20,7 @@ conflict("jasper")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/lib64", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/lib64", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jasper-4.2.4-4rrdfu/share/man", ":")

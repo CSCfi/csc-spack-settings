@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.068305
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.398794
 --
 -- gcc@14.2.0%gcc@8.5.0+binutils~bootstrap+graphite~mold~nvptx~piclibs+strip build_system=autotools build_type=RelWithDebInfo languages='c,c++,fortran,jit' arch=linux-rocky8-skylake_avx512/poi6qad
 --
@@ -28,7 +28,9 @@ conflict("gcc")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/lib", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/lib64", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/lib64", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-8.5.0/gcc-14.2.0-poi6qa/share/man", ":")

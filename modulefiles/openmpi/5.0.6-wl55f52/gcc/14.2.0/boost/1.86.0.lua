@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:23.560331
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:56.896891
 --
 -- boost@1.86.0%gcc@14.2.0~atomic~charconv~chrono~clanglibcpp~cobalt+container+context~contract+coroutine~date_time~debug~exception~fiber~filesystem~graph~graph_parallel+icu~iostreams~json~locale~log~math+mpi+multithreaded~nowide~numpy~pic~program_options~python~random~regex~serialization+shared~signals~singlethreaded~stacktrace~system~taggedlayout~test~thread~timer~type_erasure~url~versionedlayout~wave build_system=generic context-impl=fcontext cxxstd=17 patches=a440f96,b8569d7 visibility=hidden arch=linux-rocky8-cascadelake/cyjpmnu
 --
@@ -25,6 +25,7 @@ conflict("boost")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn/lib", ":")
 prepend_path("CMAKE_PREFIX_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn/.", ":")
 setenv("BOOST_ROOT", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn")
 setenv("BOOST_INSTALL_ROOT", "/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-cyjpmn")

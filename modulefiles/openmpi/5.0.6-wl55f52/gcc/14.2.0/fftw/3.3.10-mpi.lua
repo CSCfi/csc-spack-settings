@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.031991
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.361578
 --
 -- fftw@3.3.10%gcc@14.2.0+mpi~openmp~pfft_patches+shared build_system=autotools patches=872cff9 precision=double,float arch=linux-rocky8-cascadelake/x6mjumi
 --
@@ -26,6 +26,7 @@ conflict("fftw")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/lib", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-x6mjum/share/man", ":")

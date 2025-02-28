@@ -4,8 +4,10 @@ modules:
     - CPATH
     lib:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     lib64:
     - LIBRARY_PATH
+    - LD_LIBRARY_PATH
     man:
     - MANPATH
     share/man:
@@ -18,6 +20,7 @@ modules:
     - tcl
     roots:
       lmod: /appl/spack/v023/modulefiles
+      tcl: /appl/spack/v023/tcl-modules
     arch_folder: false
     lmod:
       hide_implicits: false
@@ -187,9 +190,11 @@ modules:
   unsupported_set:
     enable::
     - lmod
+    arch_folder: false
     roots:
       lmod: /appl/spack/v023/unsupported
     lmod:
+      hide_implicits: false
       hash_length: 0
       core_compilers:
       - gcc@8.5.0
@@ -199,6 +204,4 @@ modules:
       - nvhpc
       exclude:
       - '%gcc@8.5.0'
-      - '%gcc@9.4.0'
-      - '%gcc@11.3.0'
-
+      - '%gcc@14.2.0'

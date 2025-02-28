@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.135490
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.540241
 --
 -- gsl@2.8%gcc@14.2.0+external-cblas+pic+shared build_system=autotools patches=f0dec42 arch=linux-rocky8-cascadelake/mmruqic
 --
@@ -26,6 +26,7 @@ conflict("gsl")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/lib", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/share/man", ":")
 prepend_path("ACLOCAL_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/share/aclocal", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/gsl-2.8-mmruqi/bin", ":")

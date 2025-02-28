@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.198818
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.603146
 --
 -- hdf5@1.14.5%gcc@14.2.0+cxx+fortran+hl~ipo~java~map+mpi+shared~subfiling+szip+threadsafe+tools api=default build_system=cmake build_type=Release generator=make arch=linux-rocky8-cascadelake/tkfyeci
 --
@@ -25,6 +25,7 @@ conflict("hdf5")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/lib", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/bin", ":")
 prepend_path("PKG_CONFIG_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/lib/pkgconfig", ":")
 prepend_path("CMAKE_PREFIX_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/hdf5-1.14.5-tkfyec/.", ":")

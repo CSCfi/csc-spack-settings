@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.380347
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.693831
 --
 -- intel-oneapi-compilers@2025.0.4%gcc@8.5.0~amd+envmods~nvidia build_system=generic arch=linux-rocky8-skylake_avx512/apr4zci
 --

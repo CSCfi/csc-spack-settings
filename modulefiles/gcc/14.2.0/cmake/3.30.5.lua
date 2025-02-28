@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:23.949052
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.266695
 --
 -- cmake@3.30.5%gcc@14.2.0~doc+ncurses+ownlibs~qtgui build_system=generic build_type=Release patches=dbc3892 arch=linux-rocky8-cascadelake/gg7zjke
 --

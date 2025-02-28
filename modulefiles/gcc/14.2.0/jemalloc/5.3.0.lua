@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.692933
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.000561
 --
 -- jemalloc@5.3.0%gcc@14.2.0~debug~documentation+fill~prof~stats build_system=autotools jemalloc_prefix=none libs=shared,static arch=linux-rocky8-cascadelake/4d3bnfn
 --
@@ -22,6 +22,7 @@ conflict("jemalloc")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/lib", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/jemalloc-5.3.0-4d3bnf/share/man", ":")

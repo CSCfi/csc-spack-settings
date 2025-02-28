@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.942000
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.233139
 --
 -- openmpi@5.0.6%gcc@14.2.0+atomics~cuda~debug~gpfs~internal-hwloc~internal-libevent+internal-pmix~java+lustre~memchecker~openshmem+romio+rsh~static~two_level_namespace+vt+wrapper-rpath build_system=autotools fabrics=ucx romio-filesystem=lustre schedulers=slurm arch=linux-rocky8-cascadelake/wl55f52
 --
@@ -41,6 +41,7 @@ conflict("openmpi")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/lib", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/lib", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-wl55f5/share/man", ":")

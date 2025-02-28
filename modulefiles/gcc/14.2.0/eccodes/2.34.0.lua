@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:23.988226
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:57.307084
 --
 -- eccodes@2.34.0%gcc@14.2.0+aec+fortran~ipo+memfs~netcdf+openmp+png~pthreads+shared~tools build_system=cmake build_type=Release extra_definitions=none generator=make jp2k=jasper arch=linux-rocky8-cascadelake/o57oz7b
 --
@@ -24,6 +24,7 @@ conflict("eccodes")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7/lib64", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7/lib64", ":")
 prepend_path("PKG_CONFIG_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7/lib64/pkgconfig", ":")
 prepend_path("CMAKE_PREFIX_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7/.", ":")
 setenv("ECCODES_INSTALL_ROOT", "/appl/spack/v023/install-tree/gcc-14.2.0/eccodes-2.34.0-o57oz7")

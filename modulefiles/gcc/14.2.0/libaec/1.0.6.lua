@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:24.727101
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.035545
 --
 -- libaec@1.0.6%gcc@14.2.0~ipo+shared build_system=cmake build_type=Release generator=make arch=linux-rocky8-cascadelake/ax6gorb
 --
@@ -24,6 +24,7 @@ conflict("libaec")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/lib64", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/lib64", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/libaec-1.0.6-ax6gor/share/man", ":")

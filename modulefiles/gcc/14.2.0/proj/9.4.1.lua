@@ -1,5 +1,5 @@
 -- -*- lua -*-
--- Module file created by spack (https://github.com/spack/spack) on 2025-02-27 15:56:25.048030
+-- Module file created by spack (https://github.com/spack/spack) on 2025-02-28 09:15:58.390175
 --
 -- proj@9.4.1%gcc@14.2.0+curl~ipo~pic+shared+tiff build_system=cmake build_type=Release generator=make arch=linux-rocky8-cascadelake/qkprcyq
 --
@@ -23,6 +23,7 @@ conflict("proj")
 
 prepend_path("CPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/include", ":")
 prepend_path("LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/lib64", ":")
+prepend_path("LD_LIBRARY_PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/lib64", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/share/man", ":")
 prepend_path("PATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/bin", ":")
 prepend_path("MANPATH", "/appl/spack/v023/install-tree/gcc-14.2.0/proj-9.4.1-qkprcy/share/man", ":")
