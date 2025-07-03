@@ -1,0 +1,42 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:02:04.869152
+##
+## fftw@3.3.10%gcc@14.2.0+mpi+openmp~pfft_patches+shared build_system=autotools patches=872cff9 precision=double,float arch=linux-rhel8-zen2/hnxwjbo
+##
+
+
+module-whatis {FFTW is a C subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, and of both real and complex data (as well as of even/odd data, i.e. the discrete cosine/sine transforms or DCT/DST). We believe that FFTW, which is free software, should become the FFT library of choice for most applications.}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : fftw}
+    puts stderr {Version: 3.3.10}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {FFTW is a C subroutine library for computing the discrete Fourier}
+    puts stderr {transform (DFT) in one or more dimensions, of arbitrary input size, and}
+    puts stderr {of both real and complex data (as well as of even/odd data, i.e. the}
+    puts stderr {discrete cosine/sine transforms or DCT/DST). We believe that FFTW, which}
+    puts stderr {is free software, should become the FFT library of choice for most}
+    puts stderr {applications.}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+    module load openmpi/5.0.6-gcc-14.2.0-4s7d
+} else {
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+    depends-on openmpi/5.0.6-gcc-14.2.0-4s7d
+}
+
+prepend-path CPATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/include}
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/lib}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/share/man}
+prepend-path PATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/bin}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/share/man}
+prepend-path PKG_CONFIG_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/lib/pkgconfig}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/fftw-3.3.10-hnxwjb/.}
+append-path MANPATH {}
+

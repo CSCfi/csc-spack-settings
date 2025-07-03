@@ -1,0 +1,37 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:18:24.090209
+##
+## icu4c@74.2%gcc@14.2.0 build_system=autotools cxxstd=11 arch=linux-rhel8-zen2/v5sgsqc
+##
+
+
+module-whatis {ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. ICU4C is the C/C++ interface.}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : icu4c}
+    puts stderr {Version: 74.2}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {ICU is a mature, widely used set of C/C++ and Java libraries providing}
+    puts stderr {Unicode and Globalization support for software applications. ICU4C is}
+    puts stderr {the C/C++ interface.}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+} else {
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+}
+
+prepend-path CPATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/include}
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/lib}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/share/man}
+prepend-path PATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/bin}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/share/man}
+prepend-path PKG_CONFIG_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/lib/pkgconfig}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/icu4c-74.2-v5sgsq/.}
+append-path MANPATH {}
+

@@ -1,0 +1,45 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:23:15.608242
+##
+## boost@1.86.0%gcc@14.2.0+atomic~charconv+chrono~clanglibcpp~cobalt~container~context~contract~coroutine+date_time~debug+exception~fiber+filesystem+graph~graph_parallel+icu+iostreams~json+locale+log+math~mpi+multithreaded~nowide~numpy~pic+program_options~python+random+regex+serialization+shared+signals~singlethreaded~stacktrace+system~taggedlayout+test+thread+timer~type_erasure~url~versionedlayout+wave build_system=generic cxxstd=11 patches=a440f96,b8569d7 visibility=hidden arch=linux-rhel8-zen2/5aakiol
+##
+
+
+module-whatis {Boost provides free peer-reviewed portable C++ source libraries, emphasizing libraries that work well with the C++ Standard Library.}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : boost}
+    puts stderr {Version: 1.86.0}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {Boost provides free peer-reviewed portable C++ source libraries,}
+    puts stderr {emphasizing libraries that work well with the C++ Standard Library.}
+    puts stderr {Boost libraries are intended to be widely useful, and usable across a}
+    puts stderr {broad spectrum of applications. The Boost license encourages both}
+    puts stderr {commercial and non-commercial use.}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load bzip2/1.0.8-gcc-8.5.0-eu5f
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+    module load icu4c/74.2-gcc-14.2.0-v5sg
+    module load xz/5.4.6-gcc-8.5.0-oasq
+    module load zlib-ng/2.2.1-gcc-8.5.0-ib3q
+    module load zstd/1.5.6-gcc-8.5.0-arm5
+} else {
+    depends-on bzip2/1.0.8-gcc-8.5.0-eu5f
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+    depends-on icu4c/74.2-gcc-14.2.0-v5sg
+    depends-on xz/5.4.6-gcc-8.5.0-oasq
+    depends-on zlib-ng/2.2.1-gcc-8.5.0-ib3q
+    depends-on zstd/1.5.6-gcc-8.5.0-arm5
+}
+
+prepend-path CPATH {/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-5aakio/include}
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-5aakio/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-5aakio/lib}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-5aakio/.}
+setenv BOOST_ROOT {/appl/spack/v023/install-tree/gcc-14.2.0/boost-1.86.0-5aakio}
+

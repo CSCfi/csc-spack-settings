@@ -1,0 +1,43 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:16:26.747093
+##
+## elpa@2024.03.001%gcc@14.2.0~autotune~cuda+mpi+openmp~rocm build_system=autotools arch=linux-rhel8-zen2/m6qy5mj
+##
+## Configure options: --with-mpi --enable-sse-kernels --enable-avx-kernels --enable-avx2-kernels --disable-avx512-kernels --disable-sve128-kernels --disable-sve256-kernels --disable-sve512-kernels CFLAGS=-O3 FCFLAGS=-O3 -ffree-line-length-none --disable-nvidia-gpu-kernels --disable-amd-gpu-kernels --enable-openmp LDFLAGS=-L/appl/spack/v023/install-tree/gcc-14.2.0/openblas-0.3.28-r66ni7/lib -L/appl/spack/v023/install-tree/gcc-14.2.0/openblas-0.3.28-r66ni7/lib -lstdc++ LIBS=-lopenblas -lopenblas CC=/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-4s7dor/bin/mpicc CXX=/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-4s7dor/bin/mpic++ FC=/appl/spack/v023/install-tree/gcc-14.2.0/openmpi-5.0.6-4s7dor/bin/mpif90 SCALAPACK_LDFLAGS=/appl/spack/v023/install-tree/gcc-14.2.0/netlib-scalapack-2.2.0-xuwc6m/lib/libscalapack.so --disable-silent-rules --without-threading-support-check-during-build
+##
+
+
+module-whatis {Eigenvalue solvers for Petaflop-Applications (ELPA)}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : elpa}
+    puts stderr {Version: 2024.03.001}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {Eigenvalue solvers for Petaflop-Applications (ELPA)}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+    module load netlib-scalapack/2.2.0-openmpi-5.0.6-gcc-14.2.0-xuwc
+    module load openblas/0.3.28-gcc-14.2.0-r66n
+    module load openmpi/5.0.6-gcc-14.2.0-4s7d
+} else {
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+    depends-on netlib-scalapack/2.2.0-openmpi-5.0.6-gcc-14.2.0-xuwc
+    depends-on openblas/0.3.28-gcc-14.2.0-r66n
+    depends-on openmpi/5.0.6-gcc-14.2.0-4s7d
+}
+
+prepend-path CPATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/include}
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/lib}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/share/man}
+prepend-path PATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/bin}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/share/man}
+prepend-path PKG_CONFIG_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/lib/pkgconfig}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/elpa-2024.03.001-m6qy5m/.}
+append-path MANPATH {}
+

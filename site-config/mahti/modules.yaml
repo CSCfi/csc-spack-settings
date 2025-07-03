@@ -37,6 +37,7 @@ modules:
       - amdscalapack
       - aocl-sparse
       - cgal
+      - cp2k
       - fftw
       - gsl
       - jasper
@@ -46,6 +47,7 @@ modules:
       - parallel-netcdf
       - openblas
       - papi
+      - 'plumed@2.9.2%gcc@14.2.0'
       - scorep
       - scalasca
       - openmpi

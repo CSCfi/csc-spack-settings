@@ -1,0 +1,33 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:02:46.086063
+##
+## re2c@3.1%gcc@14.2.0 build_system=autotools arch=linux-rhel8-zen2/dbhftbo
+##
+
+
+module-whatis {re2c: a free and open-source lexer generator for C and C++}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : re2c}
+    puts stderr {Version: 3.1}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {re2c: a free and open-source lexer generator for C and C++}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+} else {
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+}
+
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/lib}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/share/man}
+prepend-path PATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/bin}
+prepend-path MANPATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/share/man}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/re2c-3.1-dbhftb/.}
+append-path MANPATH {}
+

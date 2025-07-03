@@ -1,0 +1,32 @@
+#%Module1.0
+## Module file created by spack (https://github.com/spack/spack) on 2025-06-26 10:03:53.803321
+##
+## libxsmm@1.17%gcc@14.2.0~debug~generator~header-only~large_jit_buffer~shared blas=default build_system=makefile arch=linux-rhel8-zen2/ywag7z7
+##
+
+
+module-whatis {Library for specialized dense and sparse matrix operations, and deep learning primitives.}
+
+proc ModulesHelp { } {
+    puts stderr {Name   : libxsmm}
+    puts stderr {Version: 1.17}
+    puts stderr {Target : zen2}
+    puts stderr {}
+    puts stderr {Library for specialized dense and sparse matrix operations, and deep}
+    puts stderr {learning primitives.}
+}
+
+if {![info exists ::env(LMOD_VERSION_MAJOR)]} {
+    module load gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    module load glibc/2.28-gcc-14.2.0-nguc
+} else {
+    depends-on gcc-runtime/14.2.0-gcc-14.2.0-kmnt
+    depends-on glibc/2.28-gcc-14.2.0-nguc
+}
+
+prepend-path CPATH {/appl/spack/v023/install-tree/gcc-14.2.0/libxsmm-1.17-ywag7z/include}
+prepend-path LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/libxsmm-1.17-ywag7z/lib}
+prepend-path LD_LIBRARY_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/libxsmm-1.17-ywag7z/lib}
+prepend-path PKG_CONFIG_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/libxsmm-1.17-ywag7z/lib/pkgconfig}
+prepend-path CMAKE_PREFIX_PATH {/appl/spack/v023/install-tree/gcc-14.2.0/libxsmm-1.17-ywag7z/.}
+
